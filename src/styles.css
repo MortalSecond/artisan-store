@@ -1,1 +1,105 @@
-/* You can add global styles to this file, and also import other style files */
+/* Modern NormalizeCSS */
+@import 'modern-normalize/modern-normalize.css';
+
+:root{
+    /* Vibrant colors for important elements */
+    --mainAccent: #d4af37;
+    --mainAccentLight: #e5c158;
+
+    /* Desaturated dark colors for backgrounds */
+    --negativeSpace: #1a1a1a;
+    --negativeSpaceLight: #2d2d2d;
+    --negativeSpaceDark: #0d0d0d;
+
+    /* Transparent variants for elements above other elements */
+    --mainAccentAlpha: rgba(212, 175, 55, 0.3);
+    --negativeSpaceAlpha: rgba(26, 26, 26, 0.95);
+    
+    /* Reading-friendly variants for longer texts */
+    --subtleAccent: #f5f5dc;
+    --subtleNegativeSpace: #888;
+
+    /* Fonts */
+    --titlesFont: "Cormorant Garamond", serif;
+    --textFont: "Montserrat", sans-serif;
+}
+
+/* Sets rem size to 10px */
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *:after, *:before{
+    box-sizing: inherit;
+}
+
+/* Global Tag Overrides */
+
+body{
+    font-family: var(--textFont);
+}
+
+h1,h2,h3,h4{
+    margin: 0;
+    color: var(--mainAccent);
+    font-family: var(--titlesFont);
+}
+
+h1{
+    font-size: 4rem;
+}
+
+h2{
+    font-size: 2.6rem;
+    letter-spacing: 1px;
+}
+
+h3{
+    font-size: 2.2rem;
+}
+
+h4{
+    font-size: 1.2rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+button{
+    background-color: transparent;
+    border: 2px solid var(--mainAccent);
+    color: var(--subtleAccent);
+
+    transition: all 0.2s;
+}
+
+button:hover{
+    cursor: pointer;
+    
+    background-color: var(--mainAccent);
+    color: black;
+}
+
+.active-button{
+    background-color: var(--mainAccent);
+    color: black;
+    
+    transition: all 0.2s;
+}
+
+.active-button:hover{
+    background-color: var(--mainAccentLight);
+}
+
+ul{
+    padding: 0;
+}
+
+footer{
+    background-color: #0d0d0d;
+    padding: 2rem;
+    border-top: 1px solid var(--mainAccentAlpha);
+}
