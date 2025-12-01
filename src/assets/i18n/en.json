@@ -1,0 +1,11 @@
+{
+    "header":{
+        "logo-title": "Artisan",
+        "nav":{
+            "gallery": "Gallery",
+            "commission": "Commission",
+            "process": "Process",
+            "contact": "Contact"
+        }
+    }
+}

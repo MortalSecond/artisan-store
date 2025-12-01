@@ -1,0 +1,11 @@
+{
+    "header":{
+        "logo-title": "Artesanías",
+        "nav":{
+            "gallery": "Galería",
+            "commission": "Comisión",
+            "process": "Proceso",
+            "contact": "Contacto"
+        }
+    }
+}
