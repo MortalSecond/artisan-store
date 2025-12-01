@@ -17,4 +17,11 @@ export class App {
     this.translate.setFallbackLang('es');
     this.translate.use('es');
   }
+
+  switchLang(){
+    if(this.translate.getCurrentLang() == "es")
+      this.translate.use('en');
+    else
+      this.translate.use('es')
+  }
 }
