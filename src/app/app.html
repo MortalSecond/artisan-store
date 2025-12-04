@@ -36,27 +36,20 @@
     </div>
 
     <div class="works__gallery">
-      <div class="gallery__item">
-        <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=600" alt="Artwork 1">
-        <div class="gallery__overlay">
-          <h3 class="overlay__title">Sample Resin</h3>
-          <p class="overlay__subtitle">36" x 48" | Gold-Black Mix, Wooden Frame</p>
+      @for (painting of paintings(); track painting.id) 
+      {
+        <div class="gallery__item">
+          <img [src]="painting.imageURL" [alt]="painting.title">
+          <div class="gallery__overlay">
+            <h3 class="overlay__title">{{painting.title}}</h3>
+            <p class="overlay__subtitle">
+              {{painting.height}}cm x {{painting.width}}cm
+               | 
+              {{painting.details}}
+            </p>
+          </div>
         </div>
-      </div>
-      <div class="gallery__item">
-        <img src="https://images.unsplash.com/photo-1578301978162-7aae4d755744?w=600" alt="Artwork 2">
-        <div class="gallery__overlay">
-          <h3 class="overlay__title">Sample Resin</h3>
-          <p class="overlay__subtitle">36" x 48" | Gold-Black Mix, Wooden Frame</p>
-        </div>
-      </div>
-      <div class="gallery__item">
-        <img src="https://images.unsplash.com/photo-1547826039-bfc35e0f1ea8?w=600" alt="Artwork 3">
-        <div class="gallery__overlay">
-          <h3 class="overlay__title">Sample Resin</h3>
-          <p class="overlay__subtitle">36" x 48" | Gold-Black Mix, Wooden Frame</p>
-        </div>
-      </div>
+      }
     </div> <!-- .works__gallery -->
   </section> <!-- .works -->
 
