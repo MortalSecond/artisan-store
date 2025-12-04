@@ -6,9 +6,9 @@ import { Painting } from '../models/painting';
 @Injectable({
   providedIn: 'root'
 })
-export class PaintingServiceService {
+export class PaintingService {
   private http = inject(HttpClient);
-  private apiUrl = 'http://localhost:5051/api/painting';
+  private apiUrl = 'http://localhost:5051/api/Paintings';
 
   constructor() { }
 
