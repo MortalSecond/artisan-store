@@ -8,5 +8,79 @@
             "process": "Process",
             "contact": "Contact"
         }
+    },
+    "hero":{
+        "big-text": "Transforming Art Into Luxury",
+        "small-text": "Hand-decorated paintings adorned with precious stones, mirrors, and golden accents",
+        "button-gallery": "View Gallery",
+        "button-commission": "Commission A Piece"
+    },
+    "works":{
+        "title": "Featured Works",
+        "subtitle": "Each piece is a unique masterpiece"
+    },
+    "features":{
+        "title": "Craftsmanship Excellence",
+        "subtitle": "What makes each piece extraordinary",
+        "materials":{
+            "title": "Precious Materials",
+            "description": "Authentic pyrite, quartz, and semi-precious stones hand-placed for maximum visual impact"
+        },
+        "finishes":{
+            "title": "Luxury Finishes",
+            "description": "High-quality resin coatings and metallic accents that catch and reflect light beautifully"
+        },
+        "mirrors":{
+            "title": "Mirror Artistry",
+            "description": "Custom mirror frames and accents that add depth and elegance to every piece"
+        },
+        "led":{
+            "title": "LED Integration",
+            "description": "Optional LED lighting systems that transform artwork into stunning illuminated statements"
+        }
+    },
+    "commission":{
+        "title": "Custom Commissions",
+        "text": "Transform your artwork into a luxurious masterpiece. Send us your painting and we'll elevate it with precious materials, expert craftsmanship, and bespoke design.",
+        "features":{
+            "pyrite": "Pyrite and precious stone embellishments",
+            "mirrors": "Mirror and LED-illuminated frames",
+            "resin": "Resin coatings and reflective treatments",
+            "negative-space": "Gold-black negative space techniques",
+            "custom": "Custom clock and functional art designs",
+            "shipping": "International shipping available"
+        },
+        "button": "Start Your Commission"
+    },
+    "process":{
+        "title": "Our Process",
+        "subtitle": "From vision to product in four simple steps",
+        "consultation":{
+            "title": "Consultation",
+            "description": "Share your vision and artwork. We'll discuss materials, size, and design options to bring your concept to life."
+        },
+        "quotation":{
+            "title": "Quotation",
+            "description": "Receive a detailed quote based on your specifications. We'll outline materials, timeline, and costs transparently."
+        },
+        "creation":{
+            "title": "Creation",
+            "description": "Watch your piece come to life. We'll keep you updated throughout the creation process with photos and progress reports."
+        },
+        "delivery":{
+            "title": "Delivery",
+            "description": "Your finished masterpiece is carefully packaged and shipped. We ensure safe delivery with full insurance and tracking."
+        }
+    },
+    "footer":{
+        "about": "Elevating art through precious materials and expert craftsmanship. Based in Estado de México, serving collectors worldwide.",
+        "quick-links": "Quick Links",
+        "contact-title": "Contact",
+        "location": "Estado de México, Mexico",
+        "international-title": "International",
+        "shipping": "Worldwide shipping available",
+        "packaging": "Secure packaging guaranteed",
+        "copyright": "Carmen Méndez Delgadillo. All rights reserved.",
+        "handcrafted": "Handcrafted in Estado de Mexico"
     }
 }

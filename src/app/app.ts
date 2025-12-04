@@ -22,6 +22,6 @@ export class App {
     if(this.translate.getCurrentLang() == "es")
       this.translate.use('en');
     else
-      this.translate.use('es')
+      this.translate.use('es');
   }
 }
