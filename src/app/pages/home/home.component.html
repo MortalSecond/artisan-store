@@ -21,7 +21,8 @@
     <div class="works__gallery">
       @for (painting of paintings(); track painting.id) 
       {
-        <app-gallery-item></app-gallery-item>
+        <app-gallery-item
+        [painting]="painting"></app-gallery-item>
       }
     </div> <!-- .works__gallery -->
   </section> <!-- .works -->
