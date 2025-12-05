@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { TranslateModule, TranslateService} from '@ngx-translate/core';
-import { LogoComponent } from "../../logo/logo.component";
+import { LogoComponent } from '../logo/logo.component';
 
 @Component({
   selector: 'app-navbar',

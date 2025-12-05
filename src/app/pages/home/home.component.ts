@@ -1,12 +1,12 @@
 import { Component, inject } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
-import { PaintingService } from '../../../services/painting.service';
+import { PaintingService } from '../../services/painting.service';
 import { TranslateModule } from '@ngx-translate/core';
 
 // Components
-import { GalleryItemComponent } from '../../../shared/components/gallery/gallery-item/gallery-item.component';
-import { NavbarComponent } from "../../../shared/components/navbar/navbar/navbar.component";
-import { FooterComponent } from "../../../shared/components/footer/footer/footer.component";
+import { GalleryItemComponent } from '../../shared/components/gallery/gallery-item.component';
+import { NavbarComponent } from '../../shared/components/navbar/navbar.component';
+import { FooterComponent } from '../../shared/components/footer/footer.component';
 
 @Component({
   selector: 'app-home',

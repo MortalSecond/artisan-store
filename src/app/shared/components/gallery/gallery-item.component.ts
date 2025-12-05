@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
-import { Painting } from '../../../models/painting';
+import { Painting } from '../../models/painting';
 
 @Component({
   selector: 'app-gallery-item',
