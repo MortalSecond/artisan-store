@@ -1,0 +1,11 @@
+<div class="gallery__item">
+    <img [src]="painting.imageURL" [alt]="painting.title">
+    <div class="gallery__overlay">
+    <h3 class="overlay__title">{{painting.title}}</h3>
+    <p class="overlay__subtitle">
+        {{painting.height}}cm x {{painting.width}}cm
+        | 
+        {{painting.details}}
+    </p>
+    </div>
+</div>

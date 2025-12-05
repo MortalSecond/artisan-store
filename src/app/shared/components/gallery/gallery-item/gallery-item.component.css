@@ -1,0 +1,49 @@
+/* Gallery Item */
+
+.gallery__item{
+    position: relative;
+
+    border: 1px solid var(--mainAccentAlpha);
+    aspect-ratio: 3/4;
+    overflow: hidden;
+
+    cursor: pointer;
+}
+
+.gallery__item:hover img{
+    transform: scale(1.1);
+}
+
+.gallery__overlay{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+    padding: 2rem;
+    background: linear-gradient(transparent, rgba(0,0,0,0.9));
+
+    transform: translateY(100%);
+    transition: 0.2s;
+}
+
+.overlay__title{
+    font-size: 2.5rem;
+}
+
+.overlay__subtitle{
+    color: var(--subtleAccent);
+    font-size: 1.5rem;
+}
+
+.gallery__item:hover .gallery__overlay{
+    transform: translateY(0);
+}
+
+.gallery__item img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+
+    transition: 0.2s;
+}

@@ -1,0 +1,15 @@
+/* Logo */
+
+.logo{
+    margin-left: 2rem;
+}
+
+.logo__title{
+    font-size: 4rem;
+    text-transform: uppercase;
+}
+
+.logo__name{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}

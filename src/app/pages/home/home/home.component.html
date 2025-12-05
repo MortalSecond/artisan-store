@@ -1,0 +1,146 @@
+<app-navbar></app-navbar>
+
+<main>
+  <div class="hero">
+    <h1 class="hero__big-text">{{'hero.big-text' | translate}}</h1>
+    <p class="hero__small-text">
+      {{'hero.small-text' | translate}}
+    </p>
+    <div class="hero__buttons-container">
+      <button class="hero__button active-button">{{'hero.button-gallery' | translate}}</button>
+      <button class="hero__button">{{'hero.button-commission' | translate}}</button>
+    </div>
+  </div> <!-- .hero -->
+
+    <section class="works">
+        <div class="works__header">
+            <h1 class="works__title">{{'works.title' | translate}}</h1>
+            <h4 class="works__subtitle">{{'works.subtitle' | translate}}</h4>
+        </div>
+
+        <div class="works__gallery">
+            @for (painting of paintings(); track painting.id) 
+            {
+                <app-gallery-item></app-gallery-item>
+            }
+        </div> <!-- .works__gallery -->
+    </section> <!-- .works -->
+
+  <section class="features">
+    <h1 class="features__title">{{'features.title' | translate}}</h1>
+    <h4 class="features__subtitle">{{'features.subtitle' | translate}}</h4>
+
+    <div class="features__characteristics">
+      <div class="characteristics__card">
+        <h4 class="characteristics__icon">💎</h4>
+        <h4 class="characteristics__title">{{'features.materials.title' | translate}}</h4>
+        <p class="characteristics__description">
+          {{'features.materials.description' | translate}}
+        </p>
+      </div> <!-- Materials -->
+      
+      <div class="characteristics__card">
+        <h4 class="characteristics__icon">✨</h4>
+        <h4 class="characteristics__title">{{'features.finishes.title' | translate}}</h4>
+        <p class="characteristics__description">
+          {{'features.finishes.description' | translate}}
+        </p>
+      </div> <!-- Finishes -->
+      
+      <div class="characteristics__card">
+        <h4 class="characteristics__icon">🪞</h4>
+        <h4 class="characteristics__title">{{'features.mirrors.title' | translate}}</h4>
+        <p class="characteristics__description">
+          {{'features.mirrors.description' | translate}}
+        </p>
+      </div> <!-- Mirrors -->
+      
+      <div class="characteristics__card">
+        <h4 class="characteristics__icon">🌟</h4>
+        <h4 class="characteristics__title">{{'features.led.title' | translate}}</h4>
+        <p class="characteristics__description">
+          {{'features.led.description' | translate}}
+        </p>
+      </div> <!-- LEDs -->
+    </div>
+  </section> <!-- .features -->
+
+    <section class="commission">
+    <img src="https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=600" 
+    alt="Commission" class="commission__image">
+
+    <div class="commission__details">
+      <h1 class="commission__title">{{'commission.title' | translate}}</h1>
+
+      <p class="commission__text">
+        {{'commission.text' | translate}}
+      </p>
+
+      <ul>
+        <li class="commission__feature">{{'commission.features.pyrite' | translate}}</li>
+        <li class="commission__feature">{{'commission.features.mirrors' | translate}}</li>
+        <li class="commission__feature">{{'commission.features.resin' | translate}}</li>
+        <li class="commission__feature">{{'commission.features.negative-space' | translate}}</li>
+        <li class="commission__feature">{{'commission.features.custom' | translate}}</li>
+        <li class="commission__feature">{{'commission.features.shipping' | translate}}</li>
+      </ul>
+      
+      <button class="button--commission">
+        {{'commission.button' | translate}}
+      </button>
+    </div>
+  </section> <!-- .commission -->
+
+  <section class="process">
+    <div class="process__header">
+      <h1>{{'process.title' | translate}}</h1>
+      <p class="process__text">
+        {{'process.subtitle' | translate}}
+      </p>
+    </div>
+  
+    <div class="process__details">
+      <div class="process__step">
+        <div class="step__number">1</div>
+
+        <h2 class="step__title">{{'process.consultation.title' | translate}}</h2>
+
+        <p class="step__description">
+          {{'process.consultation.description' | translate}}
+        </p>
+      </div>
+
+      <div class="process__step">
+        <div class="step__number">2</div>
+
+        <h2 class="step__title">{{'process.quotation.title' | translate}}</h2>
+
+        <p class="step__description">
+          {{'process.quotation.description' | translate}}
+        </p>
+      </div>
+
+      <div class="process__step">
+        <div class="step__number">3</div>
+
+        <h2 class="step__title">{{'process.creation.title' | translate}}</h2>
+
+        <p class="step__description">
+          {{'process.creation.description' | translate}}
+        </p>
+      </div>
+
+      <div class="process__step">
+        <div class="step__number">4</div>
+
+        <h2 class="step__title">{{'process.delivery.title' | translate}}</h2>
+
+        <p class="step__description">
+          {{'process.delivery.description' | translate}}
+        </p>
+      </div>
+    </div>
+  </section> <!-- .process -->
+</main>
+
+<app-footer></app-footer>
