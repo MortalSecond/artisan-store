@@ -1,10 +1,11 @@
 import { Component, inject } from '@angular/core';
 import { TranslateModule, TranslateService} from '@ngx-translate/core';
 import { LogoComponent } from '../logo/logo.component';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
-  imports: [TranslateModule, LogoComponent],
+  imports: [TranslateModule, LogoComponent, RouterLink],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })

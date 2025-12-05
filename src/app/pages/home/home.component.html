@@ -7,8 +7,8 @@
       {{'hero.small-text' | translate}}
     </p>
     <div class="hero__buttons-container">
-      <button class="hero__button active-button">{{'hero.button-gallery' | translate}}</button>
-      <button class="hero__button">{{'hero.button-commission' | translate}}</button>
+      <button routerLink="/gallery" class="hero__button active-button">{{'hero.button-gallery' | translate}}</button>
+      <button routerLink="/commission" class="hero__button">{{'hero.button-commission' | translate}}</button>
     </div>
   </div> <!-- .hero -->
 
@@ -66,7 +66,7 @@
     </div>
   </section> <!-- .features -->
 
-    <section class="commission">
+  <section class="commission">
     <img src="https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=600" 
     alt="Commission" class="commission__image">
 
@@ -86,7 +86,7 @@
         <li class="commission__feature">{{'commission.features.shipping' | translate}}</li>
       </ul>
       
-      <button class="button--commission">
+      <button routerLink="/commission" class="button--commission">
         {{'commission.button' | translate}}
       </button>
     </div>
