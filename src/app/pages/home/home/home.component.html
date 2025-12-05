@@ -12,19 +12,19 @@
     </div>
   </div> <!-- .hero -->
 
-    <section class="works">
-        <div class="works__header">
-            <h1 class="works__title">{{'works.title' | translate}}</h1>
-            <h4 class="works__subtitle">{{'works.subtitle' | translate}}</h4>
-        </div>
+  <section class="works">
+    <div class="works__header">
+      <h1 class="works__title">{{'works.title' | translate}}</h1>
+      <h4 class="works__subtitle">{{'works.subtitle' | translate}}</h4>
+    </div>
 
-        <div class="works__gallery">
-            @for (painting of paintings(); track painting.id) 
-            {
-                <app-gallery-item></app-gallery-item>
-            }
-        </div> <!-- .works__gallery -->
-    </section> <!-- .works -->
+    <div class="works__gallery">
+      @for (painting of paintings(); track painting.id) 
+      {
+        <app-gallery-item></app-gallery-item>
+      }
+    </div> <!-- .works__gallery -->
+  </section> <!-- .works -->
 
   <section class="features">
     <h1 class="features__title">{{'features.title' | translate}}</h1>
