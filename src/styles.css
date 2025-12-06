@@ -103,3 +103,28 @@ footer{
     padding: 2rem;
     border-top: 1px solid var(--mainAccentAlpha);
 }
+
+select{
+    width: 100%;
+    padding: 1.5rem;
+    background-color: var(--negativeSpace);
+    border: 2px solid var(--mainAccentAlpha);
+
+    font-size: 1.6rem;
+    color: var(--subtleAccent);
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+input[type="radio"]{
+    width: 1.8rem;
+    height: 1.8rem;
+    accent-color: var(--mainAccent);
+}
+
+input[type="checkbox"]{
+    width: 1.8rem;
+    height: 1.8rem;
+    accent-color: var(--mainAccent);
+}
