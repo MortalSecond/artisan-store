@@ -84,23 +84,19 @@
             "subtitle": "Selecciona el tamaño de tu obra. Piezas más grandes tienen costos base más altos debido a materiales y mano de obra.",
             "small": {
                 "label": "Pequeña",
-                "description": "Hasta 40cm",
-                "price": "$200"
+                "description": "Hasta 40cm"
             },
             "medium": {
                 "label": "Mediana",
-                "description": "60cm - 120cm",
-                "price": "$400"
+                "description": "60cm - 120cm"
             },
             "large": {
                 "label": "Grande",
-                "description": "120cm - 180cm",
-                "price": "$700"
+                "description": "120cm - 180cm"
             },
             "extra-large": {
                 "label": "Extra Grande",
-                "description": "180cm+",
-                "price": "$1,200"
+                "description": "180cm+"
             }
         },
         "stones": {
@@ -118,22 +114,18 @@
             "subtitle": "Elige el marco perfecto para complementar tu obra mejorada.",
             "wooden": {
                 "label": "Marco de Madera",
-                "price": "+$80",
                 "description": "Elegancia clásica con acabado de madera premium"
             },
             "mirror": {
                 "label": "Marco de Espejo",
-                "price": "+$300",
                 "description": "Acentos de espejo reflectantes para mayor profundidad"
             },
             "led-wooden": {
                 "label": "Marco de Madera LED",
-                "price": "+$450",
                 "description": "Marco de madera iluminado con luz ambiental"
             },
             "led-mirror": {
                 "label": "Marco de Espejo LED",
-                "price": "+$650",
                 "description": "Máximo lujo con luces y espejos"
             }
         },
@@ -142,22 +134,18 @@
             "subtitle": "Transforma tu arte en algo verdaderamente único con elementos de diseño funcional.",
             "clock": {
                 "label": "Mecanismo de Reloj",
-                "price": "+$180",
                 "description": "Transforma tu arte en una pieza de tiempo funcional y elegante"
             },
             "diamond-strips": {
                 "label": "Tiras \"Diamante\"",
-                "price": "+$80",
                 "description": "Tiras reflectantes de tela en el marco interior para resaltar la pintura"
             },
             "studs": {
                 "label": "Tachuelas en la Imagen",
-                "price": "+$80",
                 "description": "Pequeñas esferas de tachuelas de espejo o colores sólidos para dar sensación de profundidad a la imagen"
             },
             "leds": {
                 "label": "LEDs en la Imagen",
-                "price": "+$75",
                 "description": "Tiras de luz utilizables dentro del espacio visual con conectores de pared dedicados"
             }
         },
@@ -166,12 +154,10 @@
             "subtitle": "Acabados premium que realzan tu obra con materiales y técnicas de lujo.",
             "resin": {
                 "label": "Recubrimiento de Resina Epóxica",
-                "price": "+$180",
                 "description": "Crea un acabado brillante y cristalino que captura y refleja la luz hermosamente"
             },
             "geode": {
                 "label": "Espacio Negativo \"Geoda\"",
-                "price": "+$250",
                 "description": "Combina dos colores diferentes para difundirse a través del espacio negativo y crear una textura similar a geodas"
             }
         },

@@ -84,23 +84,19 @@
             "subtitle": "Select the size of your artwork. Larger pieces have higher base costs due to materials and labor.",
             "small": {
                 "label": "Small",
-                "description": "Up to 40cm",
-                "price": "$200"
+                "description": "Up to 40cm"
             },
             "medium": {
                 "label": "Medium",
-                "description": "60cm - 120cm",
-                "price": "$400"
+                "description": "60cm - 120cm"
             },
             "large": {
                 "label": "Large",
-                "description": "120cm - 180cm",
-                "price": "$700"
+                "description": "120cm - 180cm"
             },
             "extra-large": {
                 "label": "Extra Large",
-                "description": "180cm+",
-                "price": "$1,200"
+                "description": "180cm+"
             }
         },
         "stones": {
@@ -118,22 +114,18 @@
             "subtitle": "Choose the perfect frame to complement your enhanced artwork.",
             "wooden": {
                 "label": "Wooden Frame",
-                "price": "+$80",
                 "description": "Classic elegance with premium wooden finish"
             },
             "mirror": {
                 "label": "Mirror Frame",
-                "price": "+$300",
                 "description": "Reflective mirror accents for added depth"
             },
             "led-wooden": {
                 "label": "LED Wooden Frame",
-                "price": "+$450",
                 "description": "Illuminated wooden frame with ambient lighting"
             },
             "led-mirror": {
                 "label": "LED Mirror Frame",
-                "price": "+$650",
                 "description": "Ultimate luxury with lights and mirrors"
             }
         },
@@ -142,22 +134,18 @@
             "subtitle": "Transform your art into something truly unique with functional design elements.",
             "clock": {
                 "label": "Clock Mechanism",
-                "price": "+$180",
                 "description": "Transform your art into a functional, elegant timepiece"
             },
             "diamond-strips": {
                 "label": "\"Diamond\" Strips",
-                "price": "+$80",
                 "description": "Reflective strips of cloth in the inner frame to bring out the painting"
             },
             "studs": {
                 "label": "Studs In Picture",
-                "price": "+$80",
                 "description": "Small spheres of either mirror studs or solid colors to give a sense of depth to the image"
             },
             "leds": {
                 "label": "LEDs In Picture",
-                "price": "+$75",
                 "description": "Usable light strips inside the viewing space with dedicated wall connectors"
             }
         },
@@ -166,12 +154,10 @@
             "subtitle": "Premium finishes that enhance your artwork with luxury materials and techniques.",
             "resin": {
                 "label": "Epoxy Resin Coating",
-                "price": "+$180",
                 "description": "Creates a glossy, crystalline finish that beautifully catches and reflects light"
             },
             "geode": {
                 "label": "\"Geode\" Negative Space",
-                "price": "+$250",
                 "description": "Combines two different colors to diffuse across the negative space to create a texture akin to geodes"
             }
         },
