@@ -160,6 +160,13 @@
     border-color: var(--mainAccent);
 }
 
+.size-options__item--active {
+  border-color: var(--mainAccent);
+  background-color: var(--mainAccentAlpha);
+  transform: translateY(-3px);
+  box-shadow: 0 0.5rem 1.5rem rgba(212, 175, 55, 0.3);
+}
+
 .size-options__title{
     color: var(--subtleAccent);
     font-family: var(--textFont);

@@ -21,7 +21,7 @@
 
 					<div class="section__size-options">
 						<div class="size-options__item"
-							[class.active]="selectedSize() === 'small'"
+							[class.size-options__item--active]="selectedSize() === 'small'"
 							(click)="selectSize('small')">
 							<h3 class="size-options__title">{{'commission.size.small.label' | translate}}</h3>
 							<p class="size-options__description">{{'commission.size.small.description' | translate}}</p>
@@ -29,7 +29,7 @@
 						</div>
 						
 						<div class="size-options__item"
-							[class.active]="selectedSize() === 'medium'"
+							[class.size-options__item--active]="selectedSize() === 'medium'"
 							(click)="selectSize('medium')">
 							<h3 class="size-options__title">{{'commission.size.medium.label' | translate}}</h3>
 							<p class="size-options__description">{{'commission.size.medium.description' | translate}}</p>
@@ -37,7 +37,7 @@
 						</div>
 						
 						<div class="size-options__item"
-							[class.active]="selectedSize() === 'large'"
+							[class.size-options__item--active]="selectedSize() === 'large'"
 							(click)="selectSize('large')">
 							<h3 class="size-options__title">{{'commission.size.large.label' | translate}}</h3>
 							<p class="size-options__description">{{'commission.size.large.description' | translate}}</p>
@@ -45,7 +45,7 @@
 						</div>
 						
 						<div class="size-options__item"
-							[class.active]="selectedSize() === 'extra-large'"
+							[class.size-options__item--active]="selectedSize() === 'extra-large'"
 							(click)="selectSize('extra-large')">
 							<h3 class="size-options__title">{{'commission.size.extra-large.label' | translate}}</h3>
 							<p class="size-options__description">{{'commission.size.extra-large.description' | translate}}</p>
