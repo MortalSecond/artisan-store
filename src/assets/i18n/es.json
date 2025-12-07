@@ -9,67 +9,188 @@
             "contact": "Contacto"
         }
     },
-    "hero":{
-        "big-text": "Transformando Arte En Lujo",
-        "small-text": "Pinturas decoradas a mano, adornadas con piedras preciosas, espejos, y acentos dorados",
-        "button-gallery": "Ver Galería",
-        "button-commission": "Solicitar Una Comisión"
-    },
-    "works":{
-        "title": "Trabajos Destacados",
-        "subtitle": "Cada pieza es una obra maestra única"
-    },
-    "features":{
-        "title": "Excelencia Artesanal",
-        "subtitle": "Lo que hace cada pieza extraordinaria",
-        "materials":{
-            "title": "Materiales Preciosos",
-            "description": "Pirita auténtica, cuarzo y piedras semipreciosas colocadas a mano para máximo impacto visual"
+    "home":{
+        "hero":{
+            "big-text": "Transformando Arte En Lujo",
+            "small-text": "Pinturas decoradas a mano, adornadas con piedras preciosas, espejos, y acentos dorados",
+            "button-gallery": "Ver Galería",
+            "button-commission": "Solicitar Una Comisión"
         },
-        "finishes":{
-            "title": "Acabados de Lujo",
-            "description": "Recubrimientos de resina de alta calidad y acentos metálicos que capturan y reflejan la luz hermosamente"
+        "works":{
+            "title": "Trabajos Destacados",
+            "subtitle": "Cada pieza es una obra maestra única"
         },
-        "mirrors":{
-            "title": "Arte con Espejos",
-            "description": "Marcos de espejo personalizados y acentos que añaden profundidad y elegancia a cada pieza"
+        "features":{
+            "title": "Excelencia Artesanal",
+            "subtitle": "Lo que hace cada pieza extraordinaria",
+            "materials":{
+                "title": "Materiales Preciosos",
+                "description": "Pirita auténtica, cuarzo y piedras semipreciosas colocadas a mano para máximo impacto visual"
+            },
+            "finishes":{
+                "title": "Acabados de Lujo",
+                "description": "Recubrimientos de resina de alta calidad y acentos metálicos que capturan y reflejan la luz hermosamente"
+            },
+            "mirrors":{
+                "title": "Arte con Espejos",
+                "description": "Marcos de espejo personalizados y acentos que añaden profundidad y elegancia a cada pieza"
+            },
+            "led":{
+                "title": "Integración LED",
+                "description": "Sistemas de iluminación LED opcionales que transforman el arte en impresionantes declaraciones iluminadas"
+            }
         },
-        "led":{
-            "title": "Integración LED",
-            "description": "Sistemas de iluminación LED opcionales que transforman el arte en impresionantes declaraciones iluminadas"
+        "commission":{
+            "title": "Comisiones Personalizadas",
+            "text": "Transforma tu obra de arte en una obra maestra lujosa. Envíanos tu pintura y la elevaremos con materiales preciosos, artesanía experta y diseño a medida.",
+            "features":{
+                "pyrite": "Adornos de pirita y piedras preciosas",
+                "mirrors": "Marcos con espejos e iluminación LED",
+                "resin": "Recubrimientos de resina y tratamientos reflectantes",
+                "negative-space": "Técnicas de espacio negativo oro-negro",
+                "custom": "Diseños de relojes personalizados y arte funcional",
+                "shipping": "Envío internacional disponible"
+            },
+            "button": "Inicia Tu Comisión"
+        },
+        "process":{
+            "title": "Nuestro Proceso",
+            "subtitle": "De la visión al producto en cuatro simples pasos",
+            "consultation":{
+                "title": "Consulta",
+                "description": "Comparte tu visión y obra de arte. Discutiremos materiales, tamaño y opciones de diseño para dar vida a tu concepto."
+            },
+            "quotation":{
+                "title": "Cotización",
+                "description": "Recibe una cotización detallada basada en tus especificaciones. Detallaremos materiales, cronograma y costos de forma transparente."
+            },
+            "creation":{
+                "title": "Creación",
+                "description": "Observa cómo tu pieza cobra vida. Te mantendremos informado durante todo el proceso de creación con fotos y reportes de progreso."
+            },
+            "delivery":{
+                "title": "Entrega",
+                "description": "Tu obra maestra terminada se empaca cuidadosamente y se envía. Aseguramos entrega segura con seguro completo y rastreo."
+            }
         }
     },
-    "commission":{
-        "title": "Comisiones Personalizadas",
-        "text": "Transforma tu obra de arte en una obra maestra lujosa. Envíanos tu pintura y la elevaremos con materiales preciosos, artesanía experta y diseño a medida.",
-        "features":{
-            "pyrite": "Adornos de pirita y piedras preciosas",
-            "mirrors": "Marcos con espejos e iluminación LED",
-            "resin": "Recubrimientos de resina y tratamientos reflectantes",
-            "negative-space": "Técnicas de espacio negativo oro-negro",
-            "custom": "Diseños de relojes personalizados y arte funcional",
-            "shipping": "Envío internacional disponible"
+    "commission": {
+        "hero": {
+            "title": "Diseña Tu Comisión",
+            "subtitle": "Transforma tu obra de arte en una pieza de declaración lujosa con materiales preciosos, artesanía experta y diseño a medida"
         },
-        "button": "Inicia Tu Comisión"
-    },
-    "process":{
-        "title": "Nuestro Proceso",
-        "subtitle": "De la visión al producto en cuatro simples pasos",
-        "consultation":{
-            "title": "Consulta",
-            "description": "Comparte tu visión y obra de arte. Discutiremos materiales, tamaño y opciones de diseño para dar vida a tu concepto."
+        "size": {
+            "title": "Tamaño de la Pintura",
+            "subtitle": "Selecciona el tamaño de tu obra. Piezas más grandes tienen costos base más altos debido a materiales y mano de obra.",
+            "small": {
+                "label": "Pequeña",
+                "description": "Hasta 40cm",
+                "price": "$200"
+            },
+            "medium": {
+                "label": "Mediana",
+                "description": "60cm - 120cm",
+                "price": "$400"
+            },
+            "large": {
+                "label": "Grande",
+                "description": "120cm - 180cm",
+                "price": "$700"
+            },
+            "extra-large": {
+                "label": "Extra Grande",
+                "description": "180cm+",
+                "price": "$1,200"
+            }
         },
-        "quotation":{
-            "title": "Cotización",
-            "description": "Recibe una cotización detallada basada en tus especificaciones. Detallaremos materiales, cronograma y costos de forma transparente."
+        "stones": {
+            "title": "Cobertura de Piedras",
+            "subtitle": "Pirita, cuarzo y piedras semipreciosas colocadas a mano crean impresionante profundidad visual y textura.",
+            "options": {
+                "none": "Ninguna",
+                "light": "Cobertura Ligera (Acentos)",
+                "medium": "Cobertura Media (Espacio Negativo)",
+                "heavy": "Cobertura Pesada (Margen Y Espacio Negativo)"
+            }
         },
-        "creation":{
-            "title": "Creación",
-            "description": "Observa cómo tu pieza cobra vida. Te mantendremos informado durante todo el proceso de creación con fotos y reportes de progreso."
+        "frame": {
+            "title": "Selección de Marco",
+            "subtitle": "Elige el marco perfecto para complementar tu obra mejorada.",
+            "wooden": {
+                "label": "Marco de Madera",
+                "price": "+$80",
+                "description": "Elegancia clásica con acabado de madera premium"
+            },
+            "mirror": {
+                "label": "Marco de Espejo",
+                "price": "+$300",
+                "description": "Acentos de espejo reflectantes para mayor profundidad"
+            },
+            "led-wooden": {
+                "label": "Marco de Madera LED",
+                "price": "+$450",
+                "description": "Marco de madera iluminado con luz ambiental"
+            },
+            "led-mirror": {
+                "label": "Marco de Espejo LED",
+                "price": "+$650",
+                "description": "Máximo lujo con luces y espejos"
+            }
         },
-        "delivery":{
-            "title": "Entrega",
-            "description": "Tu obra maestra terminada se empaca cuidadosamente y se envía. Aseguramos entrega segura con seguro completo y rastreo."
+        "features": {
+            "title": "Características Especiales",
+            "subtitle": "Transforma tu arte en algo verdaderamente único con elementos de diseño funcional.",
+            "clock": {
+                "label": "Mecanismo de Reloj",
+                "price": "+$180",
+                "description": "Transforma tu arte en una pieza de tiempo funcional y elegante"
+            },
+            "diamond-strips": {
+                "label": "Tiras \"Diamante\"",
+                "price": "+$80",
+                "description": "Tiras reflectantes de tela en el marco interior para resaltar la pintura"
+            },
+            "studs": {
+                "label": "Tachuelas en la Imagen",
+                "price": "+$80",
+                "description": "Pequeñas esferas de tachuelas de espejo o colores sólidos para dar sensación de profundidad a la imagen"
+            },
+            "leds": {
+                "label": "LEDs en la Imagen",
+                "price": "+$75",
+                "description": "Tiras de luz utilizables dentro del espacio visual con conectores de pared dedicados"
+            }
+        },
+        "treatments": {
+            "title": "Tratamientos de Superficie",
+            "subtitle": "Acabados premium que realzan tu obra con materiales y técnicas de lujo.",
+            "resin": {
+                "label": "Recubrimiento de Resina Epóxica",
+                "price": "+$180",
+                "description": "Crea un acabado brillante y cristalino que captura y refleja la luz hermosamente"
+            },
+            "geode": {
+                "label": "Espacio Negativo \"Geoda\"",
+                "price": "+$250",
+                "description": "Combina dos colores diferentes para difundirse a través del espacio negativo y crear una textura similar a geodas"
+            }
+        },
+        "shipping": {
+            "title": "Ubicación de Envío",
+            "domestic": "Nacional (México)",
+            "north-america": "Norteamérica",
+            "international": "Internacional"
+        },
+        "price": {
+            "title": "Tu Comisión",
+            "base": "Base",
+            "frame": "Marco",
+            "stones": "Piedras",
+            "features": "Características Especiales",
+            "treatments": "Tratamientos de Superficie",
+            "shipping": "Envío",
+            "total": "Total Estimado:",
+            "button": "Solicitar Cotización"
         }
     },
     "footer":{

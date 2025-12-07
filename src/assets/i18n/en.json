@@ -9,67 +9,188 @@
             "contact": "Contact"
         }
     },
-    "hero":{
-        "big-text": "Transforming Art Into Luxury",
-        "small-text": "Hand-decorated paintings adorned with precious stones, mirrors, and golden accents",
-        "button-gallery": "View Gallery",
-        "button-commission": "Commission A Piece"
-    },
-    "works":{
-        "title": "Featured Works",
-        "subtitle": "Each piece is a unique masterpiece"
-    },
-    "features":{
-        "title": "Craftsmanship Excellence",
-        "subtitle": "What makes each piece extraordinary",
-        "materials":{
-            "title": "Precious Materials",
-            "description": "Authentic pyrite, quartz, and semi-precious stones hand-placed for maximum visual impact"
+    "home":{
+        "hero":{
+            "big-text": "Transforming Art Into Luxury",
+            "small-text": "Hand-decorated paintings adorned with precious stones, mirrors, and golden accents",
+            "button-gallery": "View Gallery",
+            "button-commission": "Commission A Piece"
         },
-        "finishes":{
-            "title": "Luxury Finishes",
-            "description": "High-quality resin coatings and metallic accents that catch and reflect light beautifully"
+        "works":{
+            "title": "Featured Works",
+            "subtitle": "Each piece is a unique masterpiece"
         },
-        "mirrors":{
-            "title": "Mirror Artistry",
-            "description": "Custom mirror frames and accents that add depth and elegance to every piece"
+        "features":{
+            "title": "Craftsmanship Excellence",
+            "subtitle": "What makes each piece extraordinary",
+            "materials":{
+                "title": "Precious Materials",
+                "description": "Authentic pyrite, quartz, and semi-precious stones hand-placed for maximum visual impact"
+            },
+            "finishes":{
+                "title": "Luxury Finishes",
+                "description": "High-quality resin coatings and metallic accents that catch and reflect light beautifully"
+            },
+            "mirrors":{
+                "title": "Mirror Artistry",
+                "description": "Custom mirror frames and accents that add depth and elegance to every piece"
+            },
+            "led":{
+                "title": "LED Integration",
+                "description": "Optional LED lighting systems that transform artwork into stunning illuminated statements"
+            }
         },
-        "led":{
-            "title": "LED Integration",
-            "description": "Optional LED lighting systems that transform artwork into stunning illuminated statements"
+        "commission":{
+            "title": "Custom Commissions",
+            "text": "Transform your artwork into a luxurious masterpiece. Send us your painting and we'll elevate it with precious materials, expert craftsmanship, and bespoke design.",
+            "features":{
+                "pyrite": "Pyrite and precious stone embellishments",
+                "mirrors": "Mirror and LED-illuminated frames",
+                "resin": "Resin coatings and reflective treatments",
+                "negative-space": "Gold-black negative space techniques",
+                "custom": "Custom clock and functional art designs",
+                "shipping": "International shipping available"
+            },
+            "button": "Start Your Commission"
+        },
+        "process":{
+            "title": "Our Process",
+            "subtitle": "From vision to product in four simple steps",
+            "consultation":{
+                "title": "Consultation",
+                "description": "Share your vision and artwork. We'll discuss materials, size, and design options to bring your concept to life."
+            },
+            "quotation":{
+                "title": "Quotation",
+                "description": "Receive a detailed quote based on your specifications. We'll outline materials, timeline, and costs transparently."
+            },
+            "creation":{
+                "title": "Creation",
+                "description": "Watch your piece come to life. We'll keep you updated throughout the creation process with photos and progress reports."
+            },
+            "delivery":{
+                "title": "Delivery",
+                "description": "Your finished masterpiece is carefully packaged and shipped. We ensure safe delivery with full insurance and tracking."
+            }
         }
     },
-    "commission":{
-        "title": "Custom Commissions",
-        "text": "Transform your artwork into a luxurious masterpiece. Send us your painting and we'll elevate it with precious materials, expert craftsmanship, and bespoke design.",
-        "features":{
-            "pyrite": "Pyrite and precious stone embellishments",
-            "mirrors": "Mirror and LED-illuminated frames",
-            "resin": "Resin coatings and reflective treatments",
-            "negative-space": "Gold-black negative space techniques",
-            "custom": "Custom clock and functional art designs",
-            "shipping": "International shipping available"
+    "commission": {
+        "hero": {
+            "title": "Design Your Commission",
+            "subtitle": "Transform your artwork into a luxurious statement piece with precious materials, expert craftsmanship, and bespoke design"
         },
-        "button": "Start Your Commission"
-    },
-    "process":{
-        "title": "Our Process",
-        "subtitle": "From vision to product in four simple steps",
-        "consultation":{
-            "title": "Consultation",
-            "description": "Share your vision and artwork. We'll discuss materials, size, and design options to bring your concept to life."
+        "size": {
+            "title": "Painting Size",
+            "subtitle": "Select the size of your artwork. Larger pieces have higher base costs due to materials and labor.",
+            "small": {
+                "label": "Small",
+                "description": "Up to 40cm",
+                "price": "$200"
+            },
+            "medium": {
+                "label": "Medium",
+                "description": "60cm - 120cm",
+                "price": "$400"
+            },
+            "large": {
+                "label": "Large",
+                "description": "120cm - 180cm",
+                "price": "$700"
+            },
+            "extra-large": {
+                "label": "Extra Large",
+                "description": "180cm+",
+                "price": "$1,200"
+            }
         },
-        "quotation":{
-            "title": "Quotation",
-            "description": "Receive a detailed quote based on your specifications. We'll outline materials, timeline, and costs transparently."
+        "stones": {
+            "title": "Stone Coverage",
+            "subtitle": "Hand-placed pyrite, quartz, and semi-precious stones create stunning visual depth and texture.",
+            "options": {
+                "none": "None",
+                "light": "Light Coverage (Accents)",
+                "medium": "Medium Coverage (Negative Space)",
+                "heavy": "Heavy Coverage (Margin And Negative Space)"
+            }
         },
-        "creation":{
-            "title": "Creation",
-            "description": "Watch your piece come to life. We'll keep you updated throughout the creation process with photos and progress reports."
+        "frame": {
+            "title": "Frame Selection",
+            "subtitle": "Choose the perfect frame to complement your enhanced artwork.",
+            "wooden": {
+                "label": "Wooden Frame",
+                "price": "+$80",
+                "description": "Classic elegance with premium wooden finish"
+            },
+            "mirror": {
+                "label": "Mirror Frame",
+                "price": "+$300",
+                "description": "Reflective mirror accents for added depth"
+            },
+            "led-wooden": {
+                "label": "LED Wooden Frame",
+                "price": "+$450",
+                "description": "Illuminated wooden frame with ambient lighting"
+            },
+            "led-mirror": {
+                "label": "LED Mirror Frame",
+                "price": "+$650",
+                "description": "Ultimate luxury with lights and mirrors"
+            }
         },
-        "delivery":{
-            "title": "Delivery",
-            "description": "Your finished masterpiece is carefully packaged and shipped. We ensure safe delivery with full insurance and tracking."
+        "features": {
+            "title": "Special Features",
+            "subtitle": "Transform your art into something truly unique with functional design elements.",
+            "clock": {
+                "label": "Clock Mechanism",
+                "price": "+$180",
+                "description": "Transform your art into a functional, elegant timepiece"
+            },
+            "diamond-strips": {
+                "label": "\"Diamond\" Strips",
+                "price": "+$80",
+                "description": "Reflective strips of cloth in the inner frame to bring out the painting"
+            },
+            "studs": {
+                "label": "Studs In Picture",
+                "price": "+$80",
+                "description": "Small spheres of either mirror studs or solid colors to give a sense of depth to the image"
+            },
+            "leds": {
+                "label": "LEDs In Picture",
+                "price": "+$75",
+                "description": "Usable light strips inside the viewing space with dedicated wall connectors"
+            }
+        },
+        "treatments": {
+            "title": "Surface Treatments",
+            "subtitle": "Premium finishes that enhance your artwork with luxury materials and techniques.",
+            "resin": {
+                "label": "Epoxy Resin Coating",
+                "price": "+$180",
+                "description": "Creates a glossy, crystalline finish that beautifully catches and reflects light"
+            },
+            "geode": {
+                "label": "\"Geode\" Negative Space",
+                "price": "+$250",
+                "description": "Combines two different colors to diffuse across the negative space to create a texture akin to geodes"
+            }
+        },
+        "shipping": {
+            "title": "Shipping Location",
+            "domestic": "Domestic (Mexico)",
+            "north-america": "North America",
+            "international": "International"
+        },
+        "price": {
+            "title": "Your Commission",
+            "base": "Base",
+            "frame": "Frame",
+            "stones": "Stones",
+            "features": "Special Features",
+            "treatments": "Surface Treatments",
+            "shipping": "Shipping",
+            "total": "Estimated Total:",
+            "button": "Request Quote"
         }
     },
     "footer":{
