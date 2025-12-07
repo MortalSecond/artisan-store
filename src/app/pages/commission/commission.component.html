@@ -1,10 +1,8 @@
 <main>
 	<div class="hero">
-		<h1 class="hero__big-text">Design Your Commission</h1>
+		<h1 class="hero__big-text">{{'commission.hero.title' | translate}}</h1>
 		<p class="hero__small-text">
-			Transform your artwork into a luxurious statement 
-			piece with precious materials, expert craftsmanship, 
-			and bespoke design
+			{{'commission.hero.subtitle' | translate}}
 		</p>
 	</div> <!-- .hero -->
 
@@ -15,36 +13,35 @@
 			<div class="commission-design__section">
 				<div class="section__container">
 					<div class="section__title-group">
-						<h2 class="section__title">Painting Size</h2>
+						<h2 class="section__title">{{'commission.size.title' | translate}}</h2>
 						<p class="section__subtitle">
-							Select the size of your artwork. Larger pieces have 
-							higher base costs due to materials and labor.
+							{{'commission.size.subtitle' | translate}}
 						</p>
 					</div>
 
 					<div class="section__size-options">
 						<div class="size-options__item">
-							<h3 class="size-options__title">Small</h3>
-							<p class="size-options__description">Up to 40cm</p>
-							<h2 class="size-options__price">$200</h2>
+							<h3 class="size-options__title">{{'commission.size.small.label' | translate}}</h3>
+							<p class="size-options__description">{{'commission.size.small.description' | translate}}</p>
+							<h2 class="size-options__price">{{'commission.size.small.price' | translate}}</h2>
 						</div>
 						
 						<div class="size-options__item">
-							<h3 class="size-options__title">Medium</h3>
-							<p class="size-options__description">60cm - 120cm</p>
-							<h2 class="size-options__price">$200</h2>
+							<h3 class="size-options__title">{{'commission.size.medium.label' | translate}}</h3>
+							<p class="size-options__description">{{'commission.size.medium.description' | translate}}</p>
+							<h2 class="size-options__price">{{'commission.size.medium.price' | translate}}</h2>
 						</div>
 						
 						<div class="size-options__item">
-							<h3 class="size-options__title">Large</h3>
-							<p class="size-options__description">120cm - 180cm</p>
-							<h2 class="size-options__price">$200</h2>
+							<h3 class="size-options__title">{{'commission.size.large.label' | translate}}</h3>
+							<p class="size-options__description">{{'commission.size.large.description' | translate}}</p>
+							<h2 class="size-options__price">{{'commission.size.large.price' | translate}}</h2>
 						</div>
 						
 						<div class="size-options__item">
-							<h3 class="size-options__title">Extra Large</h3>
-							<p class="size-options__description">180cm+</p>
-							<h2 class="size-options__price">$200</h2>
+							<h3 class="size-options__title">{{'commission.size.extra-large.label' | translate}}</h3>
+							<p class="size-options__description">{{'commission.size.extra-large.description' | translate}}</p>
+							<h2 class="size-options__price">{{'commission.size.extra-large.price' | translate}}</h2>
 						</div>
 					</div> <!-- .section__size-options -->
 				</div> <!-- .section__container -->
@@ -54,18 +51,17 @@
 			<div class="commission-design__section">
 				<div class="section__container">
 					<div class="section__title-group">
-						<h2 class="section__title">Stone Coverage</h2>
+						<h2 class="section__title">{{'commission.stones.title' | translate}}</h2>
 						<p class="section__subtitle">
-							Hand-placed pyrite, quartz, and semi-precious stones create 
-							stunning visual depth and texture.
+							{{'commission.stones.subtitle' | translate}}
 						</p>
 					</div>
 
 					<select>
-						<option value="0">None</option>
-						<option value="200">Light Coverage (Accents)</option>
-						<option value="400">Medium Coverage (Negative Space)</option>
-						<option value="800">Heavy Coverage (Margin And Negative Space)</option>
+						<option value="0">{{'commission.stones.options.none' | translate}}</option>
+						<option value="200">{{'commission.stones.options.light' | translate}}</option>
+						<option value="400">{{'commission.stones.options.medium' | translate}}</option>
+						<option value="800">{{'commission.stones.options.heavy' | translate}}</option>
 					</select>
 				</div> <!-- .section__container -->
 			</div> <!-- .commission-design__section -->
@@ -74,9 +70,9 @@
 			<div class="commission-design__section">
 				<div class="section__container">
 					<div class="section__title-group">
-						<h2 class="section__title">Frame Selection</h2>
+						<h2 class="section__title">{{'commission.frame.title' | translate}}</h2>
 						<p class="section__subtitle">
-							Choose the perfect frame to complement your enhanced artwork.
+							{{'commission.frame.subtitle' | translate}}
 						</p>
 					</div>
 
@@ -84,48 +80,48 @@
 						<label class="item">
 							<div class="item__title-group">
 								<input type="radio" name="frame">
-								<h3 class="item__title">Wooden Frame</h3>
-								<span class="item__price">+$80</span>
+								<h3 class="item__title">{{'commission.frame.wooden.label' | translate}}</h3>
+								<span class="item__price">{{'commission.frame.wooden.price' | translate}}</span>
 							</div>
 							
 							<p class="item__description">
-								Classic elegance with premium wooden finish
+								{{'commission.frame.wooden.description' | translate}}
 							</p>
 						</label>
 
 						<label class="item">
 							<div class="item__title-group">
 								<input type="radio" name="frame">
-								<h3 class="item__title">Mirror Frame</h3>
-								<span class="item__price">+$300</span>
+								<h3 class="item__title">{{'commission.frame.mirror.label' | translate}}</h3>
+								<span class="item__price">{{'commission.frame.mirror.price' | translate}}</span>
 							</div>
 
 							<p class="item__description">
-								Reflective mirror accents for added depth
+								{{'commission.frame.mirror.description' | translate}}
 							</p>
 						</label>
 
 						<label class="item">
 							<div class="item__title-group">
 								<input type="radio" name="frame">
-								<h3 class="item__title">LED Wooden Frame</h3>
-								<span class="item__price">+$450</span>
+								<h3 class="item__title">{{'commission.frame.led-wooden.label' | translate}}</h3>
+								<span class="item__price">{{'commission.frame.led-wooden.price' | translate}}</span>
 							</div>
 
 							<p class="item__description">
-								Illuminated wooden frame with ambient lighting
+								{{'commission.frame.led-wooden.description' | translate}}
 							</p>
 						</label>
 
 						<label class="item">
 							<div class="item__title-group">
 								<input type="radio" name="frame">
-								<h3 class="item__title">LED Mirror Frame</h3>
-								<span class="item__price">+$650</span>
+								<h3 class="item__title">{{'commission.frame.led-mirror.label' | translate}}</h3>
+								<span class="item__price">{{'commission.frame.led-mirror.description' | translate}}</span>
 							</div>
 							
 							<p class="item__description">
-								Ultimate luxury with lights and mirrors
+								{{'commission.frame.led-mirror.description' | translate}}
 							</p>
 						</label>
 					</div> <!-- .section__options -->
@@ -136,10 +132,9 @@
 			<div class="commission-design__section">
 				<div class="section__container">
 					<div class="section__title-group">
-						<h2 class="section__title">Special Features</h2>
+						<h2 class="section__title">{{'commission.features.title' | translate}}</h2>
 						<p class="section__subtitle">
-							Transform your art into something truly unique 
-							with functional design elements.
+							{{'commission.features.subtitle' | translate}}
 						</p>
 					</div>
 
@@ -147,51 +142,48 @@
 						<label class="item">
 							<div class="item__title-group">
 								<input type="checkbox" name="feature">
-								<h3 class="item__title">Clock Mechanism</h3>
-								<span class="item__price">+$180</span>
+								<h3 class="item__title">{{'commission.features.clock.label' | translate}}</h3>
+								<span class="item__price">{{'commission.features.clock.price' | translate}}</span>
 							</div>
 							
 							<p class="item__description">
-								Transform your art into a functional, elegant timepiece
+								{{'commission.features.clock.description' | translate}}
 							</p>
 						</label>
 						
 						<label class="item">
 							<div class="item__title-group">
 								<input type="checkbox" name="feature">
-								<h3 class="item__title">"Diamond" Strips</h3>
-								<span class="item__price">+$80</span>
+								<h3 class="item__title">{{'commission.features.diamond-strips.label' | translate}}</h3>
+								<span class="item__price">{{'commission.features.diamond-strips.price' | translate}}</span>
 							</div>
 							
 							<p class="item__description">
-								Reflective strips of cloth in the inner frame to
-								bring out the painting
+								{{'commission.features.diamond-strips.description' | translate}}
 							</p>
 						</label>
 						
 						<label class="item">
 							<div class="item__title-group">
 								<input type="checkbox" name="feature">
-								<h3 class="item__title">Studs In Picture</h3>
-								<span class="item__price">+$80</span>
+								<h3 class="item__title">{{'commission.features.studs.label' | translate}}</h3>
+								<span class="item__price">{{'commission.features.studs.price' | translate}}</span>
 							</div>
 							
 							<p class="item__description">
-								Small spheres of either mirror studs or solid colors
-								to give a sense of depth to the image
+								{{'commission.features.studs.description' | translate}}
 							</p>
 						</label>
 						
 						<label class="item">
 							<div class="item__title-group">
 								<input type="checkbox" name="feature">
-								<h3 class="item__title">LEDs In Picture</h3>
-								<span class="item__price">+$75</span>
+								<h3 class="item__title">{{'commission.features.leds.label' | translate}}</h3>
+								<span class="item__price">{{'commission.features.leds.price' | translate}}</span>
 							</div>
 							
 							<p class="item__description">
-								Usable light strips inside the viewing space with 
-								dedicated wall connectors
+								{{'commission.features.leds.description' | translate}}
 							</p>
 						</label>
 					</div> <!-- .section__options -->
@@ -202,10 +194,9 @@
 			<div class="commission-design__section">
 				<div class="section__container">
 					<div class="section__title-group">
-						<h2 class="section__title">Surface Treatments</h2>
+						<h2 class="section__title">{{'commission.treatments.title' | translate}}</h2>
 						<p class="section__subtitle">
-							Premium finishes that enhance your artwork with 
-							luxury materials and techniques.
+							{{'commission.treatments.subtitle' | translate}}
 						</p>
 					</div>
 
@@ -213,26 +204,24 @@
 						<label class="item">
 							<div class="item__title-group">
 								<input type="checkbox" name="treatment">
-								<h3 class="item__title">Epoxy Resin Coating</h3>
-								<span class="item__price">+$180</span>
+								<h3 class="item__title">{{'commission.treatments.resin.label' | translate}}</h3>
+								<span class="item__price">{{'commission.treatments.resin.price' | translate}}</span>
 							</div>
 							
 							<p class="item__description">
-								Creates a glossy, crystalline finish that beautifully 
-								catches and reflects light
+								{{'commission.treatments.resin.description' | translate}}
 							</p>
 						</label>
 						
 						<label class="item">
 							<div class="item__title-group">
 								<input type="checkbox" name="treatment">
-								<h3 class="item__title">"Geode" Negative Space</h3>
-								<span class="item__price">+$250</span>
+								<h3 class="item__title">{{'commission.treatments.geode.label' | translate}}</h3>
+								<span class="item__price">{{'commission.treatments.geode.price' | translate}}</span>
 							</div>
 							
 							<p class="item__description">
-								Combines two different colors to diffuse across the
-								negative space to create a texture akin to geodes
+								{{'commission.treatments.geode.description' | translate}}
 							</p>
 						</label>
 					</div> <!-- .section__options -->
@@ -243,13 +232,13 @@
 			<div class="commission-design__section">
 				<div class="section__container">
 					<div class="section__title-group">
-						<h2 class="section__title">Shipping Location</h2>
+						<h2 class="section__title">{{'commission.shipping.title' | translate}}</h2>
 					</div>
 
 					<select>
-						<option value="50">Domestic (Mexico)</option>
-						<option value="150">North America</option>
-						<option value="250">International</option>
+						<option value="50">{{'commission.shipping.domestic' | translate}}</option>
+						<option value="150">{{'commission.shipping.north-america' | translate}}</option>
+						<option value="250">{{'commission.shipping.international' | translate}}</option>
 					</select>
 				</div> <!-- .section__container -->
 			</div> <!-- .commission-design__section -->
@@ -257,32 +246,32 @@
 
 		<!-- Commission Price (Right Side) -->
 		<div class="quotation__price">
-			<h2 class="price__title">Your Commission</h2>
+			<h2 class="price__title">{{'commission.price.title' | translate}}</h2>
 
 			<div>
 				<div class="price__item">
-					<span class="price__item-label">Base</span>
+					<span class="price__item-label">{{'commission.price.base' | translate}}</span>
 					<span class="price__item-price">$200</span>
 				</div>
 
 				<div class="price__item">
-					<span class="price__item-label">Frame</span>
+					<span class="price__item-label">{{'commission.price.frame' | translate}}</span>
 					<span class="price__item-price">$80</span>
 				</div>
 
 				<div class="price__item">
-					<span class="price__item-label">Stones</span>
+					<span class="price__item-label">{{'commission.price.stones' | translate}}</span>
 					<span class="price__item-price">$0</span>
 				</div>
 			</div>
 
 			<div class="price__total-group">
-				<h2 class="total-group__label">Estimated Total:</h2>
+				<h2 class="total-group__label">{{'commission.price.total' | translate}}</h2>
 				<h2 class="total-group__number">$0000</h2>
 			</div>
 
 			<button class="price__button">
-				Request Quote
+				{{'commission.price.button' | translate}}
 			</button>
 		</div>
 	</section>
