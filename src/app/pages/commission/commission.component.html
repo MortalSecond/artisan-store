@@ -231,7 +231,7 @@
 									[checked]="isTreatmentSelected('resin')"
 									(change)="toggleTreatment('resin')">
 								<h3 class="item__title">{{'commission.treatments.resin.label' | translate}}</h3>
-								<span class="item__price">{{'commission.treatments.resin.price' | translate}}</span>
+								<span class="item__price">${{pricingService.getTreatmentPrice('resin')}}</span>
 							</div>
 							
 							<p class="item__description">
@@ -245,7 +245,7 @@
 									[checked]="isTreatmentSelected('geode')"
 									(change)="toggleTreatment('geode')">
 								<h3 class="item__title">{{'commission.treatments.geode.label' | translate}}</h3>
-								<span class="item__price">{{'commission.treatments.geode.price' | translate}}</span>
+								<span class="item__price">${{pricingService.getTreatmentPrice('geode')}}</span>
 							</div>
 							
 							<p class="item__description">
