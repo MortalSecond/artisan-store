@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { LogoComponent } from '../logo/logo.component';
 import { RouterLink } from '@angular/router';
+import { ContactsService } from '../../../services/contacts.service';
 
 @Component({
   selector: 'app-footer',
@@ -10,5 +11,6 @@ import { RouterLink } from '@angular/router';
   styleUrl: './footer.component.css'
 })
 export class FooterComponent {
-
+  // Services
+  contactService = inject(ContactsService);
 }

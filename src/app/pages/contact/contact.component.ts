@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
+import { ContactsService } from '../../services/contacts.service';
 
 @Component({
   selector: 'app-contact',
@@ -8,5 +9,6 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrl: './contact.component.css'
 })
 export class ContactComponent {
-
+  // Services
+  contactService = inject(ContactsService);
 }

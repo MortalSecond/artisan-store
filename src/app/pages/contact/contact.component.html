@@ -69,8 +69,8 @@
                 <div class="container__spacing">
                     <h4 class="container__label">{{'contact.info.direct.email.label' | translate}}</h4>
                     <a class="container__text container__text--email"
-                        href="mailto:email@example.com">
-                        email@example.com
+                        href="mailto:{{contactService.getEmail()}}">
+                        {{contactService.getEmail()}}
                     </a>
                 </div>
                 
