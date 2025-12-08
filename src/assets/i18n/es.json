@@ -179,14 +179,75 @@
             "button": "Solicitar Cotización"
         }
     },
-    "contact":{
-        "hero":{
-            "title": "Contactanos",
-            "subtitle": "Tienes alguna pregunta sobre comisiones, envio, o diseños unicos? Nos gustaria escuchar tus ideas."
+    "contact": {
+        "hero": {
+            "title": "Contáctanos",
+            "subtitle": "¿Tienes alguna pregunta sobre comisiones, envío, o diseños únicos? Nos gustaría escuchar tus ideas."
         },
-        "form":{
-            "title": "Mandanos Un Mensaje",
-            "subtitle": ""
+        "form": {
+            "title": "Mándanos Un Mensaje",
+            "subtitle": "Completa el formulario y te responderemos dentro de 24-48 horas. Para consultas de comisiones, incluye tantos detalles como sea posible sobre tu visión.",
+            "name": {
+                "label": "Tu Nombre",
+                "placeholder": "Nombre completo"
+            },
+            "email": {
+                "label": "Correo Electrónico",
+                "placeholder": "tu.correo@ejemplo.com"
+            },
+            "phone": {
+                "label": "Número de Teléfono (Opcional)",
+                "placeholder": "+52 555 123 4567"
+            },
+            "inquiry": {
+                "label": "Tipo de Consulta",
+                "options": {
+                    "commission": "Consulta de Comisión",
+                    "purchase": "Comprar Pieza Existente",
+                    "shipping": "Pregunta de Envío",
+                    "general": "Pregunta General"
+                }
+            },
+            "message": {
+                "label": "Mensaje",
+                "placeholder": "Cuéntanos sobre tu proyecto, pregunta, o cómo podemos ayudarte..."
+            },
+            "ps": "Para comisiones: Por favor incluye el tamaño de la pintura, materiales deseados, y cualquier imagen de referencia que tengas.",
+            "button": "Enviar Mensaje"
+        },
+        "info": {
+            "direct": {
+                "title": "Contacto Directo",
+                "email": {
+                    "label": "Correo"
+                },
+                "response": {
+                    "label": "Tiempo de Respuesta",
+                    "value": "Dentro de 24-48 Horas"
+                }
+            },
+            "location": {
+                "title": "Ubicación y Servicio",
+                "based": {
+                    "label": "Con Sede En",
+                    "value": "Estado de México, México"
+                },
+                "shipping": {
+                    "label": "Enviamos A",
+                    "value": "México y Norteamérica"
+                }
+            },
+            "hours": {
+                "title": "Horario de Atención",
+                "weekday": {
+                    "label": "Lunes - Viernes",
+                    "value": "9:00 AM - 6:00 PM CST"
+                },
+                "saturday": {
+                    "label": "Sábado",
+                    "value": "9:00 AM - 2:00 PM CST"
+                }
+            }
         }
     },
     "footer":{

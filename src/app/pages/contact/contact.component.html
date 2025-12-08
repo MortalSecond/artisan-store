@@ -17,57 +17,57 @@
             
             <!-- Name -->
              <div class="form-group__form">
-                <label>Your Name</label>
-                <input type="text" placeholder="Full Name">
+                <label>{{'contact.form.name.label' | translate}}</label>
+                <input type="text" [placeholder]="'contact.form.name.placeholder' | translate">
              </div>
             
             <!-- Email Address -->
              <div class="form-group__form">
-                <label>Email Address</label>
-                <input type="text" placeholder="example@mail.com">
+                <label>{{'contact.form.email.label' | translate}}</label>
+                <input type="text" [placeholder]="'contact.form.email.placeholder' | translate">
              </div>
             
             <!-- Phone Number -->
              <div class="form-group__form">
-                <label>Phone Number (Optional)</label>
-                <input type="text" placeholder="+52 555 123 4567">
+                <label>{{'contact.form.phone.label' | translate}}</label>
+                <input type="text" [placeholder]="'contact.form.phone.placeholder' | translate">
              </div>
             
             <!-- Inquiry Type -->
              <div class="form-group__form">
-                <label>Inquiry Type</label>
+                <label>{{'contact.form.inquiry.label' | translate}}</label>
                 <select>
-                    <option value="commission">Commission Inquiry</option>
-                    <option value="purchase">Purchase Existing Piece</option>
-                    <option value="shipping">Shipping Question</option>
-                    <option value="general">General Question</option>
+                    <option value="commission">{{'contact.form.inquiry.options.commission' | translate}}</option>
+                    <option value="purchase">{{'contact.form.inquiry.options.purchase' | translate}}</option>
+                    <option value="shipping">{{'contact.form.inquiry.options.shipping' | translate}}</option>
+                    <option value="general">{{'contact.form.inquiry.options.general' | translate}}</option>
                 </select>
              </div>
             
             <!-- Message -->
              <div class="form-group__form">
-                <label>Message</label>
+                <label>{{'contact.form.name.label' | translate}}</label>
                 <textarea
-                placeholder="Tell us about your project, question, how we can help..."></textarea>
+                 [placeholder]="'contact.form.name.placeholder' | translate"></textarea>
              </div>
 
              <!-- Post Scriptum -->
               <p class="ps">
-                For commissions: Please include painting size, desired materials, and any reference images you have.
+                {{'contact.form.ps' | translate}}
               </p>
 
               <!-- Button -->
-               <button class="send-button">Send Message</button>
+               <button class="send-button">{{'contact.form.button' | translate}}</button>
         </div>
 
         <!-- LEFT SIDE -->
         <div class="contact__information">
             <!-- Direct Contact -->
             <div class="box information__container">
-                <h2>Direct Contact</h2>
+                <h2>{{'contact.info.direct.title' | translate}}</h2>
                 
                 <div class="container__spacing">
-                    <h4 class="container__label">Email</h4>
+                    <h4 class="container__label">{{'contact.info.direct.email.label' | translate}}</h4>
                     <a class="container__text container__text--email"
                         href="mailto:email@example.com">
                         email@example.com
@@ -75,47 +75,47 @@
                 </div>
                 
                 <div class="container__spacing">
-                    <h4 class="container__label">Response Time</h4>
+                    <h4 class="container__label">{{'contact.info.direct.response.label' | translate}}</h4>
                     <h4 class="container__text">
-                        Within 24-48 Hours
+                        {{'contact.info.direct.response.value' | translate}}
                     </h4>
                 </div>
             </div>
             
             <!-- Location And Service -->
             <div class="box information__container">
-                <h2>Location & Service</h2>
+                <h2>{{'contact.info.location.title' | translate}}</h2>
                 
                 <div class="container__spacing">
-                    <h4 class="container__label">Based In</h4>
+                    <h4 class="container__label">{{'contact.info.location.based.label' | translate}}</h4>
                     <h4 class="container__text">
-                        Estado de Mexico, Mexico
+                        {{'contact.info.location.based.value' | translate}}
                     </h4>
                 </div>
                 
                 <div class="container__spacing">
-                    <h4 class="container__label">We Ship To</h4>
+                    <h4 class="container__label">{{'contact.info.location.shipping.label' | translate}}</h4>
                     <h4 class="container__text">
-                        Mexico And North America
+                        {{'contact.info.location.shipping.value' | translate}}
                     </h4>
                 </div>
             </div>
             
             <!-- Business Hours -->
             <div class="box information__container">
-                <h2>Business Hours</h2>
+                <h2>{{'contact.info.hours.title' | translate}}</h2>
                 
                 <div class="container__spacing">
-                    <h4 class="container__label">Monday - Friday</h4>
+                    <h4 class="container__label">{{'contact.info.hours.weekday.label' | translate}}</h4>
                     <h4 class="container__text">
-                        9:00 AM - 6:00 PM CST
+                        {{'contact.info.hours.weekday.value' | translate}}
                     </h4>
                 </div>
                 
                 <div class="container__spacing">
-                    <h4 class="container__label">Saturday</h4>
+                    <h4 class="container__label">{{'contact.info.hours.saturday.label' | translate}}</h4>
                     <h4 class="container__text">
-                        9:00 AM - 2:00 PM CST
+                        {{'contact.info.hours.saturday.value' | translate}}
                     </h4>
                 </div>
             </div>
