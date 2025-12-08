@@ -179,6 +179,16 @@
             "button": "Request Quote"
         }
     },
+    "contact":{
+        "hero":{
+            "title": "Get In Touch",
+            "subtitle": "Have a question about commissions, shipping, or custom designs? We'd love to hear from you."
+        },
+        "form":{
+            "title": "Send Us A Message",
+            "subtitle": "Fill out the form below and we'll get back to you within 24-48 hours. For commission inquiries, please include as much detail as possible about your vision."
+        }
+    },
     "footer":{
         "about": "Elevating art through precious materials and expert craftsmanship. Based in Estado de México, serving collectors worldwide.",
         "quick-links": "Quick Links",

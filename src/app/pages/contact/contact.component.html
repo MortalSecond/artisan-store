@@ -1,1 +1,124 @@
-<p>contact works!</p>
+<main>
+	<div class="hero">
+		<h1 class="hero__big-text">{{'contact.hero.title' | translate}}</h1>
+		<p class="hero__small-text">
+			{{'contact.hero.subtitle' | translate}}
+		</p>
+	</div> <!-- .hero -->
+
+    <section class="contact">
+        <!-- RIGHT SIDE -->
+        <!-- Contact Form -->
+        <div class="box contact__form-group">
+            <h1>{{'contact.form.title' | translate}}</h1>
+            <p class="form-group__subtitle">
+                {{'contact.form.subtitle' | translate}}
+            </p>
+            
+            <!-- Name -->
+             <div class="form-group__form">
+                <label>Your Name</label>
+                <input type="text" placeholder="Full Name">
+             </div>
+            
+            <!-- Email Address -->
+             <div class="form-group__form">
+                <label>Email Address</label>
+                <input type="text" placeholder="example@mail.com">
+             </div>
+            
+            <!-- Phone Number -->
+             <div class="form-group__form">
+                <label>Phone Number (Optional)</label>
+                <input type="text" placeholder="+52 555 123 4567">
+             </div>
+            
+            <!-- Inquiry Type -->
+             <div class="form-group__form">
+                <label>Inquiry Type</label>
+                <select>
+                    <option value="commission">Commission Inquiry</option>
+                    <option value="purchase">Purchase Existing Piece</option>
+                    <option value="shipping">Shipping Question</option>
+                    <option value="general">General Question</option>
+                </select>
+             </div>
+            
+            <!-- Message -->
+             <div class="form-group__form">
+                <label>Message</label>
+                <textarea
+                placeholder="Tell us about your project, question, how we can help..."></textarea>
+             </div>
+
+             <!-- Post Scriptum -->
+              <p class="ps">
+                For commissions: Please include painting size, desired materials, and any reference images you have.
+              </p>
+
+              <!-- Button -->
+               <button class="send-button">Send Message</button>
+        </div>
+
+        <!-- LEFT SIDE -->
+        <div class="contact__information">
+            <!-- Direct Contact -->
+            <div class="box information__container">
+                <h2>Direct Contact</h2>
+                
+                <div class="container__spacing">
+                    <h4 class="container__label">Email</h4>
+                    <a class="container__text container__text--email"
+                        href="mailto:email@example.com">
+                        email@example.com
+                    </a>
+                </div>
+                
+                <div class="container__spacing">
+                    <h4 class="container__label">Response Time</h4>
+                    <h4 class="container__text">
+                        Within 24-48 Hours
+                    </h4>
+                </div>
+            </div>
+            
+            <!-- Location And Service -->
+            <div class="box information__container">
+                <h2>Location & Service</h2>
+                
+                <div class="container__spacing">
+                    <h4 class="container__label">Based In</h4>
+                    <h4 class="container__text">
+                        Estado de Mexico, Mexico
+                    </h4>
+                </div>
+                
+                <div class="container__spacing">
+                    <h4 class="container__label">We Ship To</h4>
+                    <h4 class="container__text">
+                        Mexico And North America
+                    </h4>
+                </div>
+            </div>
+            
+            <!-- Business Hours -->
+            <div class="box information__container">
+                <h2>Business Hours</h2>
+                
+                <div class="container__spacing">
+                    <h4 class="container__label">Monday - Friday</h4>
+                    <h4 class="container__text">
+                        9:00 AM - 6:00 PM CST
+                    </h4>
+                </div>
+                
+                <div class="container__spacing">
+                    <h4 class="container__label">Saturday</h4>
+                    <h4 class="container__text">
+                        9:00 AM - 2:00 PM CST
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>

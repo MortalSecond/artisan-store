@@ -104,6 +104,33 @@ footer{
     border-top: 1px solid var(--mainAccentAlpha);
 }
 
+/* Inputs And Forms */
+
+label{
+    color: var(--subtleAccent);
+    font-size: 1.3rem;
+    font-weight: 600;
+
+    margin: 1rem 0;
+}
+
+input,
+textarea,
+select{
+    outline: none;
+
+    transition: border 0.3s;
+}
+
+input[type="radio"],
+input[type="checkbox"]{
+    width: 1.8rem;
+    height: 1.8rem;
+    accent-color: var(--mainAccent);
+}
+
+input[type="text"],
+textarea,
 select{
     width: 100%;
     padding: 1.5rem;
@@ -112,19 +139,18 @@ select{
 
     font-size: 1.6rem;
     color: var(--subtleAccent);
+}
 
+input[type="text"]:focus,
+textarea:focus,
+select:focus{
+    border-color: var(--mainAccent);
+}
+
+select{
     cursor: pointer;
-    transition: 0.3s;
 }
 
-input[type="radio"]{
-    width: 1.8rem;
-    height: 1.8rem;
-    accent-color: var(--mainAccent);
-}
-
-input[type="checkbox"]{
-    width: 1.8rem;
-    height: 1.8rem;
-    accent-color: var(--mainAccent);
+textarea{
+    height: 20rem;
 }

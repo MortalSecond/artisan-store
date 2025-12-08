@@ -179,6 +179,16 @@
             "button": "Solicitar Cotización"
         }
     },
+    "contact":{
+        "hero":{
+            "title": "Contactanos",
+            "subtitle": "Tienes alguna pregunta sobre comisiones, envio, o diseños unicos? Nos gustaria escuchar tus ideas."
+        },
+        "form":{
+            "title": "Mandanos Un Mensaje",
+            "subtitle": ""
+        }
+    },
     "footer":{
         "about": "Elevando el arte a través de materiales preciosos y artesanía experta. Con sede en Estado de México, sirviendo a coleccionistas en todo el mundo.",
         "quick-links": "Enlaces Rápidos",
