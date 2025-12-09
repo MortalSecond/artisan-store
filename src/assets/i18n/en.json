@@ -213,7 +213,8 @@
                 "placeholder": "Tell us about your project, question, or how we can help..."
             },
             "ps": "For commissions: Please include painting size, desired materials, and any reference images you have.",
-            "button": "Send Message"
+            "button": "Send Message",
+            "sending": "Sending..."
         },
         "info": {
             "direct": {

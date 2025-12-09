@@ -213,7 +213,8 @@
                 "placeholder": "Cuéntanos sobre tu proyecto, pregunta, o cómo podemos ayudarte..."
             },
             "ps": "Para comisiones: Por favor incluye el tamaño de la pintura, materiales deseados, y cualquier imagen de referencia que tengas.",
-            "button": "Enviar Mensaje"
+            "button": "Enviar Mensaje",
+            "sending": "Enviando..."
         },
         "info": {
             "direct": {

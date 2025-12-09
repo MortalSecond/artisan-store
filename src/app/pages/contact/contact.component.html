@@ -18,25 +18,32 @@
             <!-- Name -->
              <div class="form-group__form">
                 <label>{{'contact.form.name.label' | translate}}</label>
-                <input type="text" [placeholder]="'contact.form.name.placeholder' | translate">
+                <input type="text" 
+                [(ngModel)]="form.name"
+                [placeholder]="'contact.form.name.placeholder' | translate">
              </div>
             
             <!-- Email Address -->
              <div class="form-group__form">
                 <label>{{'contact.form.email.label' | translate}}</label>
-                <input type="text" [placeholder]="'contact.form.email.placeholder' | translate">
+                <input type="text"  
+                [(ngModel)]="form.email"
+                [placeholder]="'contact.form.email.placeholder' | translate">
              </div>
             
             <!-- Phone Number -->
              <div class="form-group__form">
                 <label>{{'contact.form.phone.label' | translate}}</label>
-                <input type="text" [placeholder]="'contact.form.phone.placeholder' | translate">
+                <input type="text" 
+                [(ngModel)]="form.phone"
+                [placeholder]="'contact.form.phone.placeholder' | translate">
              </div>
             
             <!-- Inquiry Type -->
              <div class="form-group__form">
                 <label>{{'contact.form.inquiry.label' | translate}}</label>
-                <select>
+                <select 
+                [(ngModel)]="form.inquiryType">
                     <option value="commission">{{'contact.form.inquiry.options.commission' | translate}}</option>
                     <option value="purchase">{{'contact.form.inquiry.options.purchase' | translate}}</option>
                     <option value="shipping">{{'contact.form.inquiry.options.shipping' | translate}}</option>
@@ -47,8 +54,9 @@
             <!-- Message -->
              <div class="form-group__form">
                 <label>{{'contact.form.name.label' | translate}}</label>
-                <textarea
-                 [placeholder]="'contact.form.name.placeholder' | translate"></textarea>
+                <textarea 
+                [(ngModel)]="form.message"
+                [placeholder]="'contact.form.name.placeholder' | translate"></textarea>
              </div>
 
              <!-- Post Scriptum -->
@@ -56,8 +64,33 @@
                 {{'contact.form.ps' | translate}}
               </p>
 
+              <!-- Success/Error Messages -->
+              @if (submitSuccess()) {
+                <div class="alert alert-success">
+                  Thank you! We'll get back to you within 24-48 hours.
+                </div>
+              }
+
+              @if (submitError()) {
+                <div class="alert alert-error">
+                  There was an error sending your message. Please try again or email us directly.
+                </div>
+              }
+
               <!-- Button -->
-               <button class="send-button">{{'contact.form.button' | translate}}</button>
+              <button 
+              (click)="submitForm()"
+              [disabled]="isSubmitting()"
+              class="send-button">.
+                @if(isSubmitting())
+                {
+                  {{'contact.form.sending' | translate}}
+                }
+                @else
+                {
+                  {{'contact.form.button' | translate}}
+                }
+              </button>
         </div>
 
         <!-- LEFT SIDE -->
