@@ -53,10 +53,10 @@
             
             <!-- Message -->
              <div class="form-group__form">
-                <label>{{'contact.form.name.label' | translate}}</label>
+                <label>{{'contact.form.message.label' | translate}}</label>
                 <textarea 
                 [(ngModel)]="form.message"
-                [placeholder]="'contact.form.name.placeholder' | translate"></textarea>
+                [placeholder]="'contact.form.message.placeholder' | translate"></textarea>
              </div>
 
              <!-- Post Scriptum -->
@@ -81,7 +81,7 @@
               <button 
               (click)="submitForm()"
               [disabled]="isSubmitting()"
-              class="send-button">.
+              class="send-button">
                 @if(isSubmitting())
                 {
                   {{'contact.form.sending' | translate}}
