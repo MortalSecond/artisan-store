@@ -88,6 +88,207 @@
     box-shadow: 0 0.5rem 2rem rgba(212, 175, 55, 0.4);
 }
 
+/* Commission Details */
+.commission-field {
+    position: relative;
+    min-height: 5.5rem;
+    padding: 1.5rem;
+    background-color: var(--negativeSpace);
+    border: 2px solid var(--mainAccentAlpha);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: all 0.3s;
+}
+
+.commission-field:empty::before {
+    content: 'No commission details';
+    color: var(--subtleNegativeSpace);
+    font-style: italic;
+}
+
+.commission-field--active {
+    border-color: var(--mainAccent);
+    background: linear-gradient(135deg, var(--negativeSpace) 0%, rgba(212, 175, 55, 0.05) 100%);
+}
+
+/* Commission Pill */
+.commission-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.8rem 1.8rem;
+    background: linear-gradient(135deg, var(--mainAccent) 0%, var(--mainAccentLight) 100%);
+    color: var(--negativeSpace);
+    border-radius: 50px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 0.2rem 1rem rgba(212, 175, 55, 0.3);
+}
+
+.commission-pill:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0.5rem 1.5rem rgba(212, 175, 55, 0.5);
+}
+
+.commission-pill__icon {
+    font-size: 1.6rem;
+}
+
+.commission-pill__text {
+    letter-spacing: 0.05rem;
+}
+
+.commission-pill__price {
+    padding-left: 1rem;
+    border-left: 1px solid rgba(0, 0, 0, 0.2);
+    font-weight: 700;
+}
+
+/* Expandable Commission Details */
+.commission-details {
+    display: none;
+    position: absolute;
+    top: calc(100% + 1rem);
+    left: 0;
+    right: 0;
+    background-color: var(--negativeSpaceLight);
+    border: 2px solid var(--mainAccent);
+    padding: 2rem;
+    z-index: 10;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5);
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from {
+    opacity: 0;
+    transform: translateY(-1rem);
+    }
+    to {
+    opacity: 1;
+    transform: translateY(0);
+    }
+}
+
+.commission-details--visible {
+    display: block;
+}
+
+.commission-details__title {
+    font-family: var(--titlesFont);
+    font-size: 2rem;
+    color: var(--mainAccent);
+    margin-bottom: 1.5rem;
+}
+
+.commission-details__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    font-size: 1.3rem;
+}
+
+.commission-details__item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.8rem;
+    background-color: var(--negativeSpace);
+    border-left: 2px solid var(--mainAccentAlpha);
+}
+
+.commission-details__label {
+    color: var(--subtleNegativeSpace);
+    font-weight: 500;
+}
+
+.commission-details__value {
+    color: var(--subtleAccent);
+    font-weight: 600;
+}
+
+.commission-details__item--full {
+    grid-column: 1 / -1;
+}
+
+.commission-details__item--total {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(212, 175, 55, 0.2) 100%);
+    border-left-color: var(--mainAccent);
+    margin-top: 1rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--mainAccentAlpha);
+}
+
+.commission-details__item--total .commission-details__label {
+    color: var(--mainAccent);
+    font-size: 1.5rem;
+}
+
+.commission-details__item--total .commission-details__value {
+    color: var(--mainAccent);
+    font-size: 1.8rem;
+}
+
+/* Image Upload in Commission Field */
+.commission-image {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-left: auto;
+}
+
+.commission-image__preview {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 0.5rem;
+    object-fit: cover;
+    border: 2px solid var(--mainAccent);
+}
+
+.commission-image__badge {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: rgba(74, 222, 128, 0.2);
+    border: 1px solid var(--successGreen);
+    border-radius: 50px;
+    font-size: 1.2rem;
+    color: var(--successGreen);
+    font-weight: 600;
+}
+
+/* Submit Button */
+.submit-button {
+    width: 100%;
+    padding: 1.8rem;
+    font-size: 1.7rem;
+    font-family: var(--textFont);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-color: var(--mainAccent);
+    color: var(--negativeSpace);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 600;
+    margin-top: 2rem;
+}
+
+.submit-button:hover {
+    background-color: var(--mainAccentLight);
+    transform: translateY(-2px);
+    box-shadow: 0 0.5rem 2rem rgba(212, 175, 55, 0.4);
+}
+
+.submit-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
 /* RIGHT SIDE */
 
 .contact__information{
@@ -125,4 +326,120 @@
 
 .container__text--email{
     color: var(--mainAccent);
+}
+
+/* MODALS (Alerts) */
+/* Modal Overlay */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+    opacity: 0;
+    }
+    to {
+    opacity: 1;
+    }
+}
+
+.modal-overlay--visible {
+    display: flex;
+}
+
+/* Modal Content */
+.modal {
+    background-color: var(--negativeSpaceLight);
+    border: 2px solid var(--mainAccent);
+    padding: 4rem;
+    max-width: 50rem;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    animation: slideUp 0.4s ease;
+    box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.8);
+}
+
+@keyframes slideUp {
+    from {
+    opacity: 0;
+    transform: translateY(3rem);
+    }
+    to {
+    opacity: 1;
+    transform: translateY(0);
+    }
+}
+
+.modal__icon {
+    font-size: 6rem;
+    margin-bottom: 2rem;
+}
+
+.modal__title {
+    font-family: var(--titlesFont);
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.modal__message {
+    font-size: 1.6rem;
+    color: var(--subtleNegativeSpace);
+    line-height: 2.4rem;
+    margin-bottom: 3rem;
+}
+
+.modal__button {
+    padding: 1.2rem 3rem;
+    font-size: 1.5rem;
+    font-family: var(--textFont);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: var(--mainAccent);
+    color: var(--negativeSpace);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 600;
+}
+
+.modal__button:hover {
+    background-color: var(--mainAccentLight);
+    transform: translateY(-2px);
+}
+
+/* Success Modal */
+.modal--success .modal__icon {
+    color: var(--successGreen);
+}
+
+.modal--success .modal__title {
+    color: var(--successGreen);
+}
+
+.modal--success {
+    border-color: var(--successGreen);
+}
+
+/* Error Modal */
+.modal--error .modal__icon {
+    color: var(--errorRed);
+}
+
+.modal--error .modal__title {
+    color: var(--errorRed);
+}
+
+.modal--error {
+    border-color: var(--errorRed);
 }

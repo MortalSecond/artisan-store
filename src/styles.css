@@ -19,6 +19,10 @@
     --subtleAccent: #f5f5dc;
     --subtleNegativeSpace: #888;
 
+    /* For Modals */
+    --successGreen: #4ade80;
+    --errorRed: #ef4444;
+
     /* Fonts */
     --titlesFont: "Cormorant Garamond", serif;
     --textFont: "Montserrat", sans-serif;

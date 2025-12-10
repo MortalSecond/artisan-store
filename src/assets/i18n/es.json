@@ -251,8 +251,9 @@
             }
         },
         "commission": {
-            "title": "Configuración de Comisión Adjunta",
-            "subtitle": "Los detalles de tu comisión personalizada se incluirán con esta consulta.",
+            "label": "Detalles de la Comisión (si aplica)",
+            "pill": "Tu Comisión",
+            "config": "Configuración de tu Comisión",
             "size": "Tamaño",
             "frame": "Marco",
             "stones": "Cobertura de Piedras",
@@ -261,10 +262,20 @@
             "treatments": "Tratamientos de Superficie",
             "total": "Total Estimado",
             "image": {
-                "title": "Adjunta Tu Pintura (Opcional)",
-                "upload": "Subir Imagen de Tu Pintura",
-                "remove": "Eliminar"
+                "attached": "Imagen Adjunta",
+                "upload": "Subir Imagen de Pintura",
+                "remove": "Remover Imagen"
             }
+        },
+        "success": {
+            "title": "¡Mensaje Enviado!",
+            "message": "¡Gracias por contactarnos! Hemos recibido su mensaje y responderemos dentro de 24 a 48 horas.",
+            "button": "Cerrar"
+        },
+        "error": {
+            "title": "Error Enviando Mensaje",
+            "message": "Hubo un error enviando su mensaje. Porfavor intente otra vez o contactenos directamente.",
+            "button": "Intentar Otra Vez"
         }
     },
     "footer":{

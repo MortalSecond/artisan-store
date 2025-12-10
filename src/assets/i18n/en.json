@@ -251,8 +251,9 @@
             }
         },
         "commission": {
-            "title": "Attached Commission Configuration",
-            "subtitle": "Your customized commission details will be included with this inquiry.",
+            "label": "Commission Details (if applicable)",
+            "pill": "Your Commission",
+            "config": "Your Commission Configuration",
             "size": "Size",
             "frame": "Frame",
             "stones": "Stone Coverage",
@@ -261,10 +262,20 @@
             "treatments": "Surface Treatments",
             "total": "Estimated Total",
             "image": {
-                "title": "Attach Your Painting (Optional)",
-                "upload": "Upload Image of Your Painting",
-                "remove": "Remove"
+                "attached": "Image Attached",
+                "upload": "Upload Painting Image",
+                "remove": "Remove Image"
             }
+        },
+        "success": {
+            "title": "Message Sent!",
+            "message": "Thank you for reaching out! We've received your message and will get back to you within 24-48 hours.",
+            "button": "Close"
+        },
+        "error": {
+            "title": "Error Sending Message",
+            "message": "There was an error sending your message. Please try again or contact us directly.",
+            "button": "Try Again"
         }
     },
     "footer":{

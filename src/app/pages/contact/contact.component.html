@@ -10,84 +10,6 @@
         <!-- RIGHT SIDE -->
         <!-- Contact Form -->
         <div class="box contact__form-group">
-            <!-- Commission Summary (only shows if coming from commission page) -->
-            @if (isCommissionRequest()) {
-            <div class="box commission-summary">
-                <h2>📋 {{'contact.commission.title' | translate}}</h2>
-                <p class="commission-summary__subtitle">
-                {{'contact.commission.subtitle' | translate}}
-                </p>
-                
-                <div class="commission-summary__grid">
-                <div class="summary-item">
-                    <span class="summary-label">{{'contact.commission.size' | translate}}:</span>
-                    <span class="summary-value">{{ commissionConfig()?.size}}</span>
-                </div>
-                
-                <div class="summary-item">
-                    <span class="summary-label">{{'contact.commission.frame' | translate}}:</span>
-                    <span class="summary-value">{{ commissionConfig()?.frame}}</span>
-                </div>
-                
-                <div class="summary-item">
-                    <span class="summary-label">{{'contact.commission.stones' | translate}}:</span>
-                    <span class="summary-value">{{ commissionConfig()?.stoneCoverage}}</span>
-                </div>
-                
-                <div class="summary-item">
-                    <span class="summary-label">{{'contact.commission.shipping' | translate}}:</span>
-                    <span class="summary-value">{{ commissionConfig()?.shipping}}</span>
-                </div>
-                
-                @if (commissionConfig()?.features.length ?? 0 > 0) {
-                    <div class="summary-item summary-item--full">
-                    <span class="summary-label">{{'contact.commission.features' | translate}}:</span>
-                    <span class="summary-value">{{ commissionConfig()?.features.join(', ') }}</span>
-                    </div>
-                }
-                
-                @if (commissionConfig()?.treatments.length ?? 0 > 0) {
-                    <div class="summary-item summary-item--full">
-                    <span class="summary-label">{{'contact.commission.treatments' | translate}}:</span>
-                    <span class="summary-value">{{ commissionConfig()?.treatments.join(', ') }}</span>
-                    </div>
-                }
-                
-                <div class="summary-item summary-item--total">
-                    <span class="summary-label">{{'contact.commission.total' | translate}}:</span>
-                    <span class="summary-value summary-value--price">${{ estimatedPrice() }}</span>
-                </div>
-                </div>
-
-                <!-- Image Upload Section -->
-                <div class="image-upload">
-                <h3>{{'contact.commission.image.title' | translate}}</h3>
-                <input type="file" 
-                        accept="image/*" 
-                        (change)="onImageSelected($event)"
-                        #fileInput
-                        style="display: none;">
-                
-                @if (!imagePreview()) {
-                    <button type="button" 
-                            class="upload-button"
-                            (click)="fileInput.click()">
-                    📷 {{'contact.commission.image.upload' | translate}}
-                    </button>
-                } @else {
-                    <div class="image-preview">
-                    <img [src]="imagePreview()" alt="Preview">
-                    <button type="button" 
-                            class="remove-button"
-                            (click)="RemoveImage()">
-                        ✕ {{'contact.commission.image.remove' | translate}}
-                    </button>
-                    </div>
-                }
-                </div>
-            </div>
-            }
-
             <h1>{{'contact.form.title' | translate}}</h1>
             <p class="form-group__subtitle">
                 {{'contact.form.subtitle' | translate}}
@@ -116,6 +38,111 @@
                 [(ngModel)]="form.phone"
                 [placeholder]="'contact.form.phone.placeholder' | translate">
              </div>
+
+             
+            <!-- Commission Details Field -->
+            <div class="form-group__form" style="position: relative;">
+                <label>{{'contact.commission.label' | translate}}</label>
+                
+                <div class="commission-field" 
+                    [class.commission-field--active]="isCommissionRequest()">
+                    
+                    @if (isCommissionRequest()) {
+                        <!-- The Pill -->
+                        <div class="commission-pill" (click)="toggleCommissionDetails()">
+                            <span class="commission-pill__icon">📋</span>
+                            <span class="commission-pill__text">{{'contact.commission.pill' | translate}}</span>
+                            <span class="commission-pill__price">${{ estimatedPrice() }}</span>
+                        </div>
+
+                        <!-- Image Badge (if image attached) -->
+                        @if (selectedImage()) {
+                            <div class="commission-image">
+                                <img [src]="imagePreview()" 
+                                    alt="Preview" 
+                                    class="commission-image__preview">
+                                <div class="commission-image__badge">
+                                    <span>✓</span>
+                                    <span>{{'contact.commission.image.attached' | translate}}</span>
+                                </div>
+                            </div>
+                        }
+                    }
+                </div>
+
+                <!-- Expandable Details -->
+                @if (isCommissionRequest()) {
+                    <div class="commission-details" 
+                        [class.commission-details--visible]="showCommissionDetails()">
+                        <h3 class="commission-details__title">{{'contact.commission.config' | translate}}</h3>
+                        <div class="commission-details__grid">
+                            <!-- Size -->
+                            <div class="commission-details__item">
+                                <span class="commission-details__label">{{'contact.commission.size' | translate}}:</span>
+                                <span class="commission-details__value">{{ commissionConfig()?.size }}</span>
+                            </div>
+                            <!-- Frame -->
+                            <div class="commission-details__item">
+                                <span class="commission-details__label">{{'contact.commission.frame' | translate}}:</span>
+                                <span class="commission-details__value">{{ commissionConfig()?.frame }}</span>
+                            </div>
+                            <!-- Stone Coverage -->
+                            <div class="commission-details__item">
+                                <span class="commission-details__label">{{'contact.commission.stones' | translate}}:</span>
+                                <span class="commission-details__value">{{ commissionConfig()?.stoneCoverage }}</span>
+                            </div>
+                            <!-- Features -->
+                             @if(commissionConfig()?.features.length ?? 0 > 0)
+                             {
+                                <div class="commission-details__item">
+                                    <span class="commission-details__label">{{'contact.commission.features' | translate}}:</span>
+                                    <span class="commission-details__value">{{ commissionConfig()?.features }}</span>
+                                </div>
+                             }
+                            <!-- Treatments -->
+                             @if (commissionConfig()?.treatments.length ?? 0 > 0) 
+                             {
+                                    <div class="commission-details__item">
+                                    <span class="commission-details__label">{{'contact.commission.treatments' | translate}}:</span>
+                                    <span class="commission-details__value">{{ commissionConfig()?.treatments }}</span>
+                                </div>
+                             }
+                            
+                            <!-- Shipping -->
+                            <div class="commission-details__item">
+                                <span class="commission-details__label">{{'contact.commission.shipping' | translate}}:</span>
+                                <span class="commission-details__value">{{ commissionConfig()?.shipping }}</span>
+                            </div>
+                            <!-- Total Price -->
+                            <div class="commission-details__item commission-details__item--total">
+                                <span class="commission-details__label">{{'contact.commission.total' | translate}}:</span>
+                                <span class="commission-details__value">${{ estimatedPrice() }}</span>
+                            </div>
+                        </div>
+
+                        <!-- File Upload Button (inside expanded details) -->
+                        <input type="file" 
+                            accept="image/*" 
+                            (change)="onImageSelected($event)"
+                            #fileInput
+                            style="display: none;">
+                        
+                        @if (!selectedImage()) {
+                            <button type="button" 
+                                    class="upload-button"
+                                    (click)="fileInput.click()">
+                                📷 {{'contact.commission.image.upload' | translate}}
+                            </button>
+                        } @else {
+                            <button type="button" 
+                                    class="remove-button"
+                                    (click)="RemoveImage()">
+                                ✕ {{'contact.commission.image.remove' | translate}}
+                            </button>
+                        }
+                    </div>
+                }
+            </div>
             
             <!-- Inquiry Type -->
              <div class="form-group__form">
@@ -141,19 +168,6 @@
               <p class="ps">
                 {{'contact.form.ps' | translate}}
               </p>
-
-              <!-- Success/Error Messages -->
-              @if (submitSuccess()) {
-                <div class="alert alert-success">
-                  Thank you! We'll get back to you within 24-48 hours.
-                </div>
-              }
-
-              @if (submitError()) {
-                <div class="alert alert-error">
-                  There was an error sending your message. Please try again or email us directly.
-                </div>
-              }
 
               <!-- Button -->
               <button 
@@ -233,3 +247,41 @@
         </div>
     </section>
 </main>
+
+<!-- Success Modal -->
+ @if (submitSuccess()) 
+ {
+    <div class="modal-overlay" 
+        [class.modal-overlay--visible]="submitSuccess()"
+        (click)="closeModals()">
+        <div class="modal modal--success" (click)="$event.stopPropagation()">
+            <div class="modal__icon">✓</div>
+            <h2 class="modal__title">{{'contact.success.title' | translate}}</h2>
+            <p class="modal__message">
+                {{'contact.success.message' | translate}}
+            </p>
+            <button class="modal__button" (click)="closeModals()">
+                {{'contact.success.button' | translate}}
+            </button>
+        </div>
+    </div>
+ }
+
+<!-- Error Modal -->
+ @if (submitError()) 
+ {
+    <div class="modal-overlay" 
+        [class.modal-overlay--visible]="submitError()"
+        (click)="closeModals()">
+        <div class="modal modal--error" (click)="$event.stopPropagation()">
+            <div class="modal__icon">✕</div>
+            <h2 class="modal__title">{{'contact.error.title' | translate}}</h2>
+            <p class="modal__message">
+                {{'contact.error.message' | translate}}
+            </p>
+            <button class="modal__button" (click)="closeModals()">
+                {{'contact.error.button' | translate}}
+            </button>
+        </div>
+    </div>
+ }

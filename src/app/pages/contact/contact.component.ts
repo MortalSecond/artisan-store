@@ -31,6 +31,7 @@ export class ContactComponent {
   // UI State
   isSubmitting = signal(false);
   isCommissionRequest = signal(false);
+  showCommissionDetails = signal(false);
   submitSuccess = signal(false);
   submitError = signal(false);
   commissionConfig = signal<any>(null);
@@ -51,6 +52,16 @@ export class ContactComponent {
         }
       }
     });
+  }
+
+  // UI Updates
+  toggleCommissionDetails() {
+    this.showCommissionDetails.update(v => !v);
+  }
+
+  closeModals() {
+      this.submitSuccess.set(false);
+      this.submitError.set(false);
   }
 
   // Image Handling
