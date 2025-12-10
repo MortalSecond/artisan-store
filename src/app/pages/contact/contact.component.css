@@ -162,17 +162,6 @@
     animation: slideDown 0.3s ease;
 }
 
-@keyframes slideDown {
-    from {
-    opacity: 0;
-    transform: translateY(-1rem);
-    }
-    to {
-    opacity: 1;
-    transform: translateY(0);
-    }
-}
-
 .commission-details--visible {
     display: block;
 }
@@ -344,15 +333,6 @@
     animation: fadeIn 0.3s ease;
 }
 
-@keyframes fadeIn {
-    from {
-    opacity: 0;
-    }
-    to {
-    opacity: 1;
-    }
-}
-
 .modal-overlay--visible {
     display: flex;
 }
@@ -368,17 +348,6 @@
     position: relative;
     animation: slideUp 0.4s ease;
     box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.8);
-}
-
-@keyframes slideUp {
-    from {
-    opacity: 0;
-    transform: translateY(3rem);
-    }
-    to {
-    opacity: 1;
-    transform: translateY(0);
-    }
 }
 
 .modal__icon {
