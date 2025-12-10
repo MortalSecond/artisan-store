@@ -249,6 +249,22 @@
                     "value": "9:00 AM - 2:00 PM CST"
                 }
             }
+        },
+        "commission": {
+            "title": "Attached Commission Configuration",
+            "subtitle": "Your customized commission details will be included with this inquiry.",
+            "size": "Size",
+            "frame": "Frame",
+            "stones": "Stone Coverage",
+            "shipping": "Shipping",
+            "features": "Special Features",
+            "treatments": "Surface Treatments",
+            "total": "Estimated Total",
+            "image": {
+                "title": "Attach Your Painting (Optional)",
+                "upload": "Upload Image of Your Painting",
+                "remove": "Remove"
+            }
         }
     },
     "footer":{

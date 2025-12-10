@@ -249,6 +249,22 @@
                     "value": "9:00 AM - 2:00 PM CST"
                 }
             }
+        },
+        "commission": {
+            "title": "Configuración de Comisión Adjunta",
+            "subtitle": "Los detalles de tu comisión personalizada se incluirán con esta consulta.",
+            "size": "Tamaño",
+            "frame": "Marco",
+            "stones": "Cobertura de Piedras",
+            "shipping": "Envío",
+            "features": "Características Especiales",
+            "treatments": "Tratamientos de Superficie",
+            "total": "Total Estimado",
+            "image": {
+                "title": "Adjunta Tu Pintura (Opcional)",
+                "upload": "Subir Imagen de Tu Pintura",
+                "remove": "Eliminar"
+            }
         }
     },
     "footer":{

@@ -15,11 +15,15 @@ export interface ContactForm{
 })
 export class EmailService {
   private http = inject(HttpClient);
-  private apiUrl = "http://localhost:5051/api/Contact";
+  private apiUrl = "http://localhost:5051/api";
 
   constructor() { }
 
   submitContactForm(form: ContactForm): Observable<any>{
-    return this.http.post(this.apiUrl, form);
+    return this.http.post(`${this.apiUrl}/Contact`, form);
+  }
+  
+  submitCommissionRequest(formData: FormData): Observable<any>{
+    return this.http.post(`${this.apiUrl}/Commission`, formData);
   }
 }

@@ -2,6 +2,8 @@ import { Component, computed, inject, signal } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { PricingService } from '../../services/pricing.service';
 import { CommissionConfig, FeaturesOption, FrameOption, ShippingOption, SizeOption, StoneCoverage, TreatmentsOption } from '../../shared/models/commission-config';
+import { CommissionStateService } from '../../services/commission-state.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-commission',
@@ -12,6 +14,8 @@ import { CommissionConfig, FeaturesOption, FrameOption, ShippingOption, SizeOpti
 export class CommissionComponent {
   // Injections
   pricingService = inject(PricingService)
+  commissionState = inject(CommissionStateService);
+  router = inject(Router);
 
   // Signals
   selectedSize = signal<SizeOption>('small');
@@ -94,5 +98,14 @@ export class CommissionComponent {
 
   isTreatmentSelected(treatment: TreatmentsOption): boolean{
     return this.selectedTreatments().includes(treatment);
+  }
+
+  // BUTTON FUNCTIONALITY
+  requestQuote(){
+    // Save config
+    this.commissionState.setCommissionConfig(this.config(), this.totalPrice());
+
+    // Send to contact page
+    this.router.navigate(['contact'],{queryParams:{commission:'true'}})
   }
 }
