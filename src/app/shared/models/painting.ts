@@ -5,4 +5,6 @@ export interface Painting {
     imageURL: string;
     height: number;
     width: number;
+    price: number;
+    available: boolean;
 }
