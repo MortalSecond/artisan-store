@@ -1,1 +1,41 @@
-<p>gallery works!</p>
+<main>
+  <div class="hero">
+    <h1 class="hero__big-text">{{'gallery.hero.big-text' | translate}}</h1>
+    <p class="hero__small-text">
+      {{'gallery.hero.small-text' | translate}}
+    </p>
+  </div> <!-- .hero -->
+
+  <section class="gallery">
+    <div class="gallery__top-group">
+        <p class="top-group__counter">
+            {{'gallery.counter.showing' | translate}} <span class="top-group__number">12</span> {{'gallery.counter.pieces' | translate}}
+        </p>
+
+        <div class="top-group__selectors">
+            <select class="top-group__dropdown">
+                <option value="all">{{'gallery.selectors.sizes.all' | translate}}</option>
+                <option value="small">{{'gallery.selectors.sizes.small' | translate}}</option>
+                <option value="medium">{{'gallery.selectors.sizes.medium' | translate}}</option>
+                <option value="large">{{'gallery.selectors.sizes.large' | translate}}</option>
+            </select>
+            
+            <select class="top-group__dropdown">
+                <option value="all">{{'gallery.selectors.prices.all' | translate}}</option>
+                <option value="under-500">{{'gallery.selectors.prices.under-500' | translate}}</option>
+                <option value="500-1000">{{'gallery.selectors.prices.500-1000' | translate}}</option>
+                <option value="over-1000">{{'gallery.selectors.prices.over-500' | translate}}</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Paintings -->
+    <div class="gallery__paintings">
+        @for (painting of paintings(); track painting.id) 
+        {
+            <app-gallery-item
+            [painting]="painting"></app-gallery-item>
+        }
+    </div>
+  </section>
+</main>

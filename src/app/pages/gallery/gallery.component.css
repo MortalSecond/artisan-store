@@ -1,0 +1,72 @@
+/* Hero */
+
+.hero{
+    background-color: var(--negativeSpaceDark);
+    height: 50vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+
+    text-align: center;
+}
+
+.hero__big-text{
+    font-size: 9rem;
+    font-weight: normal;
+}
+
+.hero__small-text{
+    color: var(--subtleAccent);
+    font-weight: 300;
+    font-size: 2.3rem;
+    letter-spacing: 2px;
+}
+
+/* Top Group */
+
+.gallery{
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+
+    background-color: var(--negativeSpace);
+    padding: 6rem;
+}
+
+.gallery__top-group{
+    display: flex;
+}
+
+.top-group__counter{
+    color: var(--subtleNegativeSpace);
+    font-size: 1.5rem;
+}
+
+.top-group__number{
+    color: var(--mainAccent);
+    font-weight: bold;
+}
+
+.top-group__selectors{
+    display: flex;
+    gap: 1rem;
+    margin-left: auto;
+}
+
+.top-group__dropdown{
+    background-color: var(--negativeSpaceLight);
+    border-width: 1px;
+    width: fit-content;
+    padding: 1rem 2rem;
+}
+
+/* Gallery */
+
+.gallery__paintings{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}

@@ -74,6 +74,45 @@
             }
         }
     },
+    "gallery":{
+        "hero":{
+            "big-text": "Our Gallery",
+            "small-text": "Explore our collection of hand-decorated luxury art pieces"
+        },
+        "counter":{
+            "showing": "Showing",
+            "pieces": "pieces"
+        },
+        "selectors":{
+            "sizes":{
+                "all": "All Sizes",
+                "small": "Small",
+                "medium": "Medium",
+                "large": "Large"
+            },
+            "prices":{
+                "all": "All Prices",
+                "under-500": "Under $500",
+                "500-1000": "$500 - $1,000",
+                "over-500": "Over $1,000"
+            }
+        },
+        "modal":{
+            "available": "Available",
+            "unavailable": "Unavailable"
+        },
+        "specifications":{
+            "title": "Specifications",
+            "dimensions": "Dimensions"
+        },
+        "description":{
+            "title": "Description"
+        },
+        "buttons":{
+            "inquire": "Inquire About This Piece",
+            "continue": "Continue Browsing"
+        }
+    },
     "commission": {
         "hero": {
             "title": "Design Your Commission",

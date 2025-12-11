@@ -74,6 +74,45 @@
             }
         }
     },
+    "gallery":{
+        "hero":{
+            "big-text": "Nuestra Gallería",
+            "small-text": "Explora nuestra colección de piezas de arte decoradas a mano"
+        },
+        "counter":{
+            "showing": "Mostrando",
+            "pieces": "piezas"
+        },
+        "selectors":{
+            "sizes":{
+                "all": "Todos Los Tamaños",
+                "small": "Pequeños",
+                "medium": "Medianos",
+                "large": "Grandes"
+            },
+            "prices":{
+                "all": "Todos Los Precios",
+                "under-500": "Bajo $500",
+                "500-1000": "$500 - $1,000",
+                "over-500": "Sobre $1,000"
+            }
+        },
+        "modal":{
+            "available": "Disponible",
+            "unavailable": "No Disponible"
+        },
+        "specifications":{
+            "title": "Especificaciones",
+            "dimensions": "Dimenciónes"
+        },
+        "description":{
+            "title": "Descripción"
+        },
+        "buttons":{
+            "inquire": "Preguntar Sobre Esta Pieza",
+            "continue": "Continuar Navegando"
+        }
+    },
     "commission": {
         "hero": {
             "title": "Diseña Tu Comisión",

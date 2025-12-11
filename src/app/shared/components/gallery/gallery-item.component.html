@@ -1,11 +1,65 @@
-<div class="gallery__item">
-    <img [src]="painting.imageURL" [alt]="painting.title">
+<!-- Painting -->
+<div class="gallery__item" (click)="showPaintingInformation()">
+    <img [src]="painting.imageURL" [alt]="painting.title" loading="lazy">
     <div class="gallery__overlay">
-    <h3 class="overlay__title">{{painting.title}}</h3>
-    <p class="overlay__subtitle">
-        {{painting.height}}cm x {{painting.width}}cm
-        | 
-        {{painting.details}}
-    </p>
+        <h3 class="overlay__title">{{painting.title}}</h3>
+        <p class="overlay__subtitle">
+            {{painting.height}}cm x {{painting.width}}cm
+            | 
+            {{painting.details}}
+        </p>
     </div>
 </div>
+
+<!-- Information Modal -->
+ <div class="modal-overlay" 
+ [class.modal-overlay--visible]="isPaintingInformationVisible()">
+    <div class="modal">
+        <!-- LEFT SIDE -->
+         <div class="modal__image-container">
+            <img [src]="painting.imageURL" [alt]="painting.title" loading="lazy" class="modal__image">
+         </div>
+         <!-- RIGHT SIDE -->
+          <div class="modal__information">
+            <h1>{{painting.title}}</h1>
+
+            <div class="information__availability"
+            [class.information__availability--unavailable]="!isPaintingAvailable()"
+            [class.information__availability--available]="isPaintingAvailable()">
+                ●
+                @if (isPaintingAvailable()) 
+                {
+                    {{'gallery.modal.available' | translate}}
+                }
+                @else 
+                {
+                    {{'gallery.modal.unavailable' | translate}}
+                }
+            </div>
+
+            <div class="information__price">
+                <h1 class="price__number">${{painting.price | number}} MXN</h1>
+            </div>
+
+            <h2 class="information__title">{{'gallery.specifications.title' | translate}}</h2>
+            <div class="information__specifications">
+                <div class="specifications__section">
+                    <h3 class="section__title">{{'gallery.specifications.dimensions' | translate}}</h3>
+                    <span class="section__value">{{painting.width}}cm x {{painting.height}}cm</span>
+                </div>
+            </div>
+
+            <div class="information__description">
+                <h2 class="information__title">{{'gallery.description.title' | translate}}</h2>
+
+                <p class="description__text">{{painting.details}}</p>
+            </div>
+
+            <button class="information__button information__button--important"
+            routerLink="/contact">{{'gallery.buttons.inquire' | translate}}</button>
+
+            <button class="information__button"
+            (click)="hidePaintingInformation()">{{'gallery.buttons.continue' | translate}}</button>
+          </div>
+    </div>
+ </div>

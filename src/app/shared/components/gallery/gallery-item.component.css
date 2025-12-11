@@ -47,3 +47,181 @@
 
     transition: 0.2s;
 }
+
+/* Information Modal */
+
+.modal-overlay{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+
+    align-items: center;
+    justify-content: center;
+    
+    background-color: rgba(0, 0, 0, 0.85);
+
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-overlay--visible{
+    display: flex;
+}
+
+.modal{
+    position: relative;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    overflow: auto;
+    
+    text-align: center;
+
+    background-color: var(--negativeSpaceLight);
+    border: 2px solid var(--mainAccent);
+    width: 90%;
+    height: 90%;
+    box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.8);
+    
+    animation: slideUp 0.4s ease;
+}
+
+/* LEFT SIDE */
+
+.modal__image-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--negativeSpaceDark);
+    padding: 4rem;
+}
+
+.modal__image{
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+    border: 1px solid var(--mainAccentAlpha);
+}
+
+/* RIGHT SIDE */
+
+.modal__information{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    padding: 3rem;
+    text-align: left;
+}
+
+.information__title{
+    text-transform: uppercase;
+    font-family: var(--textFont);
+    font-size: 1.9rem;
+    font-weight: 600;
+}
+
+/* Price */
+
+.information__price{
+    border-left: 3px solid var(--mainAccent);
+    background-color: var(--negativeSpace);
+    padding: 1.3rem 2rem;
+}
+
+.price__number{
+    font-size: 3rem;
+    font-family: var(--textFont);
+}
+
+/* Availability */
+
+.information__availability{
+    border: 1px solid;
+    border-radius: 50px;
+    padding: 0.7rem 1.5rem;
+    
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.information__availability--available{
+    background-color: rgba(74, 222, 128, 0.2);
+    border-color: #4ade80;
+    color: #4ade80;
+}
+
+.information__availability--unavailable{
+    background-color: rgba(94, 27, 27, 0.534);
+    border-color: rgb(214, 40, 40);
+    color: rgb(214, 40, 40);
+}
+
+/* Specifications */
+/* P.S. Grid for now so i can add more fields
+later as the database grows more details */
+
+.information__specifications{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+.specifications__section{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.section__title{
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-size: 1.3rem;
+    font-family: var(--textFont);
+    font-weight: 400;
+    color: var(--subtleNegativeSpace);
+}
+
+.section__value{
+    letter-spacing: 0.1rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--subtleAccent);
+}
+
+/* Description */
+
+.information__description{
+    border-top: 1px solid var(--mainAccentAlpha);
+    border-bottom: 1px solid var(--mainAccentAlpha);
+    padding: 1rem 0;
+}
+
+.description__text{
+    font-size: 1.5rem;
+    color: var(--subtleNegativeSpace);
+    line-height: 2.3rem;
+}
+
+/* Buttons */
+
+.information__button{
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+
+    padding: 1.5rem;
+}
+
+.information__button--important{
+    background-color: var(--mainAccent);
+    color: black;
+}
+
+.information__button--important:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 0.5rem 2rem rgba(212, 175, 55, 0.4);
+}
