@@ -1,0 +1,15 @@
+<div class="admin-layout">
+  <nav class="admin-nav">
+    <h2>Admin Panel</h2>
+    <ul>
+      <li><a routerLink="/admin/paintings">Manage Paintings</a></li>
+      <li><a routerLink="/admin/inquiries">View Inquiries</a></li>
+      <li><button (click)="logout()">Logout</button></li>
+    </ul>
+  </nav>
+
+  <main class="admin-content">
+    <h1>Dashboard</h1>
+    <p>Welcome, {{ authService.currentUser() }}!</p>
+  </main>
+</div>
