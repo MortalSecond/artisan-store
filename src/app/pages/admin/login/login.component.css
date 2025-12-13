@@ -1,0 +1,129 @@
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--negativeSpace);
+    height: 100vh;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 40rem;
+    padding: 2rem;
+}
+
+.login-box {
+    background-color: var(--negativeSpaceLight);
+    border: 2px solid var(--mainAccentAlpha);
+    padding: 4rem;
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.login-header__icon {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+}
+
+.login-header__title {
+    font-size: 2.8rem;
+    color: var(--mainAccent);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.login-header__subtitle {
+    font-size: 1.4rem;
+    color: var(--subtleNegativeSpace);
+}
+
+.form-group {
+    margin-bottom: 2rem;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+    color: var(--subtleAccent);
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    font-family: var(--textFont);
+    background-color: var(--negativeSpace);
+    color: var(--subtleAccent);
+    border: 2px solid var(--mainAccentAlpha);
+    transition: all 0.3s;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--mainAccent);
+}
+
+.error-message {
+    background-color: rgba(239, 68, 68, 0.1);
+    border: 1px solid var(--errorRed);
+    color: var(--errorRed);
+    padding: 1.2rem;
+    margin-bottom: 2rem;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.login-button {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    font-family: var(--textFont);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: var(--mainAccent);
+    color: var(--negativeSpace);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 600;
+}
+
+.login-button:hover:not(:disabled) {
+    background-color: #e5c158;
+    transform: translateY(-2px);
+    box-shadow: 0 0.5rem 2rem rgba(212, 175, 55, 0.4);
+}
+
+.login-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.login-footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--mainAccentAlpha);
+}
+
+.login-footer__text {
+    font-size: 1.3rem;
+    color: var(--subtleNegativeSpace);
+}
+
+.login-footer__link {
+    color: var(--mainAccent);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-footer__link:hover {
+    text-decoration: underline;
+}
+  
