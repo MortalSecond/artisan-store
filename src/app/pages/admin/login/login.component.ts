@@ -40,4 +40,8 @@ export class LoginComponent {
       }
     });
   }
+
+  home(){
+    this.router.navigate(['']);
+  }
 }
