@@ -7,10 +7,11 @@ import { toSignal } from '@angular/core/rxjs-interop';
 import { RequestsService } from '../../../services/requests.service';
 import { FormsModule } from '@angular/forms';
 import { PricingService } from '../../../services/pricing.service';
+import { DecimalPipe } from '@angular/common';
 
 @Component({
   selector: 'app-dashboard',
-  imports: [FormsModule],
+  imports: [FormsModule, DecimalPipe],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css'
 })

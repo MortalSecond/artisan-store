@@ -235,6 +235,68 @@ main{
     background-color: rgb(13, 63, 138);
 }
 
+table{
+    font-size: 1.4rem;
+    font-weight: 500;
+    border-collapse: collapse;
+}
+
+table thead{
+    background-color: rgb(230, 234, 252);
+    font-size: 1.8rem;
+    color: var(--subtleNegativeSpace);
+}
+
+table th{
+    border-bottom: 2px solid rgba(128, 128, 128, 0.411);
+}
+
+table tr:hover{
+    background-color: rgb(246, 248, 255);
+}
+
+table td{
+    padding: 1.2rem;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.411);
+    border-right: 1px solid rgba(128, 128, 128, 0.411);
+}
+
+.table__image{
+    width: 15rem;
+    height: 15rem;
+    object-fit: cover;
+}
+
+.table__buttons{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.table__edit-button,
+.table__delete-button{
+    border: 0;
+    border-radius: 5px;
+    padding: 0.7rem 1rem;
+}
+
+.table__edit-button{
+    background-color: rgb(15, 132, 228);
+}
+
+.table__edit-button:hover{
+    background-color: rgb(51, 154, 238);
+    color: white;
+}
+
+.table__delete-button{
+    background-color: rgb(223, 64, 64);
+}
+
+.table__delete-button:hover{
+    background-color: rgb(184, 0, 0);
+}
+
 /* Pricing */
 
 .prices__item{

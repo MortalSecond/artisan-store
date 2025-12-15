@@ -132,6 +132,37 @@
 
     <div class="box">
       <h2>Pinturas Existentes ({{paintingsCount()}})</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Imagen</th>
+            <th>Titulo</th>
+            <th>Dimension</th>
+            <th>Precio</th>
+            <th>Disponibilidad</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for(painting of paintings(); track painting.id)
+          {
+            <tr>
+              <td><img [src]="painting.imageURL" [alt]="painting.title" class="table__image"></td>
+              <td>({{painting.id}}) {{painting.title}}</td>
+              <td>{{painting.height}}cm x {{painting.width}}cm</td>
+              <td>${{painting.price | number}}</td>
+              <td>@if(painting.available){Disponible}@else{No Disponible}</td>
+              <td>
+                <div class="table__buttons">
+                  <button class="table__edit-button">Editar</button>
+                  <button class="table__delete-button">Borrar</button>
+                </div>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
     </div>
   }
 
