@@ -13,19 +13,32 @@ export class PaintingService {
 
   constructor() { }
 
-  getAllPaintings(): Observable<Painting[]>{
+  // Public endpoints
+  getAllPaintings(): Observable<Painting[]> {
     return this.http.get<Painting[]>(this.apiUrl);
   }
 
-  uploadPainting(form: FormData): Observable<any>{
-    return this.http.post(`${this.apiUrl}/upload`, form);
+  getPainting(id: number): Observable<Painting> {
+    return this.http.get<Painting>(`${this.apiUrl}/${id}`);
   }
 
-  deletePainting(id:number): Observable<any>{
-    return this.http.delete(`${this.apiUrl}/${id}`);
+  // Admin endpoints
+  uploadPainting(formData: FormData): Observable<Painting> {
+    return this.http.post<Painting>(`${this.apiUrl}/upload`, formData);
   }
 
-  updatePainting(id: number, form: FormData): Observable<any>{
-    return this.http.put(`${this.apiUrl}/${id}`, form);
+  updatePainting(id: number, formData: FormData): Observable<void> {
+    return this.http.put<void>(`${this.apiUrl}/${id}`, formData);
+  }
+
+  deletePainting(id: number): Observable<void> {
+    return this.http.delete<void>(`${this.apiUrl}/${id}`);
+  }
+
+  toggleAvailability(id: number): Observable<{ available: boolean }> {
+    return this.http.patch<{ available: boolean }>(
+      `${this.apiUrl}/${id}/availability`, 
+      {}
+    );
   }
 }

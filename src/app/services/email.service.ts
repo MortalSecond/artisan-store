@@ -11,20 +11,26 @@ export interface ContactForm{
   message: string;
 }
 
+export interface ApiResponse {
+  message: string;
+  success: boolean;
+}
+
 @Injectable({
   providedIn: 'root'
 })
 export class EmailService {
   private http = inject(HttpClient);
-  private apiUrl = `${environment.apiUrl}`;
+  private apiUrl = environment.apiUrl;
 
   constructor() { }
 
-  submitContactForm(form: ContactForm): Observable<any>{
-    return this.http.post(`${this.apiUrl}/Contact`, form);
+  // Public endpoints
+  submitContactForm(form: ContactForm): Observable<ApiResponse> {
+    return this.http.post<ApiResponse>(`${this.apiUrl}/Contact`, form);
   }
   
-  submitCommissionRequest(formData: FormData): Observable<any>{
-    return this.http.post(`${this.apiUrl}/Commission`, formData);
+  submitCommissionRequest(formData: FormData): Observable<ApiResponse> {
+    return this.http.post<ApiResponse>(`${this.apiUrl}/Commission`, formData);
   }
 }
