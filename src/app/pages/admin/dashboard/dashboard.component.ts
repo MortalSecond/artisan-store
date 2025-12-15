@@ -2,11 +2,11 @@ import { Component, computed, inject, OnInit, signal } from '@angular/core';
 import { AuthService } from '../../../services/auth.service';
 import { Router } from '@angular/router';
 import { PaintingService } from '../../../services/painting.service';
-import { toSignal } from '@angular/core/rxjs-interop';
 import { RequestsService } from '../../../services/requests.service';
 import { FormsModule } from '@angular/forms';
 import { PricingService } from '../../../services/pricing.service';
 import { DecimalPipe } from '@angular/common';
+import { Painting } from '../../../shared/models/painting';
 
 @Component({
   selector: 'app-dashboard',
@@ -23,21 +23,25 @@ export class DashboardComponent{
   router = inject(Router);
 
   // Signals
-  paintings = toSignal(this.paintingService.getAllPaintings(),{
-    initialValue: []
-  });
-  contacts = toSignal(this.requestsService.getAllInquiries(),{
-    initialValue: []
-  });
-  commissions = toSignal(this.requestsService.getAllCommissions())
+  paintings = signal<Painting[]>([]);
+  contacts = signal<any[]>([]);
+  commissions = signal<any[]>([]);
+  // Loading states
+  isLoadingPaintings = signal(true);
+  isLoadingContacts = signal(true);
+  isLoadingCommissions = signal(true);
+  // UI State
   isDashboardSelected = signal(true);
   isPaintingsSelected = signal(false);
   isPricesSelected = signal(false);
   isContactsSelected = signal(false);
   isCommissionsSelected = signal(false);
+  // Upload State
   selectedImage = signal<File | null>(null);
   imagePreview = signal<string | null>(null);
   isUploading = signal(false);
+  uploadError = signal<string | null>(null);
+  uploadSuccess = signal(false);
   
   // Form data
   paintingForm = {
@@ -53,18 +57,74 @@ export class DashboardComponent{
   contactsCount = computed(()=>this.contacts.length)
   commissionsCount = computed(()=>this.commissions.length)
 
+  constructor(){
+    this.loadPaintings();
+    this.loadContacts();
+    this.loadCommissions();
+  }
+
+  // Data loading methods
+  private loadPaintings() {
+    this.isLoadingPaintings.set(true);
+    this.paintingService.getAllPaintings().subscribe({
+      next: (paintings) => {
+        this.paintings.set(paintings);
+        this.isLoadingPaintings.set(false);
+      },
+      error: (error) => {
+        console.error('Error loading paintings:', error);
+        this.isLoadingPaintings.set(false);
+      }
+    });
+  }
+
+  private loadContacts() {
+    this.isLoadingContacts.set(true);
+    this.requestsService.getAllInquiries().subscribe({
+      next: (contacts) => {
+        this.contacts.set(contacts);
+        this.isLoadingContacts.set(false);
+      },
+      error: (error) => {
+        console.error('Error loading contacts:', error);
+        this.isLoadingContacts.set(false);
+      }
+    });
+  }
+
+  private loadCommissions() {
+    this.isLoadingCommissions.set(true);
+    this.requestsService.getAllCommissions().subscribe({
+      next: (commissions) => {
+        this.commissions.set(commissions);
+        this.isLoadingCommissions.set(false);
+      },
+      error: (error) => {
+        console.error('Error loading commissions:', error);
+        this.isLoadingCommissions.set(false);
+      }
+    });
+  }
+
   // Functional Methods
   logout(){
     this.authService.logout();
     this.router.navigate(['admin/login']);
   }
 
+  // Paintings Methods
   onImageSelected(event: Event) {
     const input = event.target as HTMLInputElement;
     
     if (input.files && input.files[0]) {
       const file = input.files[0];
       this.selectedImage.set(file);
+
+      // Validate file type
+      if (!file.type.startsWith('image/')) {
+        this.uploadError.set('Please select a valid image file');
+        return;
+      }
       
       // Create preview
       const reader = new FileReader();
@@ -93,6 +153,10 @@ export class DashboardComponent{
   }
 
   uploadPainting(){
+    // Reset messages
+    this.uploadError.set(null);
+    this.uploadSuccess.set(false);
+
     // Validation
     if (!this.selectedImage()) {
       alert('Porfavor selecciona una imagen.');
@@ -117,20 +181,65 @@ export class DashboardComponent{
     this.paintingService.uploadPainting(formData).subscribe({
       next: (response) =>{
         console.log("Success:", response);
-        this.resetForm();
         this.isUploading.set(false);
+        this.uploadSuccess.set(true);
+
+        this.resetForm();
+        // Refresh paintings list
+        this.loadPaintings();
+
+
+        // Hide success message after 3 seconds
+        setTimeout(() => this.uploadSuccess.set(false), 3000);
       },
       error: (error) =>{
         console.log("Error:", error);
-        if(error.status === 401){
-          alert('Sesión expirada. Porfavor inicia sesión de nuevo.')
-          this.logout();
+
+        if (error.status === 401) {
+          this.uploadError.set('Sesión expirada. Redirigiendo al login...');
+        } else if (error.status === 400) {
+          this.uploadError.set(error.error?.message || 'Datos inválidos. Verifica el formulario.');
+        } else {
+          this.uploadError.set('Error al subir la pintura. Intenta de nuevo.');
         }
 
         this.isUploading.set(false);
       }
     });
   }
+
+  deletePainting(id: number) {
+    if (confirm('¿Estás seguro de eliminar esta pintura?')) {
+      this.paintingService.deletePainting(id).subscribe({
+        next: () => {
+          // Refresh paintings list
+          this.loadPaintings();
+        },
+        error: (error) => {
+          console.error('Error deleting painting:', error);
+          alert('Error al eliminar la pintura');
+        }
+      });
+    }
+  }
+
+  togglePaintingAvailability(id: number) {
+    this.paintingService.toggleAvailability(id).subscribe({
+      next: (response) => {
+        // Refresh paintings list
+        this.loadPaintings();
+        
+        console.log('Availability toggled:', response.available);
+      },
+      error: (error) => {
+        console.error('Error toggling availability:', error);
+        alert('Error al cambiar disponibilidad');
+      }
+    });
+  }
+
+  // Contact Inquiries Methods
+
 
   // UI Methods
   selectDashboard(){

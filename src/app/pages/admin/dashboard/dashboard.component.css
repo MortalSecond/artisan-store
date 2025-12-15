@@ -82,6 +82,25 @@ main{
     color: var(--subtleNegativeSpace);
 }
 
+.alert {
+  padding: 1.5rem;
+  border-radius: 5px;
+  margin-bottom: 2rem;
+  font-size: 1.4rem;
+}
+
+.alert--error {
+  background-color: rgba(239, 68, 68, 0.1);
+  border: 1px solid var(--errorRed);
+  color: var(--errorRed);
+}
+
+.alert--success {
+  background-color: rgba(74, 222, 128, 0.1);
+  border: 1px solid var(--successGreen);
+  color: var(--successGreen);
+}
+
 /* Navbar */
 
 .nav{
@@ -190,6 +209,18 @@ main{
     height: 50%;
 }
 
+.image-upload__remove-button{
+    border: 0;
+    border-radius: 5px;
+    padding: 1rem;
+    background-color: rgba(235, 0, 0, 0.733);
+}
+
+.image-upload__remove-button:hover{
+    background-color: rgb(190, 17, 17);
+    color: white;
+}
+
 .painting__inputs{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -211,7 +242,9 @@ main{
     border-radius: 5px;
     padding: 1rem;
     background-color: white;
+
     font-size: 1.5rem;
+    color: black;
 
     transition: 0s;
 }

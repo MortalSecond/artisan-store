@@ -75,6 +75,20 @@
     <div class="box">
       <h2>Subir Nueva Foto</h2>
 
+      <!-- Error Message -->
+      @if (uploadError()) {
+        <div class="alert alert--error">
+          {{ uploadError() }}
+        </div>
+      }
+
+      <!-- Success Message -->
+      @if (uploadSuccess()) {
+        <div class="alert alert--success">
+          ✓ Pintura subida exitosamente!
+        </div>
+      }
+
       <input type="file" accept="image/*" (change)="onImageSelected($event)"
       #fileInput style="display: none;">
       @if (!imagePreview()) 
@@ -88,8 +102,8 @@
       {
         <!-- Shows Preview -->
         <div class="image-upload">
-          <img [src]="imagePreview()" alt="Preview" class="image-preview">
-          <button type="button" class="remove-image-btn" (click)="removeImage()">
+          <img [src]="imagePreview()" alt="Preview" class="image-upload__preview">
+          <button type="button" class="image-upload__remove-button" (click)="removeImage()">
             ✕ Eliminar Imagen
           </button>
         </div>
@@ -98,24 +112,24 @@
       <div class="painting__inputs">
         <div class="inputs__input">
           <span class="input__label">Titulo</span>
-          <input type="text" class="input__textbox" placeholder="Copa De Vino" [ngModel]="paintingForm.title">
+          <input type="text" class="input__textbox" placeholder="Copa De Vino" [(ngModel)]="paintingForm.title">
         </div>
         <div class="inputs__input">
           <span class="input__label">Precio (MXN)</span>
-          <input type="number" class="input__textbox" placeholder="850" [ngModel]="paintingForm.price">
+          <input type="number" class="input__textbox" placeholder="850" [(ngModel)]="paintingForm.price">
         </div>
         <div class="inputs__input">
           <span class="input__label">Altura (Cm)</span>
-          <input type="number" class="input__textbox" placeholder="120" [ngModel]="paintingForm.height">
+          <input type="number" class="input__textbox" placeholder="120" [(ngModel)]="paintingForm.height">
         </div>
         <div class="inputs__input">
           <span class="input__label">Width (Cm)</span>
-          <input type="number" class="input__textbox" placeholder="90" [ngModel]="paintingForm.width">
+          <input type="number" class="input__textbox" placeholder="90" [(ngModel)]="paintingForm.width">
         </div>
       </div>
       <div class="inputs__input">
         <span class="input__label">Detalles</span>
-        <input type="text" class="input__textbox" placeholder="Marco de Vidrio" [ngModel]="paintingForm.details">
+        <input type="text" class="input__textbox" placeholder="Marco de Vidrio" [(ngModel)]="paintingForm.details">
       </div>
 
       <button class="add-painting" (click)="uploadPainting()" [disabled]="isUploading()">
@@ -156,7 +170,8 @@
               <td>
                 <div class="table__buttons">
                   <button class="table__edit-button">Editar</button>
-                  <button class="table__delete-button">Borrar</button>
+                  <button class="table__delete-button"
+                  (click)="deletePainting(painting.id)">Borrar</button>
                 </div>
               </td>
             </tr>
