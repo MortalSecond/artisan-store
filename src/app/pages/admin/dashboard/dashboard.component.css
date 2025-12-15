@@ -1,0 +1,267 @@
+/* Sidebar Spacing */
+
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    margin-left: 24rem;
+    padding: 3rem 2rem;
+    background-color: rgb(249, 249, 255);
+    min-height: 100vh;
+}
+
+/* Utilities */
+
+.box{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+
+    padding: 2rem;
+    background-color: white;
+
+    transition: 0.2s;
+}
+
+.box:hover{
+    box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+}
+
+.box__titles{
+    display: flex;
+    align-items: center;
+}
+
+.box h4{
+    color: var(--subtleNegativeSpace);
+    font-family: var(--textFont);
+    font-weight: 500;
+    font-size: 1.4rem;
+}
+
+.box h4:last-of-type{
+    margin-left: auto;
+    font-size: 3rem;
+}
+
+.box h1{
+    color: black;
+    font-family: var(--textFont);
+    font-size: 3.3rem;
+}
+
+.box h2{
+    color: rgb(40, 40, 43);
+    font-family: var(--textFont);
+    font-size: 2.2rem;
+    letter-spacing: 0;
+}
+
+.option__titles{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.option__titles h2{
+    font-size: 3rem;
+    font-family: var(--textFont);
+    color: black;
+    letter-spacing: 0;
+}
+
+.option__titles h3{
+    font-size: 1.5rem;
+    font-family: var(--textFont);
+    font-weight: 500;
+    color: var(--subtleNegativeSpace);
+}
+
+/* Navbar */
+
+.nav{
+    display: flex;
+    flex-direction: column;
+
+    position: fixed;
+    width: 24rem;
+    height: 100vh;
+
+    background-color: rgb(34, 41, 78);
+}
+
+.nav__titles{
+    border-bottom: 1px solid rgba(100, 100, 196, 0.342);
+    padding: 2rem;
+}
+
+.nav__titles h3{
+    font-family: var(--textFont);
+    color: white;
+}
+
+.nav__titles h4{
+    color: rgb(167, 167, 196);
+    font-size: 1.4rem;
+    font-family: var(--textFont);
+    font-weight: 500;
+    margin-top: 0.5rem;
+}
+
+/* Navbar Menu Items */
+
+.menu__item{
+    color: white;
+    font-size: 1.5rem;
+
+    padding: 1rem 2rem;
+
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.menu__item:hover{
+    background-color: rgb(69, 80, 133);
+}
+
+.menu__item--active{
+    background-color: rgb(69, 80, 133);
+    border-left: 3px solid white;
+}
+
+.nav__logout{
+    margin: auto 1rem 1rem 1rem;
+
+    padding: 1rem;
+    font-size: 1.5rem;
+    border: 1px solid rgba(100, 100, 196, 0.342);
+    border-radius: 5px;
+}
+
+.nav__logout:hover{
+    background-color: rgb(212, 66, 66);
+}
+
+/* Dashboard */
+
+.dashboard-stats{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 2rem;
+    margin-right: 5rem;
+}
+
+/* Painting Manager */
+
+.image-upload{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    cursor: pointer;
+    border: 2px dashed var(--subtleNegativeSpace);
+    padding: 5rem;
+
+    transition: 0.3s;
+}
+
+.image-upload:hover{
+    border-color: rgba(0, 84, 211, 0.747);
+    background-color: rgba(0, 255, 255, 0.082);
+}
+
+.image-upload__text{
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--NegativeSpaceLight);
+}
+
+.image-upload img{
+    object-fit: contain;
+    width: 50%;
+    height: 50%;
+}
+
+.painting__inputs{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.inputs__input{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.input__label{
+    font-size: 1.3rem;
+}
+
+.input__textbox{
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 1rem;
+    background-color: white;
+    font-size: 1.5rem;
+
+    transition: 0s;
+}
+
+.input__textbox:focus{
+    border-color: rgba(9, 74, 212, 0.425);
+}
+
+.add-painting{
+    background-color: rgb(39, 78, 185);
+    border: none;
+    border-radius: 5px;
+    padding: 1rem 2rem;
+
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+.add-painting:hover{
+    color: white;
+    background-color: rgb(13, 63, 138);
+}
+
+/* Pricing */
+
+.prices__item{
+    display: flex;
+    align-items: center;
+
+    padding: 1rem 4rem 1rem 1.5rem;
+    background-color: rgba(168, 168, 177, 0.219);
+    border-radius: 5px;
+}
+
+.price__label{
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.price__input{
+    margin-left: auto;
+    margin-right: 1rem;
+
+    padding: 0.3rem 0.8rem;
+    width: 25rem;
+    
+    font-size: 1.5rem;
+    transition: 0s;
+}
+
+.price__input:focus{
+    border-color: rgba(9, 74, 212, 0.425);
+}

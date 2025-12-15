@@ -1,15 +1,198 @@
-<div class="admin-layout">
-  <nav class="admin-nav">
-    <h2>Admin Panel</h2>
-    <ul>
-      <li><a routerLink="/admin/paintings">Manage Paintings</a></li>
-      <li><a routerLink="/admin/inquiries">View Inquiries</a></li>
-      <li><button (click)="logout()">Logout</button></li>
-    </ul>
-  </nav>
+<aside class="nav">
+  <div class="nav__titles">
+    <h3>Artisan Admin</h3>
+    <h4>👤 {{authService.currentUser()}}</h4>
+  </div>
+  
+  <ul>
+    <li class="menu__item"
+    [class.menu__item--active]="isDashboardSelected()"
+    (click)="selectDashboard()">Dashboard</li>
+    <li class="menu__item"
+    [class.menu__item--active]="isPaintingsSelected()"
+    (click)="selectPainting()">Pinturas</li>
+    <li class="menu__item"
+    [class.menu__item--active]="isPricesSelected()"
+    (click)="selectPrices()">Precios</li>
+    <li class="menu__item"
+    [class.menu__item--active]="isContactsSelected()"
+    (click)="selectContacts()">Preguntas</li>
+    <li class="menu__item"
+    [class.menu__item--active]="isCommissionsSelected()"
+    (click)="selectCommission()">Comisiónes</li>
+  </ul>
 
-  <main class="admin-content">
-    <h1>Dashboard</h1>
-    <p>Welcome, {{ authService.currentUser() }}!</p>
-  </main>
-</div>
+  <button class="nav__logout" (click)="logout()">Logout</button>
+</aside>
+
+<main>
+  <!-- DASHBOARD -->
+  @if (isDashboardSelected()) 
+  {
+  <div class="option__titles">
+    <h2>Dashboard</h2>
+    <h3>Bienvenido, {{authService.currentUser()}}! Estas son las novedades de hoy.</h3>
+  </div>
+
+  <div class="dashboard-stats">
+    <!-- Total Paintings -->
+    <div class="box">
+      <div class="box__titles">
+        <h4>Pinturas Totales</h4>
+        <h4>🖼️</h4>
+      </div>
+      <h1>{{paintingsCount()}}</h1>
+    </div>
+
+    <!-- Pending Inquiries -->
+    <div class="box">
+      <div class="box__titles">
+        <h4>Preguntas Pendientes</h4>
+        <h4>❓</h4>
+      </div>
+      <h1>{{contactsCount()}}</h1>
+    </div>
+
+    <!-- Pending Commissions -->
+    <div class="box">
+      <div class="box__titles">
+        <h4>Peticiones Pendientes</h4>
+        <h4>📧</h4>
+      </div>
+      <h1>{{commissionsCount()}}</h1>
+    </div>
+  </div>
+  }
+
+  <!-- PAINTING MANAGER -->
+  @if (isPaintingsSelected()) 
+  {
+    <div class="option__titles">
+      <h2>Pinturas</h2>
+      <h3>Sube, edita, o elimina pinturas de la galería.</h3>
+    </div>
+
+    <div class="box">
+      <h2>Subir Nueva Foto</h2>
+
+      <input type="file" accept="image/*" (change)="onImageSelected($event)"
+      #fileInput style="display: none;">
+      @if (!imagePreview()) 
+      {
+        <div class="image-upload" (click)="fileInput.click()">
+          <h2>📷</h2>
+          <span class="image-upload__text">Haz Click Para Subir Una Foto</span>
+        </div>
+      }
+      @else 
+      {
+        <!-- Shows Preview -->
+        <div class="image-upload">
+          <img [src]="imagePreview()" alt="Preview" class="image-preview">
+          <button type="button" class="remove-image-btn" (click)="removeImage()">
+            ✕ Eliminar Imagen
+          </button>
+        </div>
+      }
+
+      <div class="painting__inputs">
+        <div class="inputs__input">
+          <span class="input__label">Titulo</span>
+          <input type="text" class="input__textbox" placeholder="Copa De Vino" [ngModel]="paintingForm.title">
+        </div>
+        <div class="inputs__input">
+          <span class="input__label">Precio (MXN)</span>
+          <input type="number" class="input__textbox" placeholder="850" [ngModel]="paintingForm.price">
+        </div>
+        <div class="inputs__input">
+          <span class="input__label">Altura (Cm)</span>
+          <input type="number" class="input__textbox" placeholder="120" [ngModel]="paintingForm.height">
+        </div>
+        <div class="inputs__input">
+          <span class="input__label">Width (Cm)</span>
+          <input type="number" class="input__textbox" placeholder="90" [ngModel]="paintingForm.width">
+        </div>
+      </div>
+      <div class="inputs__input">
+        <span class="input__label">Detalles</span>
+        <input type="text" class="input__textbox" placeholder="Marco de Vidrio" [ngModel]="paintingForm.details">
+      </div>
+
+      <button class="add-painting" (click)="uploadPainting()" [disabled]="isUploading()">
+        @if (!isUploading()) 
+        {
+          ➕ Añadir Pintura
+        }
+        @else 
+        {
+          Subiendo...
+        }
+      </button>
+    </div> <!-- .box -->
+
+    <div class="box">
+      <h2>Pinturas Existentes ({{paintingsCount()}})</h2>
+    </div>
+  }
+
+  <!-- PRICES MANAGER -->
+  @if (isPricesSelected()) 
+  {
+    <div class="option__titles">
+      <h2>Costos de Peticiones</h2>
+      <h3>Maneja los precios de las comisiónes y peticiones.</h3>
+    </div>
+    
+    <!-- Sizes -->
+    <div class="box">
+      <h2>Tamaños de Base</h2>
+
+      <div class="prices__item">
+        <span class="price__label">Pequeña (Hasta 40cm)</span>
+        <input type="number" class="price__input" [value]="pricingService.getSizePrice('small')">
+        <span class="price__currency">MXN</span>
+      </div>
+      <div class="prices__item">
+        <span class="price__label">Mediana (40cm - 120cm)</span>
+        <input type="number" class="price__input" [value]="pricingService.getSizePrice('medium')">
+        <span class="price__currency">MXN</span>
+      </div>
+      <div class="prices__item">
+        <span class="price__label">Grande (120cm - 180cm)</span>
+        <input type="number" class="price__input" [value]="pricingService.getSizePrice('large')">
+        <span class="price__currency">MXN</span>
+      </div>
+      <div class="prices__item">
+        <span class="price__label">Extra Grande (Mas de 180cm)</span>
+        <input type="number" class="price__input" [value]="pricingService.getSizePrice('extra-large')">
+        <span class="price__currency">MXN</span>
+      </div>
+    </div>
+    
+    <!-- Frames -->
+    <div class="box">
+      <h2>Marcos</h2>
+
+      <div class="prices__item">
+        <span class="price__label">Marco de Madera</span>
+        <input type="number" class="price__input" [value]="pricingService.getFramePrice('wooden')">
+        <span class="price__currency">MXN</span>
+      </div>
+      <div class="prices__item">
+        <span class="price__label">Marco de Espejo</span>
+        <input type="number" class="price__input" [value]="pricingService.getFramePrice('mirror')">
+        <span class="price__currency">MXN</span>
+      </div>
+      <div class="prices__item">
+        <span class="price__label">Marco de Madera con LEDs</span>
+        <input type="number" class="price__input" [value]="pricingService.getFramePrice('led-wooden')">
+        <span class="price__currency">MXN</span>
+      </div>
+      <div class="prices__item">
+        <span class="price__label">Marco de Espejo con LEDs</span>
+        <input type="number" class="price__input" [value]="pricingService.getFramePrice('led-mirror')">
+        <span class="price__currency">MXN</span>
+      </div>
+    </div>
+  }
+</main>
