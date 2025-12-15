@@ -1,7 +1,6 @@
 import { Component, computed, inject, OnInit, signal } from '@angular/core';
 import { AuthService } from '../../../services/auth.service';
 import { Router } from '@angular/router';
-import { Painting } from '../../../shared/models/painting';
 import { PaintingService } from '../../../services/painting.service';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { RequestsService } from '../../../services/requests.service';
