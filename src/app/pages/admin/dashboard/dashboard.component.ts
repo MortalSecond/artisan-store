@@ -174,8 +174,8 @@ export class DashboardComponent{
     formData.append('ImageFile', this.selectedImage()!);
     formData.append('Title', this.paintingForm.title);
     formData.append('Price', this.paintingForm.price.toString());
-    formData.append('HeightCm', this.paintingForm.height.toString());
-    formData.append('WidthCm', this.paintingForm.width.toString());
+    formData.append('Height', this.paintingForm.height.toString());
+    formData.append('Width', this.paintingForm.width.toString());
     formData.append('Details', this.paintingForm.details);
 
     this.paintingService.uploadPainting(formData).subscribe({
