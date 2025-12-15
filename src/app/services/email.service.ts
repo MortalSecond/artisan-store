@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from '../../environments/environment.development';
 
 export interface ContactForm{
   name: string;
@@ -15,7 +16,7 @@ export interface ContactForm{
 })
 export class EmailService {
   private http = inject(HttpClient);
-  private apiUrl = "http://localhost:5051/api";
+  private apiUrl = `${environment.apiUrl}`;
 
   constructor() { }
 

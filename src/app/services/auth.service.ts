@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { inject, Injectable, signal } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable, tap } from 'rxjs';
+import { environment } from '../../environments/environment.development';
 
 // DTOs
 export interface LoginCredentials{
@@ -22,7 +23,7 @@ export interface AuthResponse{
 export class AuthService {
   private http = inject(HttpClient);
   private router = inject(Router);
-  private apiUrl = "http://localhost:5051/api/Auth";
+  private apiUrl = `${environment.apiUrl}/Auth`;
 
   isAuthenticated = signal(false);
   currentUser = signal<string | null>(null);

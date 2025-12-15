@@ -2,13 +2,14 @@ import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ContactForm } from '../shared/models/contact-form';
+import { environment } from '../../environments/environment.development';
 
 @Injectable({
   providedIn: 'root'
 })
 export class RequestsService {
   private http = inject(HttpClient);
-  private apiUrl = "http://localhost:5051/api"
+  private apiUrl = `${environment.apiUrl}`;
 
   constructor() { }
 
