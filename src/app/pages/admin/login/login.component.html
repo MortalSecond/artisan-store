@@ -3,8 +3,8 @@
     <div class="login-box">
       <div class="login-header">
         <div class="login-header__icon">🔐</div>
-        <h1 class="login-header__title">Admin Login</h1>
-        <p class="login-header__subtitle">Artisan Store Management</p>
+        <h1 class="login-header__title">Inicio de Sesion Admin</h1>
+        <p class="login-header__subtitle">Administrador de Pagina</p>
       </div>
 
       @if (errorMessage()) {
@@ -15,39 +15,42 @@
 
       <form (ngSubmit)="login()">
         <div class="form-group">
-          <label for="username">Username</label>
+          <label for="username">Usuario</label>
           <input 
             type="text" 
             id="username" 
             [(ngModel)]="username"
             name="username"
-            placeholder="Enter your username"
+            placeholder="Introduce tu usuario"
             required>
         </div>
 
         <div class="form-group">
-          <label for="password">Password</label>
+          <label for="password">Contraseña</label>
           <input 
             type="password" 
             id="password" 
             [(ngModel)]="password"
             name="password"
-            placeholder="Enter your password"
+            placeholder="Introduce tu contraseña"
             required>
         </div>
 
         <button type="submit" class="login-button" [disabled]="isLoading()">
-          @if (isLoading()) {
-            Logging in...
-          } @else {
-            Login
+          @if (isLoading()) 
+          {
+            Ingresando...
+          } 
+          @else 
+          {
+            Ingresar
           }
         </button>
       </form>
 
       <div class="login-footer">
         <p class="login-footer__text">
-          <a routerLink="/" class="login-footer__link" (click)="home()">← Back to Site</a>
+          <a routerLink="/" class="login-footer__link" (click)="home()">← Regresar</a>
         </p>
       </div>
     </div>

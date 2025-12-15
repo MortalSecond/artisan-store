@@ -21,7 +21,7 @@ export class LoginComponent {
   login(){
     // Validate
     if(!this.username || !this.password){
-      this.errorMessage.set('Please enter username and password');
+      this.errorMessage.set('Porfavor introduce tu usuario y contraseña');
       return;
     }
 
@@ -35,8 +35,8 @@ export class LoginComponent {
       },
       error: (error) => {
         this.isLoading.set(false);
-        this.errorMessage.set('Invalid username or password');
-        console.error('Login error:', error);
+        this.errorMessage.set('Contraseña o usuario invalido');
+        console.error('Error al iniciar sesion:', error);
       }
     });
   }
