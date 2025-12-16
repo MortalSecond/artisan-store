@@ -96,8 +96,8 @@ export class DashboardComponent implements OnInit{
 
   // Computed Values
   paintingsCount = computed(()=>this.paintings().length);
-  contactsCount = computed(()=>this.contacts.length);
-  commissionsCount = computed(()=>this.commissions.length);
+  contactsCount = computed(()=>this.contacts().length);
+  commissionsCount = computed(()=>this.commissions().length);
   // Check if pricing is loaded
   hasPricingLoaded = computed(() => this.pricingService.pricing() !== null);
 
