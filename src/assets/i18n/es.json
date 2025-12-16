@@ -1,5 +1,6 @@
 {
     "language": "ES",
+    "loading": "Cargando...",
     "header":{
         "logo-title": "Artesanías",
         "nav":{

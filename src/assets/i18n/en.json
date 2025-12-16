@@ -1,5 +1,6 @@
 {
     "language": "EN",
+    "loading": "Loading...",
     "header":{
         "logo-title": "Artisan",
         "nav":{
