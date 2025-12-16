@@ -113,45 +113,6 @@ export class DashboardComponent{
   }
 
   // Paintings Methods
-  onImageSelected(event: Event) {
-    const input = event.target as HTMLInputElement;
-    
-    if (input.files && input.files[0]) {
-      const file = input.files[0];
-      this.selectedImage.set(file);
-
-      // Validate file type
-      if (!file.type.startsWith('image/')) {
-        this.uploadError.set('Please select a valid image file');
-        return;
-      }
-      
-      // Create preview
-      const reader = new FileReader();
-      reader.onload = (e) => {
-        this.imagePreview.set(e.target?.result as string);
-      };
-      reader.readAsDataURL(file);
-    }
-  }
-  
-  removeImage() {
-    this.selectedImage.set(null);
-    this.imagePreview.set(null);
-  }
-
-  resetForm() {
-    this.paintingForm = {
-      title: '',
-      price: 0,
-      height: 0,
-      width: 0,
-      details: ''
-    };
-    this.selectedImage.set(null);
-    this.imagePreview.set(null);
-  }
-
   uploadPainting(){
     // Reset messages
     this.uploadError.set(null);
@@ -280,5 +241,44 @@ export class DashboardComponent{
     this.isPricesSelected.set(false);
     this.isContactsSelected.set(false);
     this.isCommissionsSelected.set(true);
+  }
+  
+  onImageSelected(event: Event) {
+    const input = event.target as HTMLInputElement;
+    
+    if (input.files && input.files[0]) {
+      const file = input.files[0];
+      this.selectedImage.set(file);
+
+      // Validate file type
+      if (!file.type.startsWith('image/')) {
+        this.uploadError.set('Please select a valid image file');
+        return;
+      }
+      
+      // Create preview
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        this.imagePreview.set(e.target?.result as string);
+      };
+      reader.readAsDataURL(file);
+    }
+  }
+  
+  removeImage() {
+    this.selectedImage.set(null);
+    this.imagePreview.set(null);
+  }
+
+  resetForm() {
+    this.paintingForm = {
+      title: '',
+      price: 0,
+      height: 0,
+      width: 0,
+      details: ''
+    };
+    this.selectedImage.set(null);
+    this.imagePreview.set(null);
   }
 }
