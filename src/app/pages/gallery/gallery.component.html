@@ -15,10 +15,12 @@
     <section class="gallery">
       <div class="gallery__top-group">
           <p class="top-group__counter">
-              {{'gallery.counter.showing' | translate}} <span class="top-group__number">12</span> {{'gallery.counter.pieces' | translate}}
+              {{'gallery.counter.showing' | translate}} 
+              <span class="top-group__number">{{paintings().length}}</span> 
+              {{'gallery.counter.pieces' | translate}}
           </p>
 
-          <div class="top-group__selectors">
+          <div class="top-group__selectors" (change)="onSizeChange($event)">
               <select class="top-group__dropdown">
                   <option value="all">{{'gallery.selectors.sizes.all' | translate}}</option>
                   <option value="small">{{'gallery.selectors.sizes.small' | translate}}</option>
@@ -26,7 +28,7 @@
                   <option value="large">{{'gallery.selectors.sizes.large' | translate}}</option>
               </select>
               
-              <select class="top-group__dropdown">
+              <select class="top-group__dropdown" (change)="onPriceChange($event)">
                   <option value="all">{{'gallery.selectors.prices.all' | translate}}</option>
                   <option value="under-500">{{'gallery.selectors.prices.under-500' | translate}}</option>
                   <option value="500-1000">{{'gallery.selectors.prices.500-1000' | translate}}</option>
