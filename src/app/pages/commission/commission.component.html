@@ -6,322 +6,331 @@
 		</p>
 	</div> <!-- .hero -->
 
-	<section class="quotation">
-		<!-- Commission Design (Left Side) -->
-		<div class="quotation__commission-design">
-			<!-- Painting Size -->
-			<div class="commission-design__section">
-				<div class="section__container">
-					<div class="section__title-group">
-						<h2 class="section__title">{{'commission.size.title' | translate}}</h2>
-						<p class="section__subtitle">
-							{{'commission.size.subtitle' | translate}}
-						</p>
-					</div>
-
-					<div class="section__size-options">
-						<div class="size-options__item"
-							[class.size-options__item--active]="selectedSize() === 'small'"
-							(click)="selectSize('small')">
-							<h3 class="size-options__title">{{'commission.size.small.label' | translate}}</h3>
-							<p class="size-options__description">{{'commission.size.small.description' | translate}}</p>
-							<h2 class="size-options__price">${{pricingService.getSizePrice('small')}}</h2>
+	@if (!isPricingLoaded()) 
+	{
+		<!-- Loading State -->
+		<app-loading-spinner></app-loading-spinner>
+	}
+	@else 
+	{
+		<section class="quotation">
+			<!-- Commission Design (Left Side) -->
+			<div class="quotation__commission-design">
+				<!-- Painting Size -->
+				<div class="commission-design__section">
+					<div class="section__container">
+						<div class="section__title-group">
+							<h2 class="section__title">{{'commission.size.title' | translate}}</h2>
+							<p class="section__subtitle">
+								{{'commission.size.subtitle' | translate}}
+							</p>
 						</div>
-						
-						<div class="size-options__item"
-							[class.size-options__item--active]="selectedSize() === 'medium'"
-							(click)="selectSize('medium')">
-							<h3 class="size-options__title">{{'commission.size.medium.label' | translate}}</h3>
-							<p class="size-options__description">{{'commission.size.medium.description' | translate}}</p>
-							<h2 class="size-options__price">${{pricingService.getSizePrice('medium')}}</h2>
+
+						<div class="section__size-options">
+							<div class="size-options__item"
+								[class.size-options__item--active]="selectedSize() === 'small'"
+								(click)="selectSize('small')">
+								<h3 class="size-options__title">{{'commission.size.small.label' | translate}}</h3>
+								<p class="size-options__description">{{'commission.size.small.description' | translate}}</p>
+								<h2 class="size-options__price">${{pricingService.getSizePrice('small')}}</h2>
+							</div>
+							
+							<div class="size-options__item"
+								[class.size-options__item--active]="selectedSize() === 'medium'"
+								(click)="selectSize('medium')">
+								<h3 class="size-options__title">{{'commission.size.medium.label' | translate}}</h3>
+								<p class="size-options__description">{{'commission.size.medium.description' | translate}}</p>
+								<h2 class="size-options__price">${{pricingService.getSizePrice('medium')}}</h2>
+							</div>
+							
+							<div class="size-options__item"
+								[class.size-options__item--active]="selectedSize() === 'large'"
+								(click)="selectSize('large')">
+								<h3 class="size-options__title">{{'commission.size.large.label' | translate}}</h3>
+								<p class="size-options__description">{{'commission.size.large.description' | translate}}</p>
+								<h2 class="size-options__price">${{pricingService.getSizePrice('large')}}</h2>
+							</div>
+							
+							<div class="size-options__item"
+								[class.size-options__item--active]="selectedSize() === 'extra-large'"
+								(click)="selectSize('extra-large')">
+								<h3 class="size-options__title">{{'commission.size.extra-large.label' | translate}}</h3>
+								<p class="size-options__description">{{'commission.size.extra-large.description' | translate}}</p>
+								<h2 class="size-options__price">${{pricingService.getSizePrice('extra-large')}}</h2>
+							</div>
+						</div> <!-- .section__size-options -->
+					</div> <!-- .section__container -->
+				</div> <!-- .commission-design__section -->
+
+				<!-- Stone Coverage -->
+				<div class="commission-design__section">
+					<div class="section__container">
+						<div class="section__title-group">
+							<h2 class="section__title">{{'commission.stones.title' | translate}}</h2>
+							<p class="section__subtitle">
+								{{'commission.stones.subtitle' | translate}}
+							</p>
 						</div>
-						
-						<div class="size-options__item"
-							[class.size-options__item--active]="selectedSize() === 'large'"
-							(click)="selectSize('large')">
-							<h3 class="size-options__title">{{'commission.size.large.label' | translate}}</h3>
-							<p class="size-options__description">{{'commission.size.large.description' | translate}}</p>
-							<h2 class="size-options__price">${{pricingService.getSizePrice('large')}}</h2>
+
+						<select (change)="selectStones($any($event.target).value)">
+							<option value="none">{{'commission.stones.options.none' | translate}}</option>
+							<option value="light">{{'commission.stones.options.light' | translate}}</option>
+							<option value="medium">{{'commission.stones.options.medium' | translate}}</option>
+							<option value="heavy">{{'commission.stones.options.heavy' | translate}}</option>
+						</select>
+					</div> <!-- .section__container -->
+				</div> <!-- .commission-design__section -->
+
+				<!-- Frame Selection -->
+				<div class="commission-design__section">
+					<div class="section__container">
+						<div class="section__title-group">
+							<h2 class="section__title">{{'commission.frame.title' | translate}}</h2>
+							<p class="section__subtitle">
+								{{'commission.frame.subtitle' | translate}}
+							</p>
 						</div>
-						
-						<div class="size-options__item"
-							[class.size-options__item--active]="selectedSize() === 'extra-large'"
-							(click)="selectSize('extra-large')">
-							<h3 class="size-options__title">{{'commission.size.extra-large.label' | translate}}</h3>
-							<p class="size-options__description">{{'commission.size.extra-large.description' | translate}}</p>
-							<h2 class="size-options__price">${{pricingService.getSizePrice('extra-large')}}</h2>
+
+						<div class="section__options">
+							<label class="item">
+								<div class="item__title-group">
+									<input type="radio" name="frame"
+										[checked]="selectedFrame() === 'wooden'"
+										(change)="selectFrame('wooden')">
+									<h3 class="item__title">{{'commission.frame.wooden.label' | translate}}</h3>
+									<span class="item__price">${{pricingService.getFramePrice('wooden')}}</span>
+								</div>
+								
+								<p class="item__description">
+									{{'commission.frame.wooden.description' | translate}}
+								</p>
+							</label>
+
+							<label class="item">
+								<div class="item__title-group">
+									<input type="radio" name="frame"
+										[checked]="selectedFrame() === 'mirror'"
+										(change)="selectFrame('mirror')">
+									<h3 class="item__title">{{'commission.frame.mirror.label' | translate}}</h3>
+									<span class="item__price">${{pricingService.getFramePrice('mirror')}}</span>
+								</div>
+
+								<p class="item__description">
+									{{'commission.frame.mirror.description' | translate}}
+								</p>
+							</label>
+
+							<label class="item">
+								<div class="item__title-group">
+									<input type="radio" name="frame"
+										[checked]="selectedFrame() === 'led-wooden'"
+										(change)="selectFrame('led-wooden')">
+									<h3 class="item__title">{{'commission.frame.led-wooden.label' | translate}}</h3>
+									<span class="item__price">${{pricingService.getFramePrice('led-wooden')}}</span>
+								</div>
+
+								<p class="item__description">
+									{{'commission.frame.led-wooden.description' | translate}}
+								</p>
+							</label>
+
+							<label class="item">
+								<div class="item__title-group">
+									<input type="radio" name="frame"
+										[checked]="selectedFrame() === 'led-mirror'"
+										(change)="selectFrame('led-mirror')">
+									<h3 class="item__title">{{'commission.frame.led-mirror.label' | translate}}</h3>
+									<span class="item__price">${{pricingService.getFramePrice('led-mirror')}}</span>
+								</div>
+								
+								<p class="item__description">
+									{{'commission.frame.led-mirror.description' | translate}}
+								</p>
+							</label>
+						</div> <!-- .section__options -->
+					</div> <!-- .section__container -->
+				</div> <!-- .commission-design__section -->
+
+				<!-- Special Features -->
+				<div class="commission-design__section">
+					<div class="section__container">
+						<div class="section__title-group">
+							<h2 class="section__title">{{'commission.features.title' | translate}}</h2>
+							<p class="section__subtitle">
+								{{'commission.features.subtitle' | translate}}
+							</p>
 						</div>
-					</div> <!-- .section__size-options -->
-				</div> <!-- .section__container -->
-			</div> <!-- .commission-design__section -->
 
-			<!-- Stone Coverage -->
-			<div class="commission-design__section">
-				<div class="section__container">
-					<div class="section__title-group">
-						<h2 class="section__title">{{'commission.stones.title' | translate}}</h2>
-						<p class="section__subtitle">
-							{{'commission.stones.subtitle' | translate}}
-						</p>
-					</div>
-
-					<select (change)="selectStones($any($event.target).value)">
-						<option value="none">{{'commission.stones.options.none' | translate}}</option>
-						<option value="light">{{'commission.stones.options.light' | translate}}</option>
-						<option value="medium">{{'commission.stones.options.medium' | translate}}</option>
-						<option value="heavy">{{'commission.stones.options.heavy' | translate}}</option>
-					</select>
-				</div> <!-- .section__container -->
-			</div> <!-- .commission-design__section -->
-
-			<!-- Frame Selection -->
-			<div class="commission-design__section">
-				<div class="section__container">
-					<div class="section__title-group">
-						<h2 class="section__title">{{'commission.frame.title' | translate}}</h2>
-						<p class="section__subtitle">
-							{{'commission.frame.subtitle' | translate}}
-						</p>
-					</div>
-
-					<div class="section__options">
-						<label class="item">
-							<div class="item__title-group">
-								<input type="radio" name="frame"
-									[checked]="selectedFrame() === 'wooden'"
-									(change)="selectFrame('wooden')">
-								<h3 class="item__title">{{'commission.frame.wooden.label' | translate}}</h3>
-								<span class="item__price">${{pricingService.getFramePrice('wooden')}}</span>
-							</div>
+						<div class="section__options">
+							<label class="item">
+								<div class="item__title-group">
+									<input type="checkbox" name="feature"
+										[checked]="isFeatureSelected('clock')"
+										(change)="toggleFeature('clock')">
+									<h3 class="item__title">{{'commission.features.clock.label' | translate}}</h3>
+									<span class="item__price">${{pricingService.getFeaturePrice('clock')}}</span>
+								</div>
+								
+								<p class="item__description">
+									{{'commission.features.clock.description' | translate}}
+								</p>
+							</label>
 							
-							<p class="item__description">
-								{{'commission.frame.wooden.description' | translate}}
-							</p>
-						</label>
-
-						<label class="item">
-							<div class="item__title-group">
-								<input type="radio" name="frame"
-									[checked]="selectedFrame() === 'mirror'"
-									(change)="selectFrame('mirror')">
-								<h3 class="item__title">{{'commission.frame.mirror.label' | translate}}</h3>
-								<span class="item__price">${{pricingService.getFramePrice('mirror')}}</span>
-							</div>
-
-							<p class="item__description">
-								{{'commission.frame.mirror.description' | translate}}
-							</p>
-						</label>
-
-						<label class="item">
-							<div class="item__title-group">
-								<input type="radio" name="frame"
-									[checked]="selectedFrame() === 'led-wooden'"
-									(change)="selectFrame('led-wooden')">
-								<h3 class="item__title">{{'commission.frame.led-wooden.label' | translate}}</h3>
-								<span class="item__price">${{pricingService.getFramePrice('led-wooden')}}</span>
-							</div>
-
-							<p class="item__description">
-								{{'commission.frame.led-wooden.description' | translate}}
-							</p>
-						</label>
-
-						<label class="item">
-							<div class="item__title-group">
-								<input type="radio" name="frame"
-									[checked]="selectedFrame() === 'led-mirror'"
-									(change)="selectFrame('led-mirror')">
-								<h3 class="item__title">{{'commission.frame.led-mirror.label' | translate}}</h3>
-								<span class="item__price">${{pricingService.getFramePrice('led-mirror')}}</span>
-							</div>
+							<label class="item">
+								<div class="item__title-group">
+									<input type="checkbox" name="feature"
+										[checked]="isFeatureSelected('diamond-strips')"
+										(change)="toggleFeature('diamond-strips')">
+									<h3 class="item__title">{{'commission.features.diamond-strips.label' | translate}}</h3>
+									<span class="item__price">${{pricingService.getFeaturePrice('diamond-strips')}}</span>
+								</div>
+								
+								<p class="item__description">
+									{{'commission.features.diamond-strips.description' | translate}}
+								</p>
+							</label>
 							
-							<p class="item__description">
-								{{'commission.frame.led-mirror.description' | translate}}
-							</p>
-						</label>
-					</div> <!-- .section__options -->
-				</div> <!-- .section__container -->
-			</div> <!-- .commission-design__section -->
-
-			<!-- Special Features -->
-			<div class="commission-design__section">
-				<div class="section__container">
-					<div class="section__title-group">
-						<h2 class="section__title">{{'commission.features.title' | translate}}</h2>
-						<p class="section__subtitle">
-							{{'commission.features.subtitle' | translate}}
-						</p>
-					</div>
-
-					<div class="section__options">
-						<label class="item">
-							<div class="item__title-group">
-								<input type="checkbox" name="feature"
-									[checked]="isFeatureSelected('clock')"
-									(change)="toggleFeature('clock')">
-								<h3 class="item__title">{{'commission.features.clock.label' | translate}}</h3>
-								<span class="item__price">${{pricingService.getFeaturePrice('clock')}}</span>
-							</div>
+							<label class="item">
+								<div class="item__title-group">
+									<input type="checkbox" name="feature"
+										[checked]="isFeatureSelected('studs')"
+										(change)="toggleFeature('studs')">
+									<h3 class="item__title">{{'commission.features.studs.label' | translate}}</h3>
+									<span class="item__price">${{pricingService.getFeaturePrice('studs')}}</span>
+								</div>
+								
+								<p class="item__description">
+									{{'commission.features.studs.description' | translate}}
+								</p>
+							</label>
 							
-							<p class="item__description">
-								{{'commission.features.clock.description' | translate}}
+							<label class="item">
+								<div class="item__title-group">
+									<input type="checkbox" name="feature"
+										[checked]="isFeatureSelected('leds')"
+										(change)="toggleFeature('leds')">
+									<h3 class="item__title">{{'commission.features.leds.label' | translate}}</h3>
+									<span class="item__price">${{pricingService.getFeaturePrice('leds')}}</span>
+								</div>
+								
+								<p class="item__description">
+									{{'commission.features.leds.description' | translate}}
+								</p>
+							</label>
+						</div> <!-- .section__options -->
+					</div> <!-- .section__container -->
+				</div> <!-- .commission-design__section -->
+
+				<!-- Surface Treatments -->
+				<div class="commission-design__section">
+					<div class="section__container">
+						<div class="section__title-group">
+							<h2 class="section__title">{{'commission.treatments.title' | translate}}</h2>
+							<p class="section__subtitle">
+								{{'commission.treatments.subtitle' | translate}}
 							</p>
-						</label>
-						
-						<label class="item">
-							<div class="item__title-group">
-								<input type="checkbox" name="feature"
-									[checked]="isFeatureSelected('diamond-strips')"
-									(change)="toggleFeature('diamond-strips')">
-								<h3 class="item__title">{{'commission.features.diamond-strips.label' | translate}}</h3>
-								<span class="item__price">${{pricingService.getFeaturePrice('diamond-strips')}}</span>
-							</div>
+						</div>
+
+						<div class="section__options">
+							<label class="item">
+								<div class="item__title-group">
+									<input type="checkbox" name="treatment"
+										[checked]="isTreatmentSelected('resin')"
+										(change)="toggleTreatment('resin')">
+									<h3 class="item__title">{{'commission.treatments.resin.label' | translate}}</h3>
+									<span class="item__price">${{pricingService.getTreatmentPrice('resin')}}</span>
+								</div>
+								
+								<p class="item__description">
+									{{'commission.treatments.resin.description' | translate}}
+								</p>
+							</label>
 							
-							<p class="item__description">
-								{{'commission.features.diamond-strips.description' | translate}}
-							</p>
-						</label>
-						
-						<label class="item">
-							<div class="item__title-group">
-								<input type="checkbox" name="feature"
-									[checked]="isFeatureSelected('studs')"
-									(change)="toggleFeature('studs')">
-								<h3 class="item__title">{{'commission.features.studs.label' | translate}}</h3>
-								<span class="item__price">${{pricingService.getFeaturePrice('studs')}}</span>
-							</div>
-							
-							<p class="item__description">
-								{{'commission.features.studs.description' | translate}}
-							</p>
-						</label>
-						
-						<label class="item">
-							<div class="item__title-group">
-								<input type="checkbox" name="feature"
-									[checked]="isFeatureSelected('leds')"
-									(change)="toggleFeature('leds')">
-								<h3 class="item__title">{{'commission.features.leds.label' | translate}}</h3>
-								<span class="item__price">${{pricingService.getFeaturePrice('leds')}}</span>
-							</div>
-							
-							<p class="item__description">
-								{{'commission.features.leds.description' | translate}}
-							</p>
-						</label>
-					</div> <!-- .section__options -->
-				</div> <!-- .section__container -->
-			</div> <!-- .commission-design__section -->
+							<label class="item">
+								<div class="item__title-group">
+									<input type="checkbox" name="treatment"
+										[checked]="isTreatmentSelected('geode')"
+										(change)="toggleTreatment('geode')">
+									<h3 class="item__title">{{'commission.treatments.geode.label' | translate}}</h3>
+									<span class="item__price">${{pricingService.getTreatmentPrice('geode')}}</span>
+								</div>
+								
+								<p class="item__description">
+									{{'commission.treatments.geode.description' | translate}}
+								</p>
+							</label>
+						</div> <!-- .section__options -->
+					</div> <!-- .section__container -->
+				</div> <!-- .commission-design__section -->
 
-			<!-- Surface Treatments -->
-			<div class="commission-design__section">
-				<div class="section__container">
-					<div class="section__title-group">
-						<h2 class="section__title">{{'commission.treatments.title' | translate}}</h2>
-						<p class="section__subtitle">
-							{{'commission.treatments.subtitle' | translate}}
-						</p>
-					</div>
+				<!-- Shipping Location -->
+				<div class="commission-design__section">
+					<div class="section__container">
+						<div class="section__title-group">
+							<h2 class="section__title">{{'commission.shipping.title' | translate}}</h2>
+						</div>
 
-					<div class="section__options">
-						<label class="item">
-							<div class="item__title-group">
-								<input type="checkbox" name="treatment"
-									[checked]="isTreatmentSelected('resin')"
-									(change)="toggleTreatment('resin')">
-								<h3 class="item__title">{{'commission.treatments.resin.label' | translate}}</h3>
-								<span class="item__price">${{pricingService.getTreatmentPrice('resin')}}</span>
-							</div>
-							
-							<p class="item__description">
-								{{'commission.treatments.resin.description' | translate}}
-							</p>
-						</label>
-						
-						<label class="item">
-							<div class="item__title-group">
-								<input type="checkbox" name="treatment"
-									[checked]="isTreatmentSelected('geode')"
-									(change)="toggleTreatment('geode')">
-								<h3 class="item__title">{{'commission.treatments.geode.label' | translate}}</h3>
-								<span class="item__price">${{pricingService.getTreatmentPrice('geode')}}</span>
-							</div>
-							
-							<p class="item__description">
-								{{'commission.treatments.geode.description' | translate}}
-							</p>
-						</label>
-					</div> <!-- .section__options -->
-				</div> <!-- .section__container -->
-			</div> <!-- .commission-design__section -->
+						<select (change)="selectShipping($any($event.target).value)">
+							<option value="domestic">{{'commission.shipping.domestic' | translate}}</option>
+							<option value="north-america">{{'commission.shipping.north-america' | translate}}</option>
+							<option value="international">{{'commission.shipping.international' | translate}}</option>
+						</select>
+					</div> <!-- .section__container -->
+				</div> <!-- .commission-design__section -->
+			</div> <!-- .quotation__commission-design -->
 
-			<!-- Shipping Location -->
-			<div class="commission-design__section">
-				<div class="section__container">
-					<div class="section__title-group">
-						<h2 class="section__title">{{'commission.shipping.title' | translate}}</h2>
-					</div>
+			<!-- Commission Price (Right Side) -->
+			<div class="quotation__price">
+				<h2 class="price__title">{{'commission.price.title' | translate}}</h2>
 
-					<select (change)="selectShipping($any($event.target).value)">
-						<option value="domestic">{{'commission.shipping.domestic' | translate}}</option>
-						<option value="north-america">{{'commission.shipping.north-america' | translate}}</option>
-						<option value="international">{{'commission.shipping.international' | translate}}</option>
-					</select>
-				</div> <!-- .section__container -->
-			</div> <!-- .commission-design__section -->
-		</div> <!-- .quotation__commission-design -->
-
-		<!-- Commission Price (Right Side) -->
-		<div class="quotation__price">
-			<h2 class="price__title">{{'commission.price.title' | translate}}</h2>
-
-			<div>
-				<div class="price__item">
-					<span class="price__item-label">{{'commission.price.base' | translate}}</span>
-					<span class="price__item-price">${{basePrice()}}</span>
-				</div>
-
-				<div class="price__item">
-					<span class="price__item-label">{{'commission.price.frame' | translate}}</span>
-					<span class="price__item-price">${{framePrice()}}</span>
-				</div>
-
-				<div class="price__item">
-					<span class="price__item-label">{{'commission.price.stones' | translate}}</span>
-					<span class="price__item-price">${{stonePrice()}}</span>
-				</div>
-
-				@if (hasFeaturesSelected()) 
-				{
+				<div>
 					<div class="price__item">
-						<span class="price__item-label">{{'commission.price.features' | translate}}</span>
-						<span class="price__item-price">${{featuresPrice()}}</span>
+						<span class="price__item-label">{{'commission.price.base' | translate}}</span>
+						<span class="price__item-price">${{basePrice()}}</span>
 					</div>
-				}
 
-				@if (hasTreatmentsSelected()) 
-				{
 					<div class="price__item">
-						<span class="price__item-label">{{'commission.price.treatments' | translate}}</span>
-						<span class="price__item-price">${{treatmentsPrice()}}</span>
+						<span class="price__item-label">{{'commission.price.frame' | translate}}</span>
+						<span class="price__item-price">${{framePrice()}}</span>
 					</div>
-				}
 
-				<div class="price__item">
-					<span class="price__item-label">{{'commission.price.shipping' | translate}}</span>
-					<span class="price__item-price">${{shippingPrice()}}</span>
+					<div class="price__item">
+						<span class="price__item-label">{{'commission.price.stones' | translate}}</span>
+						<span class="price__item-price">${{stonePrice()}}</span>
+					</div>
+
+					@if (hasFeaturesSelected()) 
+					{
+						<div class="price__item">
+							<span class="price__item-label">{{'commission.price.features' | translate}}</span>
+							<span class="price__item-price">${{featuresPrice()}}</span>
+						</div>
+					}
+
+					@if (hasTreatmentsSelected()) 
+					{
+						<div class="price__item">
+							<span class="price__item-label">{{'commission.price.treatments' | translate}}</span>
+							<span class="price__item-price">${{treatmentsPrice()}}</span>
+						</div>
+					}
+
+					<div class="price__item">
+						<span class="price__item-label">{{'commission.price.shipping' | translate}}</span>
+						<span class="price__item-price">${{shippingPrice()}}</span>
+					</div>
 				</div>
-			</div>
 
-			<div class="price__total-group">
-				<h2 class="total-group__label">{{'commission.price.total' | translate}}</h2>
-				<h2 class="total-group__number">${{totalPrice()}}</h2>
-			</div>
+				<div class="price__total-group">
+					<h2 class="total-group__label">{{'commission.price.total' | translate}}</h2>
+					<h2 class="total-group__number">${{totalPrice()}}</h2>
+				</div>
 
-			<button class="price__button" (click)="requestQuote()">
-				{{'commission.price.button' | translate}}
-			</button>
-		</div>
-	</section>
+				<button class="price__button" (click)="requestQuote()">
+					{{'commission.price.button' | translate}}
+				</button>
+			</div>
+		</section>
+	}
+	
 </main>

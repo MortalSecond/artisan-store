@@ -1,21 +1,32 @@
-import { Component, computed, inject, signal } from '@angular/core';
+import { Component, computed, inject, OnInit, signal } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { PricingService } from '../../services/pricing.service';
 import { CommissionConfig, FeaturesOption, FrameOption, ShippingOption, SizeOption, StoneCoverage, TreatmentsOption } from '../../shared/models/commission-config';
 import { CommissionStateService } from '../../services/commission-state.service';
 import { Router } from '@angular/router';
+import { LoadingSpinnerComponent } from "../../shared/components/loading-spinner/loading-spinner.component";
 
 @Component({
   selector: 'app-commission',
-  imports: [TranslateModule],
+  imports: [TranslateModule, LoadingSpinnerComponent],
   templateUrl: './commission.component.html',
   styleUrl: './commission.component.css'
 })
-export class CommissionComponent {
+export class CommissionComponent implements OnInit{
   // Injections
   pricingService = inject(PricingService)
   commissionState = inject(CommissionStateService);
   router = inject(Router);
+  
+  // Check if pricing is loaded
+  isPricingLoaded = computed(() => this.pricingService.pricing() !== null);
+  
+  ngOnInit() {
+    // Ensure pricing is loaded
+    if (!this.isPricingLoaded()) {
+      this.pricingService.loadPricing().subscribe();
+    }
+  }
 
   // Signals
   selectedSize = signal<SizeOption>('small');
