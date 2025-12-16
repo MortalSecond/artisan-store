@@ -25,6 +25,13 @@
   <button class="nav__logout" (click)="logout()">Logout</button>
 </aside>
 
+<!-- Token Expiration Warning -->
+@if (authService.isTokenExpiringSoon()) {
+  <div class="alert alert--error">
+    ⚠️ Tu sesión expirará pronto. 
+  </div>
+}
+
 <main>
   <!-- DASHBOARD -->
   @if (isDashboardSelected()) 
