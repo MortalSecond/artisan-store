@@ -140,6 +140,13 @@ export class PricingService {
     return config[mapping[location]] as number;
   }
 
+  getLastUpdatedTime():Date | null{
+    const config = this.pricing();
+    if(!config) return null;
+
+    return config['updatedAt'] as Date;
+  }
+
   // Calculate totals (same as before)
   getFeaturesTotal(features: FeaturesOption[]): number {
     return features.reduce((total, feature) => {

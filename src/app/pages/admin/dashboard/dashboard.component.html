@@ -200,24 +200,40 @@
     <div class="box">
       <h2>Tamaños de Base</h2>
 
+      <button class="save-pricing-button" 
+      (click)="savePricing()"
+      [disabled]="isSavingPricing()">
+      @if (!isSavingPricing()) 
+      {
+        💾 Guardar Cambios
+      } 
+      @else 
+      {
+        Guardando...
+      }
+      </button>
+      <span class="prices__date">
+        Ultima Actualizacion: {{pricingService.getLastUpdatedTime() | date:'dd/MM/yyyy'}}
+      </span>
+
       <div class="prices__item">
         <span class="price__label">Pequeña (Hasta 40cm)</span>
-        <input type="number" class="price__input" [value]="pricingService.getSizePrice('small')">
+        <input type="number" class="price__input" [(ngModel)]="pricingForm.sizes.small">
         <span class="price__currency">MXN</span>
       </div>
       <div class="prices__item">
         <span class="price__label">Mediana (40cm - 120cm)</span>
-        <input type="number" class="price__input" [value]="pricingService.getSizePrice('medium')">
+        <input type="number" class="price__input" [(ngModel)]="pricingForm.sizes.medium">
         <span class="price__currency">MXN</span>
       </div>
       <div class="prices__item">
         <span class="price__label">Grande (120cm - 180cm)</span>
-        <input type="number" class="price__input" [value]="pricingService.getSizePrice('large')">
+        <input type="number" class="price__input" [(ngModel)]="pricingForm.sizes.large">
         <span class="price__currency">MXN</span>
       </div>
       <div class="prices__item">
         <span class="price__label">Extra Grande (Mas de 180cm)</span>
-        <input type="number" class="price__input" [value]="pricingService.getSizePrice('extra-large')">
+        <input type="number" class="price__input" [(ngModel)]="pricingForm.sizes.extraLarge">
         <span class="price__currency">MXN</span>
       </div>
     </div>
@@ -228,17 +244,17 @@
 
       <div class="prices__item">
         <span class="price__label">Cobertura Ligera</span>
-        <input type="number" class="price__input" [value]="pricingService.getStonePrice('light')">
+        <input type="number" class="price__input" [(ngModel)]="pricingForm.stones.light">
         <span class="price__currency">MXN</span>
       </div>
       <div class="prices__item">
         <span class="price__label">Cobertura Mediana</span>
-        <input type="number" class="price__input" [value]="pricingService.getStonePrice('medium')">
+        <input type="number" class="price__input" [(ngModel)]="pricingForm.stones.medium">
         <span class="price__currency">MXN</span>
       </div>
       <div class="prices__item">
         <span class="price__label">Cobertura Pesada</span>
-        <input type="number" class="price__input" [value]="pricingService.getStonePrice('heavy')">
+        <input type="number" class="price__input" [(ngModel)]="pricingForm.stones.heavy">
         <span class="price__currency">MXN</span>
       </div>
     </div>
@@ -249,22 +265,22 @@
 
       <div class="prices__item">
         <span class="price__label">Marco de Madera</span>
-        <input type="number" class="price__input" [value]="pricingService.getFramePrice('wooden')">
+        <input type="number" class="price__input" [(ngModel)]="pricingForm.frames.wooden">
         <span class="price__currency">MXN</span>
       </div>
       <div class="prices__item">
         <span class="price__label">Marco de Espejo</span>
-        <input type="number" class="price__input" [value]="pricingService.getFramePrice('mirror')">
+        <input type="number" class="price__input" [(ngModel)]="pricingForm.frames.mirror">
         <span class="price__currency">MXN</span>
       </div>
       <div class="prices__item">
         <span class="price__label">Marco de Madera con LEDs</span>
-        <input type="number" class="price__input" [value]="pricingService.getFramePrice('led-wooden')">
+        <input type="number" class="price__input" [(ngModel)]="pricingForm.frames.ledWooden">
         <span class="price__currency">MXN</span>
       </div>
       <div class="prices__item">
         <span class="price__label">Marco de Espejo con LEDs</span>
-        <input type="number" class="price__input" [value]="pricingService.getFramePrice('led-mirror')">
+        <input type="number" class="price__input" [(ngModel)]="pricingForm.frames.ledMirror">
         <span class="price__currency">MXN</span>
       </div>
     </div>
@@ -275,22 +291,22 @@
 
       <div class="prices__item">
         <span class="price__label">Mecanismo de Reloj</span>
-        <input type="number" class="price__input" [value]="pricingService.getFeaturePrice('clock')">
+        <input type="number" class="price__input" [(ngModel)]="pricingForm.features.clock">
         <span class="price__currency">MXN</span>
       </div>
       <div class="prices__item">
         <span class="price__label">Tiras de "Diamante"</span>
-        <input type="number" class="price__input" [value]="pricingService.getFeaturePrice('diamond-strips')">
+        <input type="number" class="price__input" [(ngModel)]="pricingForm.features.diamondStrips">
         <span class="price__currency">MXN</span>
       </div>
       <div class="prices__item">
         <span class="price__label">Tachuelas</span>
-        <input type="number" class="price__input" [value]="pricingService.getFeaturePrice('studs')">
+        <input type="number" class="price__input" [(ngModel)]="pricingForm.features.studs">
         <span class="price__currency">MXN</span>
       </div>
       <div class="prices__item">
         <span class="price__label">Luces LEDs</span>
-        <input type="number" class="price__input" [value]="pricingService.getFeaturePrice('leds')">
+        <input type="number" class="price__input" [(ngModel)]="pricingForm.features.leds">
         <span class="price__currency">MXN</span>
       </div>
     </div>
@@ -301,12 +317,12 @@
 
       <div class="prices__item">
         <span class="price__label">Resina Epoxica</span>
-        <input type="number" class="price__input" [value]="pricingService.getTreatmentPrice('resin')">
+        <input type="number" class="price__input" [(ngModel)]="pricingForm.treatments.resin">
         <span class="price__currency">MXN</span>
       </div>
       <div class="prices__item">
         <span class="price__label">Geoda</span>
-        <input type="number" class="price__input" [value]="pricingService.getTreatmentPrice('geode')">
+        <input type="number" class="price__input" [(ngModel)]="pricingForm.treatments.geode">
         <span class="price__currency">MXN</span>
       </div>
     </div>
@@ -317,17 +333,17 @@
 
       <div class="prices__item">
         <span class="price__label">Envío Nacional (Desde Mexico A Mexico)</span>
-        <input type="number" class="price__input" [value]="pricingService.getShippingPrice('domestic')">
+        <input type="number" class="price__input" [(ngModel)]="pricingForm.shipping.domestic">
         <span class="price__currency">MXN</span>
       </div>
       <div class="prices__item">
         <span class="price__label">Envío a Norteamerica (A Estados Unidos, Canada)</span>
-        <input type="number" class="price__input" [value]="pricingService.getShippingPrice('north-america')">
+        <input type="number" class="price__input" [(ngModel)]="pricingForm.shipping.northAmerica">
         <span class="price__currency">MXN</span>
       </div>
       <div class="prices__item">
         <span class="price__label">Envío Internacional</span>
-        <input type="number" class="price__input" [value]="pricingService.getShippingPrice('international')">
+        <input type="number" class="price__input" [(ngModel)]="pricingForm.shipping.international">
         <span class="price__currency">MXN</span>
       </div>
     </div>

@@ -332,6 +332,25 @@ table td{
 
 /* Pricing */
 
+.save-pricing-button{
+    padding: 1rem;
+    background-color: rgb(36, 60, 167);
+    font-size: 1.6rem;
+    border: 0;
+    border-radius: 5px;
+    width: 20rem;
+}
+
+.save-pricing-button:hover{
+    background-color: rgb(37, 69, 252);
+    color: white;
+}
+
+.prices__date{
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
 .prices__item{
     display: flex;
     align-items: center;
