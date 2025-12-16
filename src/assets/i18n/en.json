@@ -19,7 +19,8 @@
         },
         "works":{
             "title": "Featured Works",
-            "subtitle": "Each piece is a unique masterpiece"
+            "subtitle": "Each piece is a unique masterpiece",
+            "view-more": "View More"
         },
         "features":{
             "title": "Craftsmanship Excellence",

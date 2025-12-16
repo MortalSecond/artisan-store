@@ -9,6 +9,7 @@ import { PaintingService } from '../../services/painting.service';
 import { TranslateModule } from '@ngx-translate/core';
 
 import { RouterLink } from "@angular/router";
+import { map } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -19,7 +20,9 @@ import { RouterLink } from "@angular/router";
 export class HomeComponent {
   private paintingService = inject(PaintingService);
   
-  paintings = toSignal(this.paintingService.getAllPaintings(),{
+  paintings = toSignal(this.paintingService.getAllPaintings().pipe(
+    map(paintings => paintings.slice(0, 6))
+  ),{
     initialValue: []
   });
 }

@@ -19,7 +19,8 @@
         },
         "works":{
             "title": "Trabajos Destacados",
-            "subtitle": "Cada pieza es una obra maestra única"
+            "subtitle": "Cada pieza es una obra maestra única",
+            "view-more": "Ver Mas"
         },
         "features":{
             "title": "Excelencia Artesanal",

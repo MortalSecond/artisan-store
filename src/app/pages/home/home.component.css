@@ -140,9 +140,44 @@
 }
 
 .works__gallery{
+    position: relative;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
+}
+
+.works__gallery::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40rem;
+  background: linear-gradient(transparent, var(--negativeSpace));
+  pointer-events: none;
+}
+
+.works__view-more {
+  text-align: center;
+  margin-top: -8rem; /* Overlap with fade */
+  position: relative;
+  z-index: 1;
+}
+
+.view-more-button {
+  padding: 1.5rem 4rem;
+  font-weight: 600;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background-color: var(--mainAccent);
+}
+
+.view-more-button:hover{
+    background-color: black;
+    color: white;
+    box-shadow: 0.3rem 0.3rem 1.5rem #ffffff48;
+    transform: translateY(-3px);
 }
 
 /* Commissions */
