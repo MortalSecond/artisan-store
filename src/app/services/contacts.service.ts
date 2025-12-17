@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 export class ContactsService {
   // Currently Used Contact Methods
   private readonly contacts: Record<string, string> = {
-    'email': "diegojm67@gmail.com"
+    'email': "carmenartisan@gmail.com"
   }
 
   constructor() { }
