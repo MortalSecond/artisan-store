@@ -2,77 +2,80 @@
     "language": "ES",
     "loading": "Cargando...",
     "header":{
-        "logo-title": "Artesanías",
+        "logo":{
+            "title": "Taller Geoda",
+            "subtitle": "Marcos Artesanales & Decoraciones de Cuarzo"
+        },
         "nav":{
             "gallery": "Galería",
-            "commission": "Comisión",
+            "commission": "Petición",
             "process": "Proceso",
             "contact": "Contacto"
         }
     },
     "home":{
         "hero":{
-            "big-text": "Transformando Arte En Lujo",
-            "small-text": "Pinturas decoradas a mano, adornadas con piedras preciosas, espejos, y acentos dorados",
+            "big-text": "Marcos Artesanales con Piedras",
+            "small-text": "Transformamos tus imágenes en piezas decorativas únicas con piedras preciosas, espejos y acabados de resina",
             "button-gallery": "Ver Galería",
-            "button-commission": "Solicitar Una Comisión"
+            "button-commission": "Solicitar Pieza Personalizada"
         },
         "works":{
-            "title": "Trabajos Destacados",
-            "subtitle": "Cada pieza es una obra maestra única",
-            "view-more": "Ver Mas"
+            "title": "Trabajos Recientes",
+            "subtitle": "Cada pieza es decorada a mano con atención al detalle",
+            "view-more": "Ver Más"
         },
         "features":{
-            "title": "Excelencia Artesanal",
-            "subtitle": "Lo que hace cada pieza extraordinaria",
+            "title": "Nuestro Proceso Artesanal",
+            "subtitle": "Combinamos múltiples técnicas para crear piezas únicas",
             "materials":{
-                "title": "Materiales Preciosos",
-                "description": "Pirita auténtica, cuarzo y piedras semipreciosas colocadas a mano para máximo impacto visual"
+                "title": "Piedras Naturales",
+                "description": "Pirita, cuarzo, amatista y otras piedras semipreciosas aplicadas a mano para dar profundidad y textura"
             },
             "finishes":{
-                "title": "Acabados de Lujo",
-                "description": "Recubrimientos de resina de alta calidad y acentos metálicos que capturan y reflejan la luz hermosamente"
+                "title": "Acabados de Resina",
+                "description": "Aplicación precisa de resina epóxica para crear un acabado brillante y duradero, tratada con pistola de calor para una tener una superficie lisa, y curado durante horas para evitar burbujas"
             },
             "mirrors":{
-                "title": "Arte con Espejos",
-                "description": "Marcos de espejo personalizados y acentos que añaden profundidad y elegancia a cada pieza"
+                "title": "Marcos de Espejo",
+                "description": "Marcos personalizados con madera MDF 6, o espejos que añaden elegancia y amplían visualmente el espacio"
             },
             "led":{
-                "title": "Integración LED",
-                "description": "Sistemas de iluminación LED opcionales que transforman el arte en impresionantes declaraciones iluminadas"
+                "title": "Iluminación LED",
+                "description": "Tiras de luz LED opcionales que resaltan la pieza y le agregan presencia a la pieza"
             }
         },
         "commission":{
-            "title": "Comisiones Personalizadas",
-            "text": "Transforma tu obra de arte en una obra maestra lujosa. Envíanos tu pintura y la elevaremos con materiales preciosos, artesanía experta y diseño a medida.",
+            "title": "Trabajos Personalizados",
+            "text": "Trae tu imagen favorita: una foto, retrato, diploma o cualquier pintura, y la transformamos en una pieza decorativa única. Añadimos marcos personalizados, piedras naturales, acabados especiales y más.",
             "features":{
-                "pyrite": "Adornos de pirita y piedras preciosas",
-                "mirrors": "Marcos con espejos e iluminación LED",
-                "resin": "Recubrimientos de resina y tratamientos reflectantes",
-                "negative-space": "Técnicas de espacio negativo oro-negro",
-                "custom": "Diseños de relojes personalizados y arte funcional",
-                "shipping": "Envío internacional disponible"
+                "pyrite": "Decoración con pirita y piedras semipreciosas",
+                "mirrors": "Marcos de madera o espejo con iluminación LED opcional",
+                "resin": "Acabados de resina epóxica para protección y brillo",
+                "negative-space": "Técnicas de pintura oro-negro en espacio negativo",
+                "custom": "Diseños funcionales como relojes de pared",
+                "shipping": "Entrega local en Estado de México y CDMX, envíos nacionales e internacionales para piezas pequeñas"
             },
-            "button": "Inicia Tu Comisión"
+            "button": "Diseñar Mi Pieza"
         },
         "process":{
-            "title": "Nuestro Proceso",
-            "subtitle": "De la visión al producto en cuatro simples pasos",
+            "title": "Cómo Trabajamos",
+            "subtitle": "Un proceso simple y transparente",
             "consultation":{
                 "title": "Consulta",
-                "description": "Comparte tu visión y obra de arte. Discutiremos materiales, tamaño y opciones de diseño para dar vida a tu concepto."
+                "description": "Comparte tu imagen y visión. Discutimos opciones de materiales, tamaño y diseño para tu proyecto."
             },
             "quotation":{
                 "title": "Cotización",
-                "description": "Recibe una cotización detallada basada en tus especificaciones. Detallaremos materiales, cronograma y costos de forma transparente."
+                "description": "Recibes una cotización detallada con tiempo estimado y costo. Sin sorpresas, todo claro desde el inicio."
             },
             "creation":{
                 "title": "Creación",
-                "description": "Observa cómo tu pieza cobra vida. Te mantendremos informado durante todo el proceso de creación con fotos y reportes de progreso."
+                "description": "Trabajamos en tu pieza durante 3 - 7 días dependiendo del tamaño. Mantenemos contacto y enviamos fotos del progreso."
             },
             "delivery":{
                 "title": "Entrega",
-                "description": "Tu obra maestra terminada se empaca cuidadosamente y se envía. Aseguramos entrega segura con seguro completo y rastreo."
+                "description": "Entrega personal local o envío cuidadosamente empaquetado para piezas pequeñas. Cada pieza incluye certificado de autenticidad."
             }
         }
     },
@@ -111,14 +114,14 @@
             "title": "Descripción"
         },
         "buttons":{
-            "inquire": "Preguntar Sobre Esta Pieza",
+            "inquire": "Consultar Sobre Esta Pieza",
             "continue": "Continuar Navegando"
         }
     },
     "commission": {
         "hero": {
-            "title": "Diseña Tu Comisión",
-            "subtitle": "Transforma tu obra de arte en una pieza de declaración lujosa con materiales preciosos, artesanía experta y diseño a medida"
+            "title": "Diseña Tu Pieza Personalizada",
+            "subtitle": "Usa esta herramienta para estimar el costo de tu proyecto. El precio final se confirmará según tus especificaciones exactas"
         },
         "size": {
             "title": "Tamaño de la Pintura",
@@ -203,13 +206,13 @@
             }
         },
         "shipping": {
-            "title": "Ubicación de Envío",
+            "title": "Ubicación y Entrega",
             "domestic": "Nacional (México)",
-            "north-america": "Norteamérica",
-            "international": "Internacional"
+            "north-america": "Norteamérica - Solo Piezas Pequeñas",
+            "international": "Internacional - Solo Piezas Pequeñas"
         },
         "price": {
-            "title": "Tu Comisión",
+            "title": "Estimación de Costo",
             "base": "Base",
             "frame": "Marco",
             "stones": "Piedras",
@@ -320,13 +323,13 @@
         }
     },
     "footer":{
-        "about": "Elevando el arte a través de materiales preciosos y artesanía experta. Con sede en Estado de México, sirviendo a coleccionistas en todo el mundo.",
-        "quick-links": "Enlaces Rápidos",
+        "about": "Taller Geoda transforma imágenes ordinarias en piezas decorativas únicas mediante técnicas artesanales de enmarcado, decoración con piedras naturales y acabados de resina.",
+        "quick-links": "Enlaces",
         "contact-title": "Contacto",
-        "international-title": "Internacional",
-        "shipping": "Envío mundial disponible",
-        "packaging": "Empaque seguro garantizado",
-        "copyright": "Carmen Méndez Delgadillo. Todos los derechos reservados.",
+        "international-title": "Envíos",
+        "shipping": "Entrega local para la mayoria de piezas. Envíos nacionales e internacionales solo para piezas pequeñas.",
+        "packaging": "Empaquetado especial para protección durante el envío.",
+        "copyright": "© 2025 Taller Carmen. Todos los derechos reservados",
         "handcrafted": "Hecho a mano en Estado de México"
     }
 }

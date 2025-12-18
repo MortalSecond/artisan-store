@@ -2,7 +2,10 @@
     "language": "EN",
     "loading": "Loading...",
     "header":{
-        "logo-title": "Artisan",
+        "logo":{
+            "title": "Atelier Geode",
+            "subtitle": "Bespoke Framing & Stone Embellishment"
+        },
         "nav":{
             "gallery": "Gallery",
             "commission": "Commission",
@@ -12,67 +15,67 @@
     },
     "home":{
         "hero":{
-            "big-text": "Transforming Art Into Luxury",
-            "small-text": "Hand-decorated paintings adorned with precious stones, mirrors, and golden accents",
+            "big-text": "Artisan Framing with Stones",
+            "small-text": "We transform your images into unique decorative pieces with precious stones, mirrors, and resin finishes",
             "button-gallery": "View Gallery",
-            "button-commission": "Commission A Piece"
+            "button-commission": "Request Custom Piece"
         },
         "works":{
-            "title": "Featured Works",
-            "subtitle": "Each piece is a unique masterpiece",
+            "title": "Recent Work",
+            "subtitle": "Each piece is hand-decorated with attention to detail",
             "view-more": "View More"
         },
         "features":{
-            "title": "Craftsmanship Excellence",
-            "subtitle": "What makes each piece extraordinary",
+            "title": "Our Artisan Process",
+            "subtitle": "We combine multiple techniques to create unique pieces",
             "materials":{
-                "title": "Precious Materials",
-                "description": "Authentic pyrite, quartz, and semi-precious stones hand-placed for maximum visual impact"
+                "title": "Natural Stones",
+                "description": "Pyrite, quartz, amethyst, and other semi-precious stones hand-placed for depth and texture"
             },
             "finishes":{
-                "title": "Luxury Finishes",
-                "description": "High-quality resin coatings and metallic accents that catch and reflect light beautifully"
+                "title": "Resin Finishes",
+                "description": "Careful application of epoxy resin for a brilliant, lasting finish, heat treated for a smooth surface and cured over hours to prevent bubbles"
             },
             "mirrors":{
-                "title": "Mirror Artistry",
-                "description": "Custom mirror frames and accents that add depth and elegance to every piece"
+                "title": "Mirror Frames",
+                "description": "Custom MDF 6 wood framing, or mirror frames that add elegance and visually expand space"
             },
             "led":{
-                "title": "LED Integration",
-                "description": "Optional LED lighting systems that transform artwork into stunning illuminated statements"
+                "title": "LED Lighting",
+                "description": "Optional LED light strips that highlight the piece and create special ambiance"
             }
         },
         "commission":{
-            "title": "Custom Commissions",
-            "text": "Transform your artwork into a luxurious masterpiece. Send us your painting and we'll elevate it with precious materials, expert craftsmanship, and bespoke design.",
+            "title": "Custom Work",
+            "text": "Bring your favorite image: a photo, portrait, diploma, or any artwork, and we'll transform it into a unique decorative piece. We add custom frames, natural stones, special finishes, and more.",
             "features":{
-                "pyrite": "Pyrite and precious stone embellishments",
-                "mirrors": "Mirror and LED-illuminated frames",
-                "resin": "Resin coatings and reflective treatments",
-                "negative-space": "Gold-black negative space techniques",
-                "custom": "Custom clock and functional art designs",
-                "shipping": "International shipping available"
+                "pyrite": "Decoration with pyrite and semi-precious stones",
+                "mirrors": "Wood or mirror frames with optional LED lighting",
+                "resin": "Epoxy resin finishes for protection and shine",
+                "negative-space": "Gold-black painting techniques in negative space",
+                "custom": "Functional designs like wall clocks",
+                "shipping": "Local delivery in Estado de México and Mexico City metro area, national and international shipping for small pieces"
             },
-            "button": "Start Your Commission"
+            "button": "Design My Piece"
         },
         "process":{
-            "title": "Our Process",
-            "subtitle": "From vision to product in four simple steps",
+            "title": "How We Work",
+            "subtitle": "A simple, transparent process",
             "consultation":{
                 "title": "Consultation",
-                "description": "Share your vision and artwork. We'll discuss materials, size, and design options to bring your concept to life."
+                "description": "Share your image and vision. We discuss material options, size, and design for your project."
             },
             "quotation":{
-                "title": "Quotation",
-                "description": "Receive a detailed quote based on your specifications. We'll outline materials, timeline, and costs transparently."
+                "title": "Quote",
+                "description": "You receive a detailed quote with estimated time and cost. No surprises, everything is clear from the start."
             },
             "creation":{
                 "title": "Creation",
-                "description": "Watch your piece come to life. We'll keep you updated throughout the creation process with photos and progress reports."
+                "description": "We work on your piece for 3 - 7 days depending on size. We stay in touch and send progress photos."
             },
             "delivery":{
                 "title": "Delivery",
-                "description": "Your finished masterpiece is carefully packaged and shipped. We ensure safe delivery with full insurance and tracking."
+                "description": "Personal local delivery or carefully packaged shipping for small pieces. Each piece includes certificate of authenticity."
             }
         }
     },
@@ -118,7 +121,7 @@
     "commission": {
         "hero": {
             "title": "Design Your Commission",
-            "subtitle": "Transform your artwork into a luxurious statement piece with precious materials, expert craftsmanship, and bespoke design"
+            "subtitle": "Use this tool to estimate the cost of your project. Final pricing will be confirmed based on your exact specifications"
         },
         "size": {
             "title": "Painting Size",
@@ -203,13 +206,13 @@
             }
         },
         "shipping": {
-            "title": "Shipping Location",
+            "title": "Location and Delivery",
             "domestic": "Domestic (Mexico)",
             "north-america": "North America",
             "international": "International"
         },
         "price": {
-            "title": "Your Commission",
+            "title": "Cost Estimation",
             "base": "Base",
             "frame": "Frame",
             "stones": "Stones",
@@ -320,14 +323,13 @@
         }
     },
     "footer":{
-        "about": "Elevating art through precious materials and expert craftsmanship. Based in Estado de México, serving collectors worldwide.",
-        "quick-links": "Quick Links",
+        "about": "Atelier Geode transforms ordinary images into unique decorative pieces through artisan framing techniques, natural stone decoration, and resin finishes.",
+        "quick-links": "Links",
         "contact-title": "Contact",
-        "location": "Estado de México, Mexico",
-        "international-title": "International",
-        "shipping": "Worldwide shipping available",
-        "packaging": "Secure packaging guaranteed",
-        "copyright": "Carmen Méndez Delgadillo. All rights reserved.",
-        "handcrafted": "Handcrafted in Estado de Mexico"
+        "international-title": "Shipping",
+        "shipping": "Local delivery for majority pieces. International and national shipping only for small pieces.",
+        "packaging": "Special packaging for protection during shipping.",
+        "copyright": "© 2025 Atelier Carmen. All rights reserved",
+        "handcrafted": "Handcrafted in Estado de México"
     }
 }
