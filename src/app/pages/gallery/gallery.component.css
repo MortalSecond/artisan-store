@@ -23,6 +23,9 @@
     font-weight: 300;
     font-size: 2.3rem;
     letter-spacing: 2px;
+    line-height: 1.6;
+
+    max-width: 70rem;
 }
 
 /* Top Group */
@@ -69,4 +72,48 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
+}
+
+/* MOBILE WEB RESPONSIVENESS */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .gallery {
+    padding: 4rem;
+  }
+  
+  .gallery__paintings {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .top-group__selectors {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .top-group__dropdown {
+    width: 100%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .gallery {
+    padding: 3rem 2rem;
+  }
+  
+  .gallery__top-group {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: flex-start;
+  }
+  
+  .top-group__selectors {
+    margin-left: 0;
+    width: 100%;
+  }
+  
+  .gallery__paintings {
+    grid-template-columns: 1fr;
+  }
 }

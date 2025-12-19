@@ -23,6 +23,9 @@
     font-weight: 300;
     font-size: 2.3rem;
     letter-spacing: 2px;
+    line-height: 1.6;
+
+    max-width: 70rem;
 }
 
 /* Commission Designer */
@@ -257,4 +260,55 @@
     border-color: var(--mainAccentLight);
     box-shadow: 0 0.5rem 2rem rgba(212, 175, 55, 0.4);
     transform: translateY(-3px);
+}
+
+/* MOBILE WEB RESPONSIVENESS */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .quotation {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding: 3rem;
+  }
+  
+  .quotation__price {
+    position: static; /* Remove sticky on mobile */
+    order: -1; /* Show price at top */
+  }
+  
+  .section__size-options {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hero {
+    height: 60vh;
+  }
+  
+  .quotation {
+    padding: 2rem;
+  }
+  
+  .commission-design__section {
+    padding: 1.5rem;
+  }
+  
+  .section__title-group {
+    padding: 1rem;
+  }
+  
+  .section__title {
+    font-size: 2.5rem;
+  }
+  
+  .item {
+    padding: 1rem;
+  }
+  
+  .price__title {
+    font-size: 2.5rem;
+  }
 }

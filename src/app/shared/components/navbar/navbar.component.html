@@ -1,16 +1,28 @@
 <div class="header">
   <app-logo></app-logo>
 
-  <nav class="header__navbar">
-    <a routerLink="/gallery" class="navbar__item">{{ 'header.nav.gallery' | translate}}</a>
-    <a routerLink="/commission" class="navbar__item">{{ 'header.nav.commission' | translate}}</a>
+  <nav class="header__navbar"
+  [class.header__navbar--open]="mobileMenuOpen()">
+    <a routerLink="/gallery" class="navbar__item"
+    (click)="closeMobileMenu()">{{ 'header.nav.gallery' | translate}}</a>
+    <a routerLink="/commission" class="navbar__item"
+    (click)="closeMobileMenu()">{{ 'header.nav.commission' | translate}}</a>
+
     <!-- Uncomment once i get some videos of the decoration process or something. -->
-    <!--<a routerLink="/process" class="navbar__item">{{ 'header.nav.process' | translate}}</a>-->
-    <a routerLink="/contact" class="navbar__item">{{ 'header.nav.contact' | translate}}</a>
+    <!--<a routerLink="/process" class="navbar__item"
+    (click)="closeMobileMenu()">{{ 'header.nav.process' | translate}}</a>-->
+
+    <a routerLink="/contact" class="navbar__item"
+    (click)="closeMobileMenu()">{{ 'header.nav.contact' | translate}}</a>
   </nav>
   
   <button class="header__language-button"
   (click)="switchLang()">
     {{'language' | translate}}
+  </button>
+
+  <!-- Mobile toggle button -->
+  <button class="header__mobile-toggle" (click)="toggleMobileMenu()">
+    {{ mobileMenuOpen() ? '✕' : '☰' }}
   </button>
 </div>

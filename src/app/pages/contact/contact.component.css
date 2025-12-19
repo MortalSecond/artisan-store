@@ -23,6 +23,9 @@
     font-weight: 300;
     font-size: 2.3rem;
     letter-spacing: 2px;
+    line-height: 1.6;
+
+    max-width: 70rem;
 }
 
 /* Utilities */
@@ -411,4 +414,35 @@
 
 .modal--error {
     border-color: var(--errorRed);
+}
+
+/* MOBILE WEB RESPONSIVENESS */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .contact {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    padding: 5rem 3rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .contact {
+    padding: 3rem 2rem;
+  }
+  
+  .box {
+    padding: 2rem;
+  }
+  
+  .commission-field {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .commission-details__grid {
+    grid-template-columns: 1fr;
+  }
 }

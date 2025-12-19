@@ -23,6 +23,9 @@
     font-weight: 300;
     font-size: 2.3rem;
     letter-spacing: 2px;
+    line-height: 1.6;
+
+    max-width: 70rem;
 }
 
 /* Hero Buttons */
@@ -38,6 +41,19 @@
 
     font-size: 1.5rem;
     text-transform: uppercase;
+}
+
+/* Fading Gradient For Heroes */
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 10rem;
+  background: linear-gradient(transparent, var(--negativeSpace));
+  pointer-events: none;
 }
 
 /* Features */
@@ -302,4 +318,273 @@
     font-size: 1.5rem;
     text-align: center;
     line-height: 2.5rem;
+}
+
+/* MOBILE WEB RESPONSIVENESS */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .hero {
+    height: 80vh;
+    padding: 2rem;
+  }
+  
+  .hero__big-text {
+    font-size: 8rem;
+  }
+  
+  .hero__buttons-container {
+    flex-direction: column;
+    
+    width: 100%;
+    max-width: 40rem;
+  }
+  
+  .hero__button {
+    font-size: 2rem;
+    font-weight: 500;
+  }
+  
+  .works__gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .works__title{
+    font-size: 7rem;
+    font-weight: 600;
+  }
+
+  .works__subtitle{
+    font-size: 2.5rem;
+  }
+
+  .features__title{
+    font-size: 6rem;
+    font-weight: 600;
+  }
+
+  .features__subtitle{
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  
+  .features__characteristics {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .characteristics__card{
+    width: 40rem;
+  }
+
+  .characteristics__title{
+    font-size: 3.5rem;
+  }
+
+  .characteristics__description{
+    font-size: 2rem;
+    line-height: 1.5;
+  }
+
+  .commission__image{
+    width: 35rem;
+  }
+  
+  .commission {
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .commission__details{
+    text-align: center;
+  }
+
+  .commission__title{
+    font-size: 7rem;
+  }
+
+  .commission__text{
+    font-size: 2.6rem;
+    font-weight: 300;
+    line-height: 1.5;
+  }
+
+  .commission__feature{
+    font-size: 2.5rem;
+  }
+
+  .commission__feature::marker{
+    content: none;
+  }
+
+  .button--commission{
+    font-size: 3rem;
+    font-weight: 500;
+    padding: 2rem 5rem;
+  }
+
+  .process h1{
+    font-size: 6rem;
+  }
+
+  .process__text{
+    font-size: 2.5rem;
+  }
+  
+  .process__details {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .step__number{
+    font-size: 4rem;
+    border: 0;
+    border-bottom: 3px solid var(--mainAccent);
+    border-radius: 15px;
+  }
+  
+  .step__title{
+    font-size: 5rem;
+  }
+
+  .step__description{
+    font-size: 2.5rem;
+    line-height: 1.5;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hero {
+    height: 100vh;
+    gap: 1.5rem;
+  }
+  
+  .hero__big-text {
+    font-size: 9rem;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  
+  .hero__small-text {
+    font-size: 3rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+  }
+
+  .hero__button{
+    font-size: 2.5rem;
+    font-weight: 600;
+  }
+  
+  .features,
+  .works,
+  .commission,
+  .process {
+    padding: 5rem 2rem;
+  }
+  
+  .works__gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .works__title{
+    font-size: 7rem;
+    font-weight: 600;
+  }
+
+  .works__subtitle{
+    font-size: 2.7rem;
+  }
+  
+  .features__characteristics {
+    grid-template-columns: 1fr;
+  }
+  
+  .characteristics__card {
+    width: 100%;
+  }
+
+  .characteristics__title{
+    font-size: 5rem;
+  }
+
+  .characteristics__description{
+    font-size: 3rem;
+  }
+  
+  .commission__image {
+    width: 50%;
+    height: auto;
+  }
+
+  .commission__details{
+    text-align: center;
+  }
+
+  .commission__title{
+    font-size: 8rem;
+  }
+
+  .commission__text{
+    font-size: 3rem;
+    line-height: 1.5;
+  }
+
+  .commission__feature{
+    font-size: 2.5rem;
+  }
+
+  .commission__feature::marker{
+    content: none;
+  }
+
+  .button--commission{
+    font-size: 3rem;
+  }
+  
+  .process__details {
+    grid-template-columns: 1fr;
+  }
+
+  .process h1{
+    font-size: 7rem;
+  }
+
+  .process__text{
+    font-size: 3rem;
+  }
+
+  .step__number{
+    font-size: 5rem;
+    border: 0;
+    border-bottom: 3px solid var(--mainAccent);
+    border-radius: 10px;
+  }
+
+  .step__title{
+    font-size: 5rem;
+  }
+
+  .step__description{
+    font-size: 3rem;
+    line-height: 1.5;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .hero__big-text {
+    font-size: 8rem;
+    font-weight: 800;
+  }
+  
+  .hero__small-text {
+    font-size: 3rem;
+  }
+
+  .hero__button{
+    font-size: 2.5rem;
+    font-weight: 600;
+  }
 }
