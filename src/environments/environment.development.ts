@@ -1,4 +1,4 @@
 export const environment = {
     production: true,
-    apiUrl: 'https://localhost:5051/api'
+    apiUrl: 'https://artisanshopapi-production.up.railway.app/api'
 };
