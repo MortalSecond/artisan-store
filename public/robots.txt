@@ -3,7 +3,7 @@ Allow: /
 Disallow: /admin/
 Disallow: /api/
 
-Sitemap: https://PLACEHOLDER/sitemap.xml
+Sitemap: https://atelier-geode.vercel.app/sitemap.xml
 
 Crawl-delay: 1
 
