@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, timeout } from 'rxjs';
 import { environment } from '../../environments/environment.development';
 
 export interface ContactForm{
@@ -31,6 +31,6 @@ export class EmailService {
   }
   
   submitCommissionRequest(formData: FormData): Observable<ApiResponse> {
-    return this.http.post<ApiResponse>(`${this.apiUrl}/Commission`, formData);
+    return this.http.post<ApiResponse>(`${this.apiUrl}/Commission`, formData).pipe(timeout(60000));
   }
 }
